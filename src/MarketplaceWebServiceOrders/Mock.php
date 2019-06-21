@@ -1,22 +1,27 @@
 <?php
-
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
+
+/**
+ *  @see MarketplaceWebServiceOrders_Interface
+ */
+require_once __DIR__ . '/Interface.php';
+
 class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_Interface
 {
     // Public API ------------------------------------------------------------//
@@ -33,13 +38,13 @@ class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_In
      */
     public function getOrder($request)
     {
+        require_once __DIR__ . '/Model/GetOrderResponse.php';
         return MarketplaceWebServiceOrders_Model_GetOrderResponse::fromXML($this->_invoke('GetOrder'));
     }
 
     /**
      * Get Service Status
-     * Returns the service status of a particular MWS API section. The operation
-     *        takes no input.
+     * Returns the service status of a particular MWS API section. The operation takes no input.
      *
      * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_GetServiceStatus request or MarketplaceWebServiceOrders_Model_GetServiceStatus object itself
      * @see MarketplaceWebServiceOrders_Model_GetServiceStatus
@@ -49,6 +54,7 @@ class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_In
      */
     public function getServiceStatus($request)
     {
+        require_once __DIR__ . '/Model/GetServiceStatusResponse.php';
         return MarketplaceWebServiceOrders_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -65,6 +71,7 @@ class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_In
      */
     public function listOrderItems($request)
     {
+        require_once __DIR__ . '/Model/ListOrderItemsResponse.php';
         return MarketplaceWebServiceOrders_Model_ListOrderItemsResponse::fromXML($this->_invoke('ListOrderItems'));
     }
 
@@ -82,6 +89,7 @@ class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_In
      */
     public function listOrderItemsByNextToken($request)
     {
+        require_once __DIR__ . '/Model/ListOrderItemsByNextTokenResponse.php';
         return MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse::fromXML($this->_invoke('ListOrderItemsByNextToken'));
     }
 
@@ -97,6 +105,7 @@ class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_In
      */
     public function listOrders($request)
     {
+        require_once __DIR__ . '/Model/ListOrdersResponse.php';
         return MarketplaceWebServiceOrders_Model_ListOrdersResponse::fromXML($this->_invoke('ListOrders'));
     }
 
@@ -114,16 +123,19 @@ class MarketplaceWebServiceOrders_Mock implements MarketplaceWebServiceOrders_In
      */
     public function listOrdersByNextToken($request)
     {
+        require_once __DIR__ . '/Model/ListOrdersByNextTokenResponse.php';
         return MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenResponse::fromXML($this->_invoke('ListOrdersByNextToken'));
     }
 
     // Private API ------------------------------------------------------------//
-
+    
+    /**
+     * @param string $actionName
+     * @return false|string
+     */
     private function _invoke($actionName)
     {
-        return $xml = file_get_contents(dirname(__FILE__) . '/Mock/' . $actionName . 'Response.xml',
-            /** search include path */
-            true);
+        return file_get_contents(__DIR__ . '/Mock/' . $actionName . 'Response.xml', /** search include path */ TRUE);
     }
 
 }

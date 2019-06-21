@@ -73,7 +73,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the Name property.
      *
-     * @return String Name.
+     * @return string Name.
      */
     public function getName()
     {
@@ -95,17 +95,17 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if Name is set.
      *
-     * @return true if Name is set.
+     * @return bool `true` if Name is set.
      */
     public function isSetName()
     {
-        return !is_null($this->_fields['Name']['FieldValue']);
+        return $this->_fields['Name']['FieldValue'] !== null;
     }
 
     /**
      * Set the value of Name, return this.
      *
-     * @param $value The new value to set.
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withName($value)
@@ -117,7 +117,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the AddressLine1 property.
      *
-     * @return String AddressLine1.
+     * @return string AddressLine1.
      */
     public function getAddressLine1()
     {
@@ -139,11 +139,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if AddressLine1 is set.
      *
-     * @return true if AddressLine1 is set.
+     * @return bool `true` if AddressLine1 is set.
      */
     public function isSetAddressLine1()
     {
-        return !is_null($this->_fields['AddressLine1']['FieldValue']);
+        return $this->_fields['AddressLine1']['FieldValue'] !== null;
     }
 
     /**
@@ -161,7 +161,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the AddressLine2 property.
      *
-     * @return String AddressLine2.
+     * @return string AddressLine2.
      */
     public function getAddressLine2()
     {
@@ -183,11 +183,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if AddressLine2 is set.
      *
-     * @return true if AddressLine2 is set.
+     * @return bool `true` if AddressLine2 is set.
      */
     public function isSetAddressLine2()
     {
-        return !is_null($this->_fields['AddressLine2']['FieldValue']);
+        return $this->_fields['AddressLine2']['FieldValue'] !== null;
     }
 
     /**
@@ -205,7 +205,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the AddressLine3 property.
      *
-     * @return String AddressLine3.
+     * @return string AddressLine3.
      */
     public function getAddressLine3()
     {
@@ -227,11 +227,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if AddressLine3 is set.
      *
-     * @return true if AddressLine3 is set.
+     * @return bool `true` if AddressLine3 is set.
      */
     public function isSetAddressLine3()
     {
-        return !is_null($this->_fields['AddressLine3']['FieldValue']);
+        return $this->_fields['AddressLine3']['FieldValue'] !== null;
     }
 
     /**
@@ -249,7 +249,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the City property.
      *
-     * @return String City.
+     * @return string City.
      */
     public function getCity()
     {
@@ -271,11 +271,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if City is set.
      *
-     * @return true if City is set.
+     * @return bool `true` if City is set.
      */
     public function isSetCity()
     {
-        return !is_null($this->_fields['City']['FieldValue']);
+        return $this->_fields['City']['FieldValue'] !== null;
     }
 
     /**
@@ -293,7 +293,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the County property.
      *
-     * @return String County.
+     * @return string County.
      */
     public function getCounty()
     {
@@ -315,11 +315,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if County is set.
      *
-     * @return true if County is set.
+     * @return bool `true` if County is set.
      */
     public function isSetCounty()
     {
-        return !is_null($this->_fields['County']['FieldValue']);
+        return $this->_fields['County']['FieldValue'] !== null;
     }
 
     /**
@@ -337,7 +337,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the District property.
      *
-     * @return String District.
+     * @return string District.
      */
     public function getDistrict()
     {
@@ -359,11 +359,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if District is set.
      *
-     * @return true if District is set.
+     * @return bool `true` if District is set.
      */
     public function isSetDistrict()
     {
-        return !is_null($this->_fields['District']['FieldValue']);
+        return $this->_fields['District']['FieldValue'] !== null;
     }
 
     /**
@@ -381,7 +381,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the StateOrRegion property.
      *
-     * @return String StateOrRegion.
+     * @return string StateOrRegion.
      */
     public function getStateOrRegion()
     {
@@ -403,11 +403,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if StateOrRegion is set.
      *
-     * @return true if StateOrRegion is set.
+     * @return bool `true` if StateOrRegion is set.
      */
     public function isSetStateOrRegion()
     {
-        return !is_null($this->_fields['StateOrRegion']['FieldValue']);
+        return $this->_fields['StateOrRegion']['FieldValue'] !== null;
     }
 
     /**
@@ -425,7 +425,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the Municipality property.
      *
-     * @return String Municipality.
+     * @return string Municipality.
      */
     public function getMunicipality()
     {
@@ -451,8 +451,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
      */
     public function isSetMunicipality()
     {
-                return !is_null($this->_fields['Municipality']['FieldValue']);
-            }
+        return $this->_fields['Municipality']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of Municipality, return this.
@@ -491,12 +491,12 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if PostalCode is set.
      *
-     * @return true if PostalCode is set.
+     * @return bool `true` if PostalCode is set.
      */
     public function isSetPostalCode()
     {
-                return !is_null($this->_fields['PostalCode']['FieldValue']);
-            }
+        return $this->_fields['PostalCode']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of PostalCode, return this.
@@ -513,7 +513,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the CountryCode property.
      *
-     * @return String CountryCode.
+     * @return string CountryCode.
      */
     public function getCountryCode()
     {
@@ -535,7 +535,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if CountryCode is set.
      *
-     * @return true if CountryCode is set.
+     * @return bool `true` if CountryCode is set.
      */
     public function isSetCountryCode()
     {
@@ -557,7 +557,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the Phone property.
      *
-     * @return String Phone.
+     * @return string Phone.
      */
     public function getPhone()
     {
@@ -579,11 +579,11 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if Phone is set.
      *
-     * @return true if Phone is set.
+     * @return bool `true` if Phone is set.
      */
     public function isSetPhone()
     {
-        return !is_null($this->_fields['Phone']['FieldValue']);
+        return $this->_fields['Phone']['FieldValue'] !== null;
     }
 
     /**
@@ -627,7 +627,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
      */
     public function isSetAddressType()
     {
-        return !is_null($this->_fields['AddressType']['FieldValue']);
+        return $this->_fields['AddressType']['FieldValue'] !== null;
     }
 
     /**

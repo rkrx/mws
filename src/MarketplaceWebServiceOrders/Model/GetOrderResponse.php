@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License");
  *
  * You may not use this file except in compliance with the License.
@@ -13,9 +13,16 @@
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
+
+/**
+ *  @see MarketplaceWebServiceOrders_Model
+ */
+
+require_once __DIR__ . '/../Model.php';
+
 
 /**
  * MarketplaceWebServiceOrders_Model_GetOrderResponse
@@ -29,25 +36,24 @@
  *
  * </ul>
  */
-class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebServiceOrders_Model
-{
-
+ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebServiceOrders_Model
+ {
     public function __construct($data = null)
     {
-        $this->_fields = array(
-            'GetOrderResult' => array(
+        $this->_fields = [
+            'GetOrderResult' => [
                 'FieldValue' => null,
                 'FieldType' => 'MarketplaceWebServiceOrders_Model_GetOrderResult'
-            ),
-            'ResponseMetadata' => array(
+            ],
+            'ResponseMetadata' => [
                 'FieldValue' => null,
                 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'
-            ),
-            'ResponseHeaderMetadata' => array(
+            ],
+            'ResponseHeaderMetadata' => [
                 'FieldValue' => null,
                 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'
-            ),
-        );
+            ],
+        ];
         parent::__construct($data);
     }
 
@@ -64,8 +70,8 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
     /**
      * Set the value of the GetOrderResult property.
      *
-     * @param MarketplaceWebServiceOrders_Model_GetOrderResult $value getOrderResult
-     * @return $this This instance
+     * @param MarketplaceWebServiceOrders_Model_GetOrderResult $value
+     * @return $this
      */
     public function setGetOrderResult($value)
     {
@@ -76,20 +82,19 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
     /**
      * Check to see if GetOrderResult is set.
      *
-     * @return true if GetOrderResult is set.
+     * @return bool `true` if GetOrderResult is set.
      */
     public function isSetGetOrderResult()
     {
-        return !is_null($this->_fields['GetOrderResult']['FieldValue']);
+        return $this->_fields['GetOrderResult']['FieldValue'] !== null;
     }
 
     /**
      * Set the value of GetOrderResult, return this.
      *
-     * @param getOrderResult
-     *             The new value to set.
+     * @param MarketplaceWebServiceOrders_Model_GetOrderResult $value The new value to set.
      *
-     * @return $this This instance.
+     * @return $this
      */
     public function withGetOrderResult($value)
     {
@@ -110,7 +115,7 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata $value responseMetadata
+     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata $value
      * @return $this This instance
      */
     public function setResponseMetadata($value)
@@ -122,20 +127,18 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return bool `true` if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
-        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+        return $this->_fields['ResponseMetadata']['FieldValue'] !== null;
     }
 
     /**
      * Set the value of ResponseMetadata, return this.
      *
-     * @param responseMetadata
-     *             The new value to set.
-     *
-     * @return $this This instance.
+     * @param mixed $value The new value to set.
+     * @return $this
      */
     public function withResponseMetadata($value)
     {
@@ -156,7 +159,7 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata $value responseHeaderMetadata
+     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata $value
      * @return $this This instance
      */
     public function setResponseHeaderMetadata($value)
@@ -168,34 +171,29 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return bool `true` if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {
-        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+        return $this->_fields['ResponseHeaderMetadata']['FieldValue'] !== null;
     }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
      *
-     * @param responseHeaderMetadata
-     *             The new value to set.
-     *
-     * @return $this This instance.
+     * @param mixed $value The new value to set.
+     * @return $this
      */
     public function withResponseHeaderMetadata($value)
     {
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
-
     /**
      * Construct MarketplaceWebServiceOrders_Model_GetOrderResponse from XML string
      *
-     * @param $xml
-     *        XML string to construct from
+     * @param string $xml XML string to construct from
      * @return MarketplaceWebServiceOrders_Model_GetOrderResponse
-     * @throws Exception
      */
     public static function fromXML($xml)
     {
@@ -203,14 +201,11 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetOrderResponse']");
-        if ($response->length == 1) {
-            return new MarketplaceWebServiceOrders_Model_GetOrderResponse(($response->item(0)));
-        } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceOrders_Model_GetOrderResponse from provided XML. 
-                                  Make sure that GetOrderResponse is a root element");
+        if($response->length === 1) {
+            return new MarketplaceWebServiceOrders_Model_GetOrderResponse($response->item(0));
         }
+        throw new RuntimeException('Unable to construct MarketplaceWebServiceOrders_Model_GetOrderResponse from provided XML. Make sure that GetOrderResponse is a root element');
     }
-
     /**
      * XML Representation for this object
      *
@@ -218,10 +213,10 @@ class MarketplaceWebServiceOrders_Model_GetOrderResponse extends MarketplaceWebS
      */
     public function toXML()
     {
-        $xml = "";
-        $xml .= "<GetOrderResponse xmlns=\"https://mws.amazonservices.com/Orders/2013-09-01\">";
+        $xml = '';
+        $xml .= '<GetOrderResponse xmlns="https://mws.amazonservices.com/Orders/2013-09-01">';
         $xml .= $this->_toXMLFragment();
-        $xml .= "</GetOrderResponse>";
+        $xml .= '</GetOrderResponse>';
         return $xml;
     }
 

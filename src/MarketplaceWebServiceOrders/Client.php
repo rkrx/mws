@@ -78,14 +78,16 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-
-
+    
     /**
      * Convert GetOrderRequest to name value pairs
+     *
+     * @param MarketplaceWebServiceOrders_Model_GetOrderRequest $request
+     * @return array
      */
     private function _convertGetOrder($request) {
 
-        $parameters = array();
+        $parameters = [];
         $parameters['Action'] = 'GetOrder';
         if ($request->isSetSellerId()) {
             $parameters['SellerId'] =  $request->getSellerId();
@@ -123,9 +125,12 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-
+    
     /**
      * Convert GetServiceStatusRequest to name value pairs
+     *
+     * @param MarketplaceWebServiceOrders_Model_GetServiceStatusRequest $request
+     * @return array
      */
     private function _convertGetServiceStatus($request) {
 
@@ -167,10 +172,12 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-
-
+    
     /**
      * Convert ListOrderItemsRequest to name value pairs
+     *
+     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsRequest $request
+     * @return array
      */
     private function _convertListOrderItems($request) {
 
@@ -216,9 +223,12 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-
+    
     /**
      * Convert ListOrderItemsByNextTokenRequest to name value pairs
+     *
+     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest $request
+     * @return array
      */
     private function _convertListOrderItemsByNextToken($request)
     {
@@ -262,9 +272,12 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-
+    
     /**
      * Convert ListOrdersRequest to name value pairs
+     *
+     * @param MarketplaceWebServiceOrders_Model_ListOrdersRequest $request
+     * @return array
      */
     private function _convertListOrders($request) {
 
@@ -347,10 +360,12 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
     }
-
-
+    
     /**
      * Convert ListOrdersByNextTokenRequest to name value pairs
+     *
+     * @param MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest $request
+     * @return array
      */
     private function _convertListOrdersByNextToken($request) {
 
@@ -392,7 +407,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
 	 */
     public function __construct($awsAccessKeyId, $awsSecretAccessKey, $applicationName, $applicationVersion, $config = null)
     {
-        if(version_compare(PHP_VERSION, '5.6.0', '<')) {
+        if(PHP_VERSION_ID < 50600) {
             iconv_set_encoding('output_encoding', 'UTF-8');
             iconv_set_encoding('input_encoding', 'UTF-8');
             iconv_set_encoding('internal_encoding', 'UTF-8');
@@ -734,11 +749,14 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         }
         return $statusCode;
     }
-
+    
     /**
      * Tries to determine some valid headers indicating this response
      * has content.  In this case
      * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
+     *
+     * @param string $headers
+     * @return bool
      */
     private function _httpHeadersHaveContent($headers){
         return (
@@ -748,8 +766,11 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
     }
     
     /**
-    *  extract a ResponseHeaderMetadata object from the raw headers
-    */
+     *  extract a ResponseHeaderMetadata object from the raw headers
+     *
+     * @param string $rawHeaders
+     * @return MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata
+     */
     private function _extractResponseHeaderMetadata($rawHeaders){
         $inputHeaders = preg_split("/\r\n|\n|\r/", $rawHeaders);
         $headers = array();
@@ -803,7 +824,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
     private function _pauseOnRetry($retries)
     {
         if ($retries <= $this->_config['MaxErrorRetry']) {
-            $delay = (int) (pow(4, $retries) * 100000);
+            $delay = ((4 ** $retries) * 100000);
             usleep($delay);
             return true;
         }
@@ -893,7 +914,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
     /**
      * Calculate String to Sign for SignatureVersion 2
      * @param array $parameters request parameters
-     * @return String to Sign
+     * @return string to Sign
      */
     private function _calculateStringToSignV2(array $parameters)
     {
@@ -926,7 +947,6 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * @param string $key
      * @param string $algorithm
      * @return string
-     * @throws Exception
      */
     private function _sign($data, $key, $algorithm)
     {
@@ -948,9 +968,12 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
     {
         return gmdate("Y-m-d\\TH:i:s.\\0\\0\\0\\Z", time());
     }
-
+    
     /**
      * Formats date as ISO 8601 timestamp
+     *
+     * @param DateTimeInterface $dateTime
+     * @return string
      */
     private function getFormattedTimestamp($dateTime)
     {
