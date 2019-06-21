@@ -1,28 +1,35 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
 
 /**
+ *  @see MarketplaceWebServiceOrders_Model
+ */
+
+require_once (dirname(__FILE__) . '/../Model.php');
+
+
+/**
  * MarketplaceWebServiceOrders_Model_InvoiceData
- *
+ * 
  * Properties:
  * <ul>
- *
+ * 
  * <li>InvoiceRequirement: string</li>
  * <li>BuyerSelectedInvoiceCategory: string</li>
  * <li>InvoiceTitle: string</li>
@@ -30,18 +37,18 @@
  *
  * </ul>
  */
-class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServiceOrders_Model
-{
+
+ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-        $this->_fields = array(
-            'InvoiceRequirement' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'BuyerSelectedInvoiceCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'InvoiceTitle' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'InvoiceInformation' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'InvoiceRequirement' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'BuyerSelectedInvoiceCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'InvoiceTitle' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'InvoiceInformation' => array('FieldValue' => null, 'FieldType' => 'string'),
+    );
+    parent::__construct($data);
     }
 
     /**
@@ -57,8 +64,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
     /**
      * Set the value of the InvoiceRequirement property.
      *
-     * @param string $value invoiceRequirement
-     * @return $this This instance
+     * @param string invoiceRequirement
+     * @return this instance
      */
     public function setInvoiceRequirement($value)
     {
@@ -73,8 +80,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      */
     public function isSetInvoiceRequirement()
     {
-        return !is_null($this->_fields['InvoiceRequirement']['FieldValue']);
-    }
+                return !is_null($this->_fields['InvoiceRequirement']['FieldValue']);
+            }
 
     /**
      * Set the value of InvoiceRequirement, return this.
@@ -82,7 +89,7 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      * @param invoiceRequirement
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withInvoiceRequirement($value)
     {
@@ -103,8 +110,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
     /**
      * Set the value of the BuyerSelectedInvoiceCategory property.
      *
-     * @param string $value buyerSelectedInvoiceCategory
-     * @return $this This instance
+     * @param string buyerSelectedInvoiceCategory
+     * @return this instance
      */
     public function setBuyerSelectedInvoiceCategory($value)
     {
@@ -119,8 +126,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      */
     public function isSetBuyerSelectedInvoiceCategory()
     {
-        return !is_null($this->_fields['BuyerSelectedInvoiceCategory']['FieldValue']);
-    }
+                return !is_null($this->_fields['BuyerSelectedInvoiceCategory']['FieldValue']);
+            }
 
     /**
      * Set the value of BuyerSelectedInvoiceCategory, return this.
@@ -128,7 +135,7 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      * @param buyerSelectedInvoiceCategory
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withBuyerSelectedInvoiceCategory($value)
     {
@@ -149,8 +156,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
     /**
      * Set the value of the InvoiceTitle property.
      *
-     * @param string $value invoiceTitle
-     * @return $this This instance
+     * @param string invoiceTitle
+     * @return this instance
      */
     public function setInvoiceTitle($value)
     {
@@ -165,8 +172,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      */
     public function isSetInvoiceTitle()
     {
-        return !is_null($this->_fields['InvoiceTitle']['FieldValue']);
-    }
+                return !is_null($this->_fields['InvoiceTitle']['FieldValue']);
+            }
 
     /**
      * Set the value of InvoiceTitle, return this.
@@ -174,7 +181,7 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      * @param invoiceTitle
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withInvoiceTitle($value)
     {
@@ -195,8 +202,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
     /**
      * Set the value of the InvoiceInformation property.
      *
-     * @param string $value invoiceInformation
-     * @return $this This instance
+     * @param string invoiceInformation
+     * @return this instance
      */
     public function setInvoiceInformation($value)
     {
@@ -211,8 +218,8 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      */
     public function isSetInvoiceInformation()
     {
-        return !is_null($this->_fields['InvoiceInformation']['FieldValue']);
-    }
+                return !is_null($this->_fields['InvoiceInformation']['FieldValue']);
+            }
 
     /**
      * Set the value of InvoiceInformation, return this.
@@ -220,7 +227,7 @@ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServic
      * @param invoiceInformation
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withInvoiceInformation($value)
     {

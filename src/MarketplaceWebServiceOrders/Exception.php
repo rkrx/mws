@@ -66,7 +66,7 @@ class MarketplaceWebServiceOrders_Exception extends RuntimeException
                 $this->_errorCode = $exception->getErrorCode();
                 $this->_errorType = $exception->getErrorType();
                 $this->_requestId = $exception->getRequestId();
-                $this->_xml = $exception->getXML();
+                $this->_xml= $exception->getXML();
                 $this->_responseHeaderMetadata = $exception->getResponseHeaderMetadata();
             }
         } else {
@@ -91,8 +91,7 @@ class MarketplaceWebServiceOrders_Exception extends RuntimeException
      *
      * @return string Error Code returned by the service
      */
-    public function getErrorCode()
-    {
+    public function getErrorCode(){
         return $this->_errorCode;
     }
 
@@ -102,8 +101,7 @@ class MarketplaceWebServiceOrders_Exception extends RuntimeException
      * @return string Error Type returned by the service.
      * Possible types:  Sender, Receiver or Unknown
      */
-    public function getErrorType()
-    {
+    public function getErrorType(){
         return $this->_errorType;
     }
 
@@ -112,8 +110,7 @@ class MarketplaceWebServiceOrders_Exception extends RuntimeException
      *
      * @return string Error message
      */
-    public function getErrorMessage()
-    {
+    public function getErrorMessage() {
         return $this->_message;
     }
 
@@ -124,8 +121,7 @@ class MarketplaceWebServiceOrders_Exception extends RuntimeException
      *
      * @return int status code returned by the service
      */
-    public function getStatusCode()
-    {
+    public function getStatusCode() {
         return $this->_statusCode;
     }
 
@@ -134,8 +130,7 @@ class MarketplaceWebServiceOrders_Exception extends RuntimeException
      *
      * @return string XML returned by the service
      */
-    public function getXML()
-    {
+    public function getXML() {
         return $this->_xml;
     }
 
@@ -144,13 +139,11 @@ class MarketplaceWebServiceOrders_Exception extends RuntimeException
      *
      * @return string Request ID returned by the service
      */
-    public function getRequestId()
-    {
+    public function getRequestId() {
         return $this->_requestId;
     }
 
-    public function getResponseHeaderMetadata()
-    {
-        return $this->_responseHeaderMetadata;
+    public function getResponseHeaderMetadata() {
+      return $this->_responseHeaderMetadata;
     }
 }

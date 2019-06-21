@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once __DIR__ . '/../Model.php';
+require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
@@ -39,25 +39,22 @@ require_once __DIR__ . '/../Model.php';
 
     public function __construct($data = null)
     {
-        $this->_fields = [
-            'Orders' => [
-                'FieldValue' => [],
-                'FieldType' => ['MarketplaceWebServiceOrders_Model_Order'],
-                'ListMemberName' => 'Order'
-            ],
-        ];
-        parent::__construct($data);
+    $this->_fields = array (
+    'Orders' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Order'), 'ListMemberName' => 'Order'),
+    );
+    parent::__construct($data);
     }
 
     /**
      * Get the value of the Orders property.
      *
-     * @return MarketplaceWebServiceOrders_Model_Order[]
+     * @return List<Order> Orders.
      */
     public function getOrders()
     {
-        if($this->_fields['Orders']['FieldValue'] === null) {
-            $this->_fields['Orders']['FieldValue'] = [];
+        if ($this->_fields['Orders']['FieldValue'] == null)
+        {
+            $this->_fields['Orders']['FieldValue'] = array();
         }
         return $this->_fields['Orders']['FieldValue'];
     }
@@ -65,13 +62,13 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of the Orders property.
      *
-     * @param array $value
-     * @return $this
+     * @param array orders
+     * @return this instance
      */
     public function setOrders($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = [$value];
+            $value = array ($value);
         }
         $this->_fields['Orders']['FieldValue'] = $value;
         return $this;
@@ -82,29 +79,33 @@ require_once __DIR__ . '/../Model.php';
      */
     public function unsetOrders()
     {
-        $this->_fields['Orders']['FieldValue'] = [];
+        $this->_fields['Orders']['FieldValue'] = array();
     }
 
     /**
      * Check to see if Orders is set.
      *
-     * @return bool `true` if Orders is set.
+     * @return true if Orders is set.
      */
     public function isSetOrders()
     {
-        return !empty($this->_fields['Orders']['FieldValue']);
-    }
+                return !empty($this->_fields['Orders']['FieldValue']);
+            }
 
     /**
      * Add values for Orders, return this.
      *
-     * @param MarketplaceWebServiceOrders_Model_Order[] $orders
+     * @param orders
+     *             New values to add.
      *
-     * @return $this
+     * @return This instance.
      */
-    public function withOrders(...$orders)
+    public function withOrders()
     {
-        $this->_fields['Orders']['FieldValue'] = $orders;
+        foreach (func_get_args() as $Orders)
+        {
+            $this->_fields['Orders']['FieldValue'][] = $Orders;
+        }
         return $this;
     }
 

@@ -21,15 +21,15 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once __DIR__ . '/../Model.php';
+require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
  * MarketplaceWebServiceOrders_Model_Address
- *
+ * 
  * Properties:
  * <ul>
- *
+ * 
  * <li>Name: string</li>
  * <li>AddressLine1: string</li>
  * <li>AddressLine2: string</li>
@@ -47,33 +47,32 @@ require_once __DIR__ . '/../Model.php';
  * </ul>
  */
 
-class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrders_Model
-{
+ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrders_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = [
-            'Name' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'AddressLine1' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'AddressLine2' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'AddressLine3' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'City' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'County' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'District' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'StateOrRegion' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'Municipality' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'PostalCode' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'CountryCode' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'Phone' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'AddressType' => ['FieldValue' => null, 'FieldType' => 'string'],
-        ];
-        
-        parent::__construct($data);
+    $this->_fields = array (
+    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'AddressLine1' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'AddressLine2' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'AddressLine3' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'City' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'County' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'District' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'StateOrRegion' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Municipality' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'PostalCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'CountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Phone' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'AddressType' => array('FieldValue' => null, 'FieldType' => 'string'),
+    );
+    parent::__construct($data);
     }
 
     /**
      * Get the value of the Name property.
      *
-     * @return string Name.
+     * @return String Name.
      */
     public function getName()
     {
@@ -83,8 +82,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the Name property.
      *
-     * @param string $value name
-     * @return $this This instance
+     * @param string name
+     * @return this instance
      */
     public function setName($value)
     {
@@ -95,18 +94,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if Name is set.
      *
-     * @return bool `true` if Name is set.
+     * @return true if Name is set.
      */
     public function isSetName()
     {
-        return $this->_fields['Name']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['Name']['FieldValue']);
+            }
 
     /**
      * Set the value of Name, return this.
      *
-     * @param string $value The new value to set.
-     * @return $this
+     * @param name
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withName($value)
     {
@@ -117,7 +118,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the AddressLine1 property.
      *
-     * @return string AddressLine1.
+     * @return String AddressLine1.
      */
     public function getAddressLine1()
     {
@@ -127,8 +128,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the AddressLine1 property.
      *
-     * @param string $value addressLine1
-     * @return $this This instance
+     * @param string addressLine1
+     * @return this instance
      */
     public function setAddressLine1($value)
     {
@@ -139,18 +140,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if AddressLine1 is set.
      *
-     * @return bool `true` if AddressLine1 is set.
+     * @return true if AddressLine1 is set.
      */
     public function isSetAddressLine1()
     {
-        return $this->_fields['AddressLine1']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['AddressLine1']['FieldValue']);
+            }
 
     /**
      * Set the value of AddressLine1, return this.
      *
-     * @param mixed $value addressLine1 The new value to set.
-     * @return $this
+     * @param addressLine1
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withAddressLine1($value)
     {
@@ -161,7 +164,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the AddressLine2 property.
      *
-     * @return string AddressLine2.
+     * @return String AddressLine2.
      */
     public function getAddressLine2()
     {
@@ -171,8 +174,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the AddressLine2 property.
      *
-     * @param string $value addressLine2
-     * @return $this
+     * @param string addressLine2
+     * @return this instance
      */
     public function setAddressLine2($value)
     {
@@ -183,18 +186,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if AddressLine2 is set.
      *
-     * @return bool `true` if AddressLine2 is set.
+     * @return true if AddressLine2 is set.
      */
     public function isSetAddressLine2()
     {
-        return $this->_fields['AddressLine2']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['AddressLine2']['FieldValue']);
+            }
 
     /**
      * Set the value of AddressLine2, return this.
      *
-     * @param mixed $value The new value to set.
-     * @return $this
+     * @param addressLine2
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withAddressLine2($value)
     {
@@ -205,7 +210,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the AddressLine3 property.
      *
-     * @return string AddressLine3.
+     * @return String AddressLine3.
      */
     public function getAddressLine3()
     {
@@ -216,7 +221,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
      * Set the value of the AddressLine3 property.
      *
      * @param string addressLine3
-     * @return $this
+     * @return this instance
      */
     public function setAddressLine3($value)
     {
@@ -227,18 +232,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if AddressLine3 is set.
      *
-     * @return bool `true` if AddressLine3 is set.
+     * @return true if AddressLine3 is set.
      */
     public function isSetAddressLine3()
     {
-        return $this->_fields['AddressLine3']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['AddressLine3']['FieldValue']);
+            }
 
     /**
      * Set the value of AddressLine3, return this.
      *
-     * @param mixed $value The new value to set.
-     * @return $this
+     * @param addressLine3
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withAddressLine3($value)
     {
@@ -249,7 +256,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the City property.
      *
-     * @return string City.
+     * @return String City.
      */
     public function getCity()
     {
@@ -260,7 +267,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
      * Set the value of the City property.
      *
      * @param string city
-     * @return $this
+     * @return this instance
      */
     public function setCity($value)
     {
@@ -271,18 +278,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if City is set.
      *
-     * @return bool `true` if City is set.
+     * @return true if City is set.
      */
     public function isSetCity()
     {
-        return $this->_fields['City']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['City']['FieldValue']);
+            }
 
     /**
      * Set the value of City, return this.
      *
-     * @param string $value The new value to set.
-     * @return $this
+     * @param city
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withCity($value)
     {
@@ -293,7 +302,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the County property.
      *
-     * @return string County.
+     * @return String County.
      */
     public function getCounty()
     {
@@ -304,7 +313,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
      * Set the value of the County property.
      *
      * @param string county
-     * @return $this
+     * @return this instance
      */
     public function setCounty($value)
     {
@@ -315,18 +324,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if County is set.
      *
-     * @return bool `true` if County is set.
+     * @return true if County is set.
      */
     public function isSetCounty()
     {
-        return $this->_fields['County']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['County']['FieldValue']);
+            }
 
     /**
      * Set the value of County, return this.
      *
-     * @param mixed $value
-     * @return $this
+     * @param county
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withCounty($value)
     {
@@ -337,7 +348,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the District property.
      *
-     * @return string District.
+     * @return String District.
      */
     public function getDistrict()
     {
@@ -347,8 +358,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the District property.
      *
-     * @param string $value district
-     * @return $this
+     * @param string district
+     * @return this instance
      */
     public function setDistrict($value)
     {
@@ -359,18 +370,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if District is set.
      *
-     * @return bool `true` if District is set.
+     * @return true if District is set.
      */
     public function isSetDistrict()
     {
-        return $this->_fields['District']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['District']['FieldValue']);
+            }
 
     /**
      * Set the value of District, return this.
      *
-     * @param mixed $value
-     * @return $this
+     * @param district
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withDistrict($value)
     {
@@ -381,7 +394,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the StateOrRegion property.
      *
-     * @return string StateOrRegion.
+     * @return String StateOrRegion.
      */
     public function getStateOrRegion()
     {
@@ -391,8 +404,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the StateOrRegion property.
      *
-     * @param string $value
-     * @return $this instance
+     * @param string stateOrRegion
+     * @return this instance
      */
     public function setStateOrRegion($value)
     {
@@ -403,18 +416,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if StateOrRegion is set.
      *
-     * @return bool `true` if StateOrRegion is set.
+     * @return true if StateOrRegion is set.
      */
     public function isSetStateOrRegion()
     {
-        return $this->_fields['StateOrRegion']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['StateOrRegion']['FieldValue']);
+            }
 
     /**
      * Set the value of StateOrRegion, return this.
      *
-     * @param mixed $value
-     * @return $this
+     * @param stateOrRegion
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withStateOrRegion($value)
     {
@@ -425,7 +440,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the Municipality property.
      *
-     * @return string Municipality.
+     * @return String Municipality.
      */
     public function getMunicipality()
     {
@@ -435,8 +450,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the Municipality property.
      *
-     * @param string $value
-     * @return $this
+     * @param string municipality
+     * @return this instance
      */
     public function setMunicipality($value)
     {
@@ -447,18 +462,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if Municipality is set.
      *
-     * @return bool `true` if Municipality is set.
+     * @return true if Municipality is set.
      */
     public function isSetMunicipality()
     {
-        return $this->_fields['Municipality']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['Municipality']['FieldValue']);
+            }
 
     /**
      * Set the value of Municipality, return this.
      *
-     * @param string $value The new value to set.
-     * @return $this
+     * @param municipality
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withMunicipality($value)
     {
@@ -469,7 +486,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the PostalCode property.
      *
-     * @return string PostalCode.
+     * @return String PostalCode.
      */
     public function getPostalCode()
     {
@@ -480,7 +497,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
      * Set the value of the PostalCode property.
      *
      * @param string postalCode
-     * @return $this
+     * @return this instance
      */
     public function setPostalCode($value)
     {
@@ -491,18 +508,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if PostalCode is set.
      *
-     * @return bool `true` if PostalCode is set.
+     * @return true if PostalCode is set.
      */
     public function isSetPostalCode()
     {
-        return $this->_fields['PostalCode']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['PostalCode']['FieldValue']);
+            }
 
     /**
      * Set the value of PostalCode, return this.
      *
-     * @param string $value The new value to set.
-     * @return $this
+     * @param postalCode
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withPostalCode($value)
     {
@@ -513,7 +532,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the CountryCode property.
      *
-     * @return string CountryCode.
+     * @return String CountryCode.
      */
     public function getCountryCode()
     {
@@ -523,8 +542,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the CountryCode property.
      *
-     * @param string $value
-     * @return $this
+     * @param string countryCode
+     * @return this instance
      */
     public function setCountryCode($value)
     {
@@ -535,18 +554,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if CountryCode is set.
      *
-     * @return bool `true` if CountryCode is set.
+     * @return true if CountryCode is set.
      */
     public function isSetCountryCode()
     {
-        return $this->_fields['CountryCode']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['CountryCode']['FieldValue']);
+            }
 
     /**
      * Set the value of CountryCode, return this.
      *
-     * @param string $value The new value to set.
-     * @return $this
+     * @param countryCode
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withCountryCode($value)
     {
@@ -557,7 +578,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the Phone property.
      *
-     * @return string Phone.
+     * @return String Phone.
      */
     public function getPhone()
     {
@@ -568,7 +589,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
      * Set the value of the Phone property.
      *
      * @param string phone
-     * @return $this
+     * @return this instance
      */
     public function setPhone($value)
     {
@@ -579,18 +600,20 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if Phone is set.
      *
-     * @return bool `true` if Phone is set.
+     * @return true if Phone is set.
      */
     public function isSetPhone()
     {
-        return $this->_fields['Phone']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['Phone']['FieldValue']);
+            }
 
     /**
      * Set the value of Phone, return this.
      *
-     * @param string $value The new value to set.
-     * @return $this
+     * @param phone
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withPhone($value)
     {
@@ -601,7 +624,7 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Get the value of the AddressType property.
      *
-     * @return string
+     * @return String AddressType.
      */
     public function getAddressType()
     {
@@ -611,8 +634,8 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Set the value of the AddressType property.
      *
-     * @param string $value
-     * @return $this
+     * @param string addressType
+     * @return this instance
      */
     public function setAddressType($value)
     {
@@ -623,22 +646,25 @@ class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrd
     /**
      * Check to see if AddressType is set.
      *
-     * @return bool `true` if AddressType is set.
+     * @return true if AddressType is set.
      */
     public function isSetAddressType()
     {
-        return $this->_fields['AddressType']['FieldValue'] !== null;
-    }
+                return !is_null($this->_fields['AddressType']['FieldValue']);
+            }
 
     /**
      * Set the value of AddressType, return this.
      *
-     * @param string $value The new value to set.
-     * @return $this
+     * @param addressType
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withAddressType($value)
     {
         $this->setAddressType($value);
         return $this;
     }
+
 }
