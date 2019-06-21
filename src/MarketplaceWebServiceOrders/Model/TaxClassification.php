@@ -25,117 +25,117 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MarketplaceWebServiceOrders_Model_Money
+ * MarketplaceWebServiceOrders_Model_TaxClassification
  * 
  * Properties:
  * <ul>
  * 
- * <li>CurrencyCode: string</li>
- * <li>Amount: string</li>
+ * <li>Name: string</li>
+ * <li>Value: string</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Money extends MarketplaceWebServiceOrders_Model {
+ class MarketplaceWebServiceOrders_Model_TaxClassification extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'CurrencyCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Amount' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
     );
     parent::__construct($data);
     }
 
     /**
-     * Get the value of the CurrencyCode property.
+     * Get the value of the Name property.
      *
-     * @return String CurrencyCode.
+     * @return String Name.
      */
-    public function getCurrencyCode()
+    public function getName()
     {
-        return $this->_fields['CurrencyCode']['FieldValue'];
+        return $this->_fields['Name']['FieldValue'];
     }
 
     /**
-     * Set the value of the CurrencyCode property.
+     * Set the value of the Name property.
      *
-     * @param string currencyCode
+     * @param string name
      * @return this instance
      */
-    public function setCurrencyCode($value)
+    public function setName($value)
     {
-        $this->_fields['CurrencyCode']['FieldValue'] = $value;
+        $this->_fields['Name']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Check to see if CurrencyCode is set.
+     * Check to see if Name is set.
      *
-     * @return true if CurrencyCode is set.
+     * @return true if Name is set.
      */
-    public function isSetCurrencyCode()
+    public function isSetName()
     {
-                return !is_null($this->_fields['CurrencyCode']['FieldValue']);
+                return !is_null($this->_fields['Name']['FieldValue']);
             }
 
     /**
-     * Set the value of CurrencyCode, return this.
+     * Set the value of Name, return this.
      *
-     * @param currencyCode
+     * @param name
      *             The new value to set.
      *
      * @return This instance.
      */
-    public function withCurrencyCode($value)
+    public function withName($value)
     {
-        $this->setCurrencyCode($value);
+        $this->setName($value);
         return $this;
     }
 
     /**
-     * Get the value of the Amount property.
+     * Get the value of the Value property.
      *
-     * @return String Amount.
+     * @return String Value.
      */
-    public function getAmount()
+    public function getValue()
     {
-        return $this->_fields['Amount']['FieldValue'];
+        return $this->_fields['Value']['FieldValue'];
     }
 
     /**
-     * Set the value of the Amount property.
+     * Set the value of the Value property.
      *
-     * @param string amount
+     * @param string value
      * @return this instance
      */
-    public function setAmount($value)
+    public function setValue($value)
     {
-        $this->_fields['Amount']['FieldValue'] = $value;
+        $this->_fields['Value']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Check to see if Amount is set.
+     * Check to see if Value is set.
      *
-     * @return true if Amount is set.
+     * @return true if Value is set.
      */
-    public function isSetAmount()
+    public function isSetValue()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
+                return !is_null($this->_fields['Value']['FieldValue']);
             }
 
     /**
-     * Set the value of Amount, return this.
+     * Set the value of Value, return this.
      *
-     * @param amount
+     * @param value
      *             The new value to set.
      *
      * @return This instance.
      */
-    public function withAmount($value)
+    public function withValue($value)
     {
-        $this->setAmount($value);
+        $this->setValue($value);
         return $this;
     }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ListOrderItemsByNextTokenResponse xmlns="https://mws.amazonservices.com/Orders/2013-09-01">
-    <ListOrderItemsByNextTokenResult>
+   <ListOrderItemsByNextTokenResult>
         <NextToken>String</NextToken>
         <AmazonOrderId>String</AmazonOrderId>
         <OrderItems>
@@ -11,6 +11,16 @@
                 <Title>String</Title>
                 <QuantityOrdered>1</QuantityOrdered>
                 <QuantityShipped>1</QuantityShipped>
+                <ProductInfo>
+                    <NumberOfItems>1</NumberOfItems>
+                </ProductInfo>
+                <PointsGranted>
+                    <PointsNumber>1</PointsNumber>
+                    <PointsMonetaryValue>
+                        <CurrencyCode>String</CurrencyCode>
+                        <Amount>String</Amount>
+                    </PointsMonetaryValue>
+                </PointsGranted>
                 <ItemPrice>
                     <CurrencyCode>String</CurrencyCode>
                     <Amount>String</Amount>
@@ -39,10 +49,18 @@
                     <CurrencyCode>String</CurrencyCode>
                     <Amount>String</Amount>
                 </ShippingDiscount>
+                <ShippingDiscountTax>
+                    <CurrencyCode>String</CurrencyCode>
+                    <Amount>String</Amount>
+                </ShippingDiscountTax>
                 <PromotionDiscount>
                     <CurrencyCode>String</CurrencyCode>
                     <Amount>String</Amount>
                 </PromotionDiscount>
+                <PromotionDiscountTax>
+                    <CurrencyCode>String</CurrencyCode>
+                    <Amount>String</Amount>
+                </PromotionDiscountTax>
                 <PromotionIds>
                     <PromotionId>String</PromotionId>
                 </PromotionIds>
@@ -54,6 +72,7 @@
                     <CurrencyCode>String</CurrencyCode>
                     <Amount>String</Amount>
                 </CODFeeDiscount>
+                <IsGift>true</IsGift>
                 <GiftMessageText>String</GiftMessageText>
                 <GiftWrapLevel>String</GiftWrapLevel>
                 <InvoiceData>
@@ -67,10 +86,20 @@
                 <ConditionSubtypeId>String</ConditionSubtypeId>
                 <ScheduledDeliveryStartDate>String</ScheduledDeliveryStartDate>
                 <ScheduledDeliveryEndDate>String</ScheduledDeliveryEndDate>
+                <PriceDesignation>String</PriceDesignation>
+                <BuyerCustomizedInfo>
+                    <CustomizedURL>String</CustomizedURL>
+                </BuyerCustomizedInfo>
+                <TaxCollection>
+                    <Model>String</Model>
+                    <ResponsibleParty>String</ResponsibleParty>
+                </TaxCollection>
+                <SerialNumberRequired>true</SerialNumberRequired>
+                <IsTransparency>true</IsTransparency>
             </OrderItem>
         </OrderItems>
     </ListOrderItemsByNextTokenResult>
-    <ResponseMetadata>
+   <ResponseMetadata>
         <RequestId>String</RequestId>
     </ResponseMetadata>
 </ListOrderItemsByNextTokenResponse>

@@ -1,28 +1,35 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
 
 /**
+ *  @see MarketplaceWebServiceOrders_Model
+ */
+
+require_once (dirname(__FILE__) . '/../Model.php');
+
+
+/**
  * MarketplaceWebServiceOrders_Model_ListOrdersResult
- *
+ * 
  * Properties:
  * <ul>
- *
+ * 
  * <li>NextToken: string</li>
  * <li>CreatedBefore: string</li>
  * <li>LastUpdatedBefore: string</li>
@@ -30,22 +37,18 @@
  *
  * </ul>
  */
-class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebServiceOrders_Model
-{
+
+ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-        $this->_fields = array(
-            'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'CreatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Orders' => array(
-                'FieldValue' => array(),
-                'FieldType' => array('MarketplaceWebServiceOrders_Model_Order'),
-                'ListMemberName' => 'Order'
-            ),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'CreatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Orders' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Order'), 'ListMemberName' => 'Order'),
+    );
+    parent::__construct($data);
     }
 
     /**
@@ -61,8 +64,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
     /**
      * Set the value of the NextToken property.
      *
-     * @param string $value nextToken
-     * @return $this This instance
+     * @param string nextToken
+     * @return this instance
      */
     public function setNextToken($value)
     {
@@ -77,8 +80,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      */
     public function isSetNextToken()
     {
-        return !is_null($this->_fields['NextToken']['FieldValue']);
-    }
+                return !is_null($this->_fields['NextToken']['FieldValue']);
+            }
 
     /**
      * Set the value of NextToken, return this.
@@ -86,7 +89,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      * @param nextToken
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withNextToken($value)
     {
@@ -97,7 +100,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
     /**
      * Get the value of the CreatedBefore property.
      *
-     * @return string CreatedBefore.
+     * @return XMLGregorianCalendar CreatedBefore.
      */
     public function getCreatedBefore()
     {
@@ -107,8 +110,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
     /**
      * Set the value of the CreatedBefore property.
      *
-     * @param string $value createdBefore
-     * @return $this This instance
+     * @param string createdBefore
+     * @return this instance
      */
     public function setCreatedBefore($value)
     {
@@ -123,8 +126,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      */
     public function isSetCreatedBefore()
     {
-        return !is_null($this->_fields['CreatedBefore']['FieldValue']);
-    }
+                return !is_null($this->_fields['CreatedBefore']['FieldValue']);
+            }
 
     /**
      * Set the value of CreatedBefore, return this.
@@ -132,7 +135,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      * @param createdBefore
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withCreatedBefore($value)
     {
@@ -143,7 +146,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
     /**
      * Get the value of the LastUpdatedBefore property.
      *
-     * @return string LastUpdatedBefore.
+     * @return XMLGregorianCalendar LastUpdatedBefore.
      */
     public function getLastUpdatedBefore()
     {
@@ -153,8 +156,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
     /**
      * Set the value of the LastUpdatedBefore property.
      *
-     * @param string $value lastUpdatedBefore
-     * @return $this This instance
+     * @param string lastUpdatedBefore
+     * @return this instance
      */
     public function setLastUpdatedBefore($value)
     {
@@ -169,8 +172,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      */
     public function isSetLastUpdatedBefore()
     {
-        return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
-    }
+                return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
+            }
 
     /**
      * Set the value of LastUpdatedBefore, return this.
@@ -178,7 +181,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      * @param lastUpdatedBefore
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withLastUpdatedBefore($value)
     {
@@ -189,11 +192,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
     /**
      * Get the value of the Orders property.
      *
-     * @return MarketplaceWebServiceOrders_Model_Order[] Orders.
+     * @return List<Order> Orders.
      */
     public function getOrders()
     {
-        if ($this->_fields['Orders']['FieldValue'] == null) {
+        if ($this->_fields['Orders']['FieldValue'] == null)
+        {
             $this->_fields['Orders']['FieldValue'] = array();
         }
         return $this->_fields['Orders']['FieldValue'];
@@ -202,13 +206,13 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
     /**
      * Set the value of the Orders property.
      *
-     * @param array $value orders
-     * @return $this This instance
+     * @param array orders
+     * @return this instance
      */
     public function setOrders($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['Orders']['FieldValue'] = $value;
         return $this;
@@ -229,8 +233,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      */
     public function isSetOrders()
     {
-        return !empty($this->_fields['Orders']['FieldValue']);
-    }
+                return !empty($this->_fields['Orders']['FieldValue']);
+            }
 
     /**
      * Add values for Orders, return this.
@@ -238,11 +242,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebS
      * @param orders
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withOrders()
     {
-        foreach (func_get_args() as $Orders) {
+        foreach (func_get_args() as $Orders)
+        {
             $this->_fields['Orders']['FieldValue'][] = $Orders;
         }
         return $this;

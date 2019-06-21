@@ -1,60 +1,58 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
 
 /**
+ *  @see MarketplaceWebServiceOrders_Model
+ */
+
+require_once (dirname(__FILE__) . '/../Model.php');
+
+
+/**
  * MarketplaceWebServiceOrders_Model_ListOrderItemsResponse
- *
+ * 
  * Properties:
  * <ul>
- *
+ * 
  * <li>ListOrderItemsResult: MarketplaceWebServiceOrders_Model_ListOrderItemsResult</li>
  * <li>ResponseMetadata: MarketplaceWebServiceOrders_Model_ResponseMetadata</li>
  * <li>ResponseHeaderMetadata: MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends MarketplaceWebServiceOrders_Model
-{
+
+ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-        $this->_fields = array(
-            'ListOrderItemsResult' => array(
-                'FieldValue' => null,
-                'FieldType' => 'MarketplaceWebServiceOrders_Model_ListOrderItemsResult'
-            ),
-            'ResponseMetadata' => array(
-                'FieldValue' => null,
-                'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'
-            ),
-            'ResponseHeaderMetadata' => array(
-                'FieldValue' => null,
-                'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'
-            ),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'ListOrderItemsResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ListOrderItemsResult'),
+    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'),
+    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'),
+    );
+    parent::__construct($data);
     }
 
     /**
      * Get the value of the ListOrderItemsResult property.
      *
-     * @return MarketplaceWebServiceOrders_Model_ListOrderItemsResult ListOrderItemsResult.
+     * @return ListOrderItemsResult ListOrderItemsResult.
      */
     public function getListOrderItemsResult()
     {
@@ -64,8 +62,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
     /**
      * Set the value of the ListOrderItemsResult property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsResult $value listOrderItemsResult
-     * @return $this This instance
+     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsResult listOrderItemsResult
+     * @return this instance
      */
     public function setListOrderItemsResult($value)
     {
@@ -80,8 +78,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
      */
     public function isSetListOrderItemsResult()
     {
-        return !is_null($this->_fields['ListOrderItemsResult']['FieldValue']);
-    }
+                return !is_null($this->_fields['ListOrderItemsResult']['FieldValue']);
+            }
 
     /**
      * Set the value of ListOrderItemsResult, return this.
@@ -89,7 +87,7 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
      * @param listOrderItemsResult
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withListOrderItemsResult($value)
     {
@@ -100,7 +98,7 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
     /**
      * Get the value of the ResponseMetadata property.
      *
-     * @return MarketplaceWebServiceOrders_Model_ResponseMetadata ResponseMetadata.
+     * @return ResponseMetadata ResponseMetadata.
      */
     public function getResponseMetadata()
     {
@@ -110,8 +108,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
     /**
      * Set the value of the ResponseMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata $value responseMetadata
-     * @return $this This instance
+     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata responseMetadata
+     * @return this instance
      */
     public function setResponseMetadata($value)
     {
@@ -126,8 +124,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
      */
     public function isSetResponseMetadata()
     {
-        return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-    }
+                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
+            }
 
     /**
      * Set the value of ResponseMetadata, return this.
@@ -135,7 +133,7 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
      * @param responseMetadata
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withResponseMetadata($value)
     {
@@ -146,7 +144,7 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
     /**
      * Get the value of the ResponseHeaderMetadata property.
      *
-     * @return MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata ResponseHeaderMetadata.
+     * @return ResponseHeaderMetadata ResponseHeaderMetadata.
      */
     public function getResponseHeaderMetadata()
     {
@@ -156,8 +154,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
     /**
      * Set the value of the ResponseHeaderMetadata property.
      *
-     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata $value responseHeaderMetadata
-     * @return $this This instance
+     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata responseHeaderMetadata
+     * @return this instance
      */
     public function setResponseHeaderMetadata($value)
     {
@@ -172,8 +170,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
      */
     public function isSetResponseHeaderMetadata()
     {
-        return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-    }
+                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
+            }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
@@ -181,21 +179,20 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
      * @param responseHeaderMetadata
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withResponseHeaderMetadata($value)
     {
         $this->setResponseHeaderMetadata($value);
         return $this;
     }
-
     /**
      * Construct MarketplaceWebServiceOrders_Model_ListOrderItemsResponse from XML string
-     *
+     * 
      * @param $xml
      *        XML string to construct from
-     * @return MarketplaceWebServiceOrders_Model_ListOrderItemsResponse
-     * @throws Exception
+     *
+     * @return MarketplaceWebServiceOrders_Model_ListOrderItemsResponse 
      */
     public static function fromXML($xml)
     {
@@ -204,19 +201,18 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResponse extends Marketpla
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListOrderItemsResponse']");
         if ($response->length == 1) {
-            return new MarketplaceWebServiceOrders_Model_ListOrderItemsResponse(($response->item(0)));
+            return new MarketplaceWebServiceOrders_Model_ListOrderItemsResponse(($response->item(0))); 
         } else {
             throw new Exception ("Unable to construct MarketplaceWebServiceOrders_Model_ListOrderItemsResponse from provided XML. 
                                   Make sure that ListOrderItemsResponse is a root element");
         }
     }
-
     /**
      * XML Representation for this object
-     *
+     * 
      * @return string XML for this object
      */
-    public function toXML()
+    public function toXML() 
     {
         $xml = "";
         $xml .= "<ListOrderItemsResponse xmlns=\"https://mws.amazonservices.com/Orders/2013-09-01\">";

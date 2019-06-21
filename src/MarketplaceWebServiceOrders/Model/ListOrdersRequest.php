@@ -1,28 +1,35 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
 
 /**
+ *  @see MarketplaceWebServiceOrders_Model
+ */
+
+require_once (dirname(__FILE__) . '/../Model.php');
+
+
+/**
  * MarketplaceWebServiceOrders_Model_ListOrdersRequest
- *
+ * 
  * Properties:
  * <ul>
- *
+ * 
  * <li>SellerId: string</li>
  * <li>MWSAuthToken: string</li>
  * <li>CreatedAfter: string</li>
@@ -37,47 +44,33 @@
  * <li>SellerOrderId: string</li>
  * <li>MaxResultsPerPage: int</li>
  * <li>TFMShipmentStatus: array</li>
+ * <li>EasyShipShipmentStatus: array</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWebServiceOrders_Model
-{
+
+ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-        $this->_fields = array(
-            'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'CreatedAfter' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'CreatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'LastUpdatedAfter' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'OrderStatus' => array(
-                'FieldValue' => array(),
-                'FieldType' => array('string'),
-                'ListMemberName' => 'Status'
-            ),
-            'MarketplaceId' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Id'),
-            'FulfillmentChannel' => array(
-                'FieldValue' => array(),
-                'FieldType' => array('string'),
-                'ListMemberName' => 'Channel'
-            ),
-            'PaymentMethod' => array(
-                'FieldValue' => array(),
-                'FieldType' => array('string'),
-                'ListMemberName' => 'Method'
-            ),
-            'BuyerEmail' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MaxResultsPerPage' => array('FieldValue' => null, 'FieldType' => 'int'),
-            'TFMShipmentStatus' => array(
-                'FieldValue' => array(),
-                'FieldType' => array('string'),
-                'ListMemberName' => 'Status'
-            ),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'CreatedAfter' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'CreatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'LastUpdatedAfter' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'OrderStatus' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Status'),
+    'MarketplaceId' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Id'),
+    'FulfillmentChannel' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Channel'),
+    'PaymentMethod' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Method'),
+    'BuyerEmail' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'MaxResultsPerPage' => array('FieldValue' => null, 'FieldType' => 'int'),
+    'TFMShipmentStatus' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Status'),
+    'EasyShipShipmentStatus' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Status'),
+    );
+    parent::__construct($data);
     }
 
     /**
@@ -93,8 +86,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the SellerId property.
      *
-     * @param string $value sellerId
-     * @return $this This instance
+     * @param string sellerId
+     * @return this instance
      */
     public function setSellerId($value)
     {
@@ -109,8 +102,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetSellerId()
     {
-        return !is_null($this->_fields['SellerId']['FieldValue']);
-    }
+                return !is_null($this->_fields['SellerId']['FieldValue']);
+            }
 
     /**
      * Set the value of SellerId, return this.
@@ -118,7 +111,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param sellerId
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withSellerId($value)
     {
@@ -139,8 +132,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the MWSAuthToken property.
      *
-     * @param string $value mwsAuthToken
-     * @return $this This instance
+     * @param string mwsAuthToken
+     * @return this instance
      */
     public function setMWSAuthToken($value)
     {
@@ -155,8 +148,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetMWSAuthToken()
     {
-        return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-    }
+                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+            }
 
     /**
      * Set the value of MWSAuthToken, return this.
@@ -164,7 +157,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param mwsAuthToken
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withMWSAuthToken($value)
     {
@@ -175,7 +168,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the CreatedAfter property.
      *
-     * @return string CreatedAfter.
+     * @return XMLGregorianCalendar CreatedAfter.
      */
     public function getCreatedAfter()
     {
@@ -185,8 +178,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the CreatedAfter property.
      *
-     * @param string $value createdAfter
-     * @return $this This instance
+     * @param string createdAfter
+     * @return this instance
      */
     public function setCreatedAfter($value)
     {
@@ -201,8 +194,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetCreatedAfter()
     {
-        return !is_null($this->_fields['CreatedAfter']['FieldValue']);
-    }
+                return !is_null($this->_fields['CreatedAfter']['FieldValue']);
+            }
 
     /**
      * Set the value of CreatedAfter, return this.
@@ -210,7 +203,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param createdAfter
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withCreatedAfter($value)
     {
@@ -221,7 +214,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the CreatedBefore property.
      *
-     * @return string CreatedBefore.
+     * @return XMLGregorianCalendar CreatedBefore.
      */
     public function getCreatedBefore()
     {
@@ -231,8 +224,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the CreatedBefore property.
      *
-     * @param string $value createdBefore
-     * @return $this This instance
+     * @param string createdBefore
+     * @return this instance
      */
     public function setCreatedBefore($value)
     {
@@ -247,8 +240,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetCreatedBefore()
     {
-        return !is_null($this->_fields['CreatedBefore']['FieldValue']);
-    }
+                return !is_null($this->_fields['CreatedBefore']['FieldValue']);
+            }
 
     /**
      * Set the value of CreatedBefore, return this.
@@ -256,7 +249,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param createdBefore
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withCreatedBefore($value)
     {
@@ -267,7 +260,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the LastUpdatedAfter property.
      *
-     * @return string LastUpdatedAfter.
+     * @return XMLGregorianCalendar LastUpdatedAfter.
      */
     public function getLastUpdatedAfter()
     {
@@ -277,8 +270,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the LastUpdatedAfter property.
      *
-     * @param string $value lastUpdatedAfter
-     * @return $this This instance
+     * @param string lastUpdatedAfter
+     * @return this instance
      */
     public function setLastUpdatedAfter($value)
     {
@@ -293,8 +286,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetLastUpdatedAfter()
     {
-        return !is_null($this->_fields['LastUpdatedAfter']['FieldValue']);
-    }
+                return !is_null($this->_fields['LastUpdatedAfter']['FieldValue']);
+            }
 
     /**
      * Set the value of LastUpdatedAfter, return this.
@@ -302,7 +295,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param lastUpdatedAfter
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withLastUpdatedAfter($value)
     {
@@ -313,7 +306,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the LastUpdatedBefore property.
      *
-     * @return string LastUpdatedBefore.
+     * @return XMLGregorianCalendar LastUpdatedBefore.
      */
     public function getLastUpdatedBefore()
     {
@@ -323,8 +316,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the LastUpdatedBefore property.
      *
-     * @param string $value lastUpdatedBefore
-     * @return $this This instance
+     * @param string lastUpdatedBefore
+     * @return this instance
      */
     public function setLastUpdatedBefore($value)
     {
@@ -339,8 +332,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetLastUpdatedBefore()
     {
-        return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
-    }
+                return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
+            }
 
     /**
      * Set the value of LastUpdatedBefore, return this.
@@ -348,7 +341,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param lastUpdatedBefore
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withLastUpdatedBefore($value)
     {
@@ -359,11 +352,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the OrderStatus property.
      *
-     * @return String[] OrderStatus.
+     * @return List<String> OrderStatus.
      */
     public function getOrderStatus()
     {
-        if ($this->_fields['OrderStatus']['FieldValue'] == null) {
+        if ($this->_fields['OrderStatus']['FieldValue'] == null)
+        {
             $this->_fields['OrderStatus']['FieldValue'] = array();
         }
         return $this->_fields['OrderStatus']['FieldValue'];
@@ -372,13 +366,13 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the OrderStatus property.
      *
-     * @param array $value orderStatus
-     * @return $this This instance
+     * @param array orderStatus
+     * @return this instance
      */
     public function setOrderStatus($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['OrderStatus']['FieldValue'] = $value;
         return $this;
@@ -399,8 +393,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetOrderStatus()
     {
-        return !empty($this->_fields['OrderStatus']['FieldValue']);
-    }
+                return !empty($this->_fields['OrderStatus']['FieldValue']);
+            }
 
     /**
      * Add values for OrderStatus, return this.
@@ -408,11 +402,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param orderStatus
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withOrderStatus()
     {
-        foreach (func_get_args() as $OrderStatus) {
+        foreach (func_get_args() as $OrderStatus)
+        {
             $this->_fields['OrderStatus']['FieldValue'][] = $OrderStatus;
         }
         return $this;
@@ -421,11 +416,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the MarketplaceId property.
      *
-     * @return String[] MarketplaceId.
+     * @return List<String> MarketplaceId.
      */
     public function getMarketplaceId()
     {
-        if ($this->_fields['MarketplaceId']['FieldValue'] == null) {
+        if ($this->_fields['MarketplaceId']['FieldValue'] == null)
+        {
             $this->_fields['MarketplaceId']['FieldValue'] = array();
         }
         return $this->_fields['MarketplaceId']['FieldValue'];
@@ -434,13 +430,13 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the MarketplaceId property.
      *
-     * @param array $value marketplaceId
-     * @return $this This instance
+     * @param array marketplaceId
+     * @return this instance
      */
     public function setMarketplaceId($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['MarketplaceId']['FieldValue'] = $value;
         return $this;
@@ -461,8 +457,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetMarketplaceId()
     {
-        return !empty($this->_fields['MarketplaceId']['FieldValue']);
-    }
+                return !empty($this->_fields['MarketplaceId']['FieldValue']);
+            }
 
     /**
      * Add values for MarketplaceId, return this.
@@ -470,11 +466,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param marketplaceId
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withMarketplaceId()
     {
-        foreach (func_get_args() as $MarketplaceId) {
+        foreach (func_get_args() as $MarketplaceId)
+        {
             $this->_fields['MarketplaceId']['FieldValue'][] = $MarketplaceId;
         }
         return $this;
@@ -483,11 +480,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the FulfillmentChannel property.
      *
-     * @return String[] FulfillmentChannel.
+     * @return List<String> FulfillmentChannel.
      */
     public function getFulfillmentChannel()
     {
-        if ($this->_fields['FulfillmentChannel']['FieldValue'] == null) {
+        if ($this->_fields['FulfillmentChannel']['FieldValue'] == null)
+        {
             $this->_fields['FulfillmentChannel']['FieldValue'] = array();
         }
         return $this->_fields['FulfillmentChannel']['FieldValue'];
@@ -496,13 +494,13 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the FulfillmentChannel property.
      *
-     * @param array $value fulfillmentChannel
-     * @return $this This instance
+     * @param array fulfillmentChannel
+     * @return this instance
      */
     public function setFulfillmentChannel($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['FulfillmentChannel']['FieldValue'] = $value;
         return $this;
@@ -523,8 +521,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetFulfillmentChannel()
     {
-        return !empty($this->_fields['FulfillmentChannel']['FieldValue']);
-    }
+                return !empty($this->_fields['FulfillmentChannel']['FieldValue']);
+            }
 
     /**
      * Add values for FulfillmentChannel, return this.
@@ -532,11 +530,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param fulfillmentChannel
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withFulfillmentChannel()
     {
-        foreach (func_get_args() as $FulfillmentChannel) {
+        foreach (func_get_args() as $FulfillmentChannel)
+        {
             $this->_fields['FulfillmentChannel']['FieldValue'][] = $FulfillmentChannel;
         }
         return $this;
@@ -545,11 +544,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the PaymentMethod property.
      *
-     * @return String[] PaymentMethod.
+     * @return List<String> PaymentMethod.
      */
     public function getPaymentMethod()
     {
-        if ($this->_fields['PaymentMethod']['FieldValue'] == null) {
+        if ($this->_fields['PaymentMethod']['FieldValue'] == null)
+        {
             $this->_fields['PaymentMethod']['FieldValue'] = array();
         }
         return $this->_fields['PaymentMethod']['FieldValue'];
@@ -558,13 +558,13 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the PaymentMethod property.
      *
-     * @param array $value paymentMethod
-     * @return $this This instance
+     * @param array paymentMethod
+     * @return this instance
      */
     public function setPaymentMethod($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['PaymentMethod']['FieldValue'] = $value;
         return $this;
@@ -585,8 +585,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetPaymentMethod()
     {
-        return !empty($this->_fields['PaymentMethod']['FieldValue']);
-    }
+                return !empty($this->_fields['PaymentMethod']['FieldValue']);
+            }
 
     /**
      * Add values for PaymentMethod, return this.
@@ -594,11 +594,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param paymentMethod
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withPaymentMethod()
     {
-        foreach (func_get_args() as $PaymentMethod) {
+        foreach (func_get_args() as $PaymentMethod)
+        {
             $this->_fields['PaymentMethod']['FieldValue'][] = $PaymentMethod;
         }
         return $this;
@@ -617,8 +618,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the BuyerEmail property.
      *
-     * @param string $value buyerEmail
-     * @return $this This instance
+     * @param string buyerEmail
+     * @return this instance
      */
     public function setBuyerEmail($value)
     {
@@ -633,8 +634,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetBuyerEmail()
     {
-        return !is_null($this->_fields['BuyerEmail']['FieldValue']);
-    }
+                return !is_null($this->_fields['BuyerEmail']['FieldValue']);
+            }
 
     /**
      * Set the value of BuyerEmail, return this.
@@ -642,7 +643,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param buyerEmail
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withBuyerEmail($value)
     {
@@ -663,8 +664,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the SellerOrderId property.
      *
-     * @param string $value sellerOrderId
-     * @return $this This instance
+     * @param string sellerOrderId
+     * @return this instance
      */
     public function setSellerOrderId($value)
     {
@@ -679,8 +680,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetSellerOrderId()
     {
-        return !is_null($this->_fields['SellerOrderId']['FieldValue']);
-    }
+                return !is_null($this->_fields['SellerOrderId']['FieldValue']);
+            }
 
     /**
      * Set the value of SellerOrderId, return this.
@@ -688,7 +689,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param sellerOrderId
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withSellerOrderId($value)
     {
@@ -709,8 +710,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the MaxResultsPerPage property.
      *
-     * @param int $value maxResultsPerPage
-     * @return $this This instance
+     * @param int maxResultsPerPage
+     * @return this instance
      */
     public function setMaxResultsPerPage($value)
     {
@@ -725,8 +726,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetMaxResultsPerPage()
     {
-        return !is_null($this->_fields['MaxResultsPerPage']['FieldValue']);
-    }
+                return !is_null($this->_fields['MaxResultsPerPage']['FieldValue']);
+            }
 
     /**
      * Set the value of MaxResultsPerPage, return this.
@@ -734,7 +735,7 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param maxResultsPerPage
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withMaxResultsPerPage($value)
     {
@@ -745,11 +746,12 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Get the value of the TFMShipmentStatus property.
      *
-     * @return String[] TFMShipmentStatus.
+     * @return List<String> TFMShipmentStatus.
      */
     public function getTFMShipmentStatus()
     {
-        if ($this->_fields['TFMShipmentStatus']['FieldValue'] == null) {
+        if ($this->_fields['TFMShipmentStatus']['FieldValue'] == null)
+        {
             $this->_fields['TFMShipmentStatus']['FieldValue'] = array();
         }
         return $this->_fields['TFMShipmentStatus']['FieldValue'];
@@ -758,13 +760,13 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
     /**
      * Set the value of the TFMShipmentStatus property.
      *
-     * @param array|string $value tfmShipmentStatus
-     * @return $this This instance
+     * @param array tfmShipmentStatus
+     * @return this instance
      */
     public function setTFMShipmentStatus($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['TFMShipmentStatus']['FieldValue'] = $value;
         return $this;
@@ -785,8 +787,8 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      */
     public function isSetTFMShipmentStatus()
     {
-        return !empty($this->_fields['TFMShipmentStatus']['FieldValue']);
-    }
+                return !empty($this->_fields['TFMShipmentStatus']['FieldValue']);
+            }
 
     /**
      * Add values for TFMShipmentStatus, return this.
@@ -794,12 +796,77 @@ class MarketplaceWebServiceOrders_Model_ListOrdersRequest extends MarketplaceWeb
      * @param tfmShipmentStatus
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withTFMShipmentStatus()
     {
-        foreach (func_get_args() as $TFMShipmentStatus) {
+        foreach (func_get_args() as $TFMShipmentStatus)
+        {
             $this->_fields['TFMShipmentStatus']['FieldValue'][] = $TFMShipmentStatus;
+        }
+        return $this;
+    }
+
+    /**
+     * Get the value of the EasyShipShipmentStatus property.
+     *
+     * @return List<String> EasyShipShipmentStatus.
+     */
+    public function getEasyShipShipmentStatus()
+    {
+        if ($this->_fields['EasyShipShipmentStatus']['FieldValue'] == null)
+        {
+            $this->_fields['EasyShipShipmentStatus']['FieldValue'] = array();
+        }
+        return $this->_fields['EasyShipShipmentStatus']['FieldValue'];
+    }
+
+    /**
+     * Set the value of the EasyShipShipmentStatus property.
+     *
+     * @param array easyShipShipmentStatus
+     * @return this instance
+     */
+    public function setEasyShipShipmentStatus($value)
+    {
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
+        }
+        $this->_fields['EasyShipShipmentStatus']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Clear EasyShipShipmentStatus.
+     */
+    public function unsetEasyShipShipmentStatus()
+    {
+        $this->_fields['EasyShipShipmentStatus']['FieldValue'] = array();
+    }
+
+    /**
+     * Check to see if EasyShipShipmentStatus is set.
+     *
+     * @return true if EasyShipShipmentStatus is set.
+     */
+    public function isSetEasyShipShipmentStatus()
+    {
+                return !empty($this->_fields['EasyShipShipmentStatus']['FieldValue']);
+            }
+
+    /**
+     * Add values for EasyShipShipmentStatus, return this.
+     *
+     * @param easyShipShipmentStatus
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withEasyShipShipmentStatus()
+    {
+        foreach (func_get_args() as $EasyShipShipmentStatus)
+        {
+            $this->_fields['EasyShipShipmentStatus']['FieldValue'][] = $EasyShipShipmentStatus;
         }
         return $this;
     }

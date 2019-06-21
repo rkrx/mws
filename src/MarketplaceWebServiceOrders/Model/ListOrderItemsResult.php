@@ -1,49 +1,52 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
 
 /**
+ *  @see MarketplaceWebServiceOrders_Model
+ */
+
+require_once (dirname(__FILE__) . '/../Model.php');
+
+
+/**
  * MarketplaceWebServiceOrders_Model_ListOrderItemsResult
- *
+ * 
  * Properties:
  * <ul>
- *
+ * 
  * <li>NextToken: string</li>
  * <li>AmazonOrderId: string</li>
  * <li>OrderItems: array</li>
  *
  * </ul>
  */
-class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends MarketplaceWebServiceOrders_Model
-{
+
+ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-        $this->_fields = array(
-            'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'OrderItems' => array(
-                'FieldValue' => array(),
-                'FieldType' => array('MarketplaceWebServiceOrders_Model_OrderItem'),
-                'ListMemberName' => 'OrderItem'
-            ),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_OrderItem'), 'ListMemberName' => 'OrderItem'),
+    );
+    parent::__construct($data);
     }
 
     /**
@@ -59,8 +62,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
     /**
      * Set the value of the NextToken property.
      *
-     * @param string $value nextToken
-     * @return $this This instance
+     * @param string nextToken
+     * @return this instance
      */
     public function setNextToken($value)
     {
@@ -75,8 +78,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
      */
     public function isSetNextToken()
     {
-        return !is_null($this->_fields['NextToken']['FieldValue']);
-    }
+                return !is_null($this->_fields['NextToken']['FieldValue']);
+            }
 
     /**
      * Set the value of NextToken, return this.
@@ -84,7 +87,7 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
      * @param nextToken
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withNextToken($value)
     {
@@ -105,8 +108,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
     /**
      * Set the value of the AmazonOrderId property.
      *
-     * @param string $value amazonOrderId
-     * @return $this This instance
+     * @param string amazonOrderId
+     * @return this instance
      */
     public function setAmazonOrderId($value)
     {
@@ -121,8 +124,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
      */
     public function isSetAmazonOrderId()
     {
-        return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-    }
+                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
+            }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -130,7 +133,7 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
      * @param amazonOrderId
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withAmazonOrderId($value)
     {
@@ -141,11 +144,12 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
     /**
      * Get the value of the OrderItems property.
      *
-     * @return MarketplaceWebServiceOrders_Model_OrderItem[] OrderItems.
+     * @return List<OrderItem> OrderItems.
      */
     public function getOrderItems()
     {
-        if ($this->_fields['OrderItems']['FieldValue'] == null) {
+        if ($this->_fields['OrderItems']['FieldValue'] == null)
+        {
             $this->_fields['OrderItems']['FieldValue'] = array();
         }
         return $this->_fields['OrderItems']['FieldValue'];
@@ -154,13 +158,13 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
     /**
      * Set the value of the OrderItems property.
      *
-     * @param array $value orderItems
-     * @return $this This instance
+     * @param array orderItems
+     * @return this instance
      */
     public function setOrderItems($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['OrderItems']['FieldValue'] = $value;
         return $this;
@@ -181,8 +185,8 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
      */
     public function isSetOrderItems()
     {
-        return !empty($this->_fields['OrderItems']['FieldValue']);
-    }
+                return !empty($this->_fields['OrderItems']['FieldValue']);
+            }
 
     /**
      * Add values for OrderItems, return this.
@@ -190,11 +194,12 @@ class MarketplaceWebServiceOrders_Model_ListOrderItemsResult extends Marketplace
      * @param orderItems
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withOrderItems()
     {
-        foreach (func_get_args() as $OrderItems) {
+        foreach (func_get_args() as $OrderItems)
+        {
             $this->_fields['OrderItems']['FieldValue'][] = $OrderItems;
         }
         return $this;

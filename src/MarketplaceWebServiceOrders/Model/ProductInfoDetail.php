@@ -25,69 +25,69 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MarketplaceWebServiceOrders_Model_ResponseMetadata
+ * MarketplaceWebServiceOrders_Model_ProductInfoDetail
  * 
  * Properties:
  * <ul>
  * 
- * <li>RequestId: string</li>
+ * <li>NumberOfItems: int</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_ResponseMetadata extends MarketplaceWebServiceOrders_Model {
+ class MarketplaceWebServiceOrders_Model_ProductInfoDetail extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'RequestId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'NumberOfItems' => array('FieldValue' => null, 'FieldType' => 'int'),
     );
     parent::__construct($data);
     }
 
     /**
-     * Get the value of the RequestId property.
+     * Get the value of the NumberOfItems property.
      *
-     * @return String RequestId.
+     * @return Integer NumberOfItems.
      */
-    public function getRequestId()
+    public function getNumberOfItems()
     {
-        return $this->_fields['RequestId']['FieldValue'];
+        return $this->_fields['NumberOfItems']['FieldValue'];
     }
 
     /**
-     * Set the value of the RequestId property.
+     * Set the value of the NumberOfItems property.
      *
-     * @param string requestId
+     * @param int numberOfItems
      * @return this instance
      */
-    public function setRequestId($value)
+    public function setNumberOfItems($value)
     {
-        $this->_fields['RequestId']['FieldValue'] = $value;
+        $this->_fields['NumberOfItems']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Check to see if RequestId is set.
+     * Check to see if NumberOfItems is set.
      *
-     * @return true if RequestId is set.
+     * @return true if NumberOfItems is set.
      */
-    public function isSetRequestId()
+    public function isSetNumberOfItems()
     {
-                return !is_null($this->_fields['RequestId']['FieldValue']);
+                return !is_null($this->_fields['NumberOfItems']['FieldValue']);
             }
 
     /**
-     * Set the value of RequestId, return this.
+     * Set the value of NumberOfItems, return this.
      *
-     * @param requestId
+     * @param numberOfItems
      *             The new value to set.
      *
      * @return This instance.
      */
-    public function withRequestId($value)
+    public function withNumberOfItems($value)
     {
-        $this->setRequestId($value);
+        $this->setNumberOfItems($value);
         return $this;
     }
 

@@ -1,22 +1,22 @@
 <?php
-
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
+
 interface  MarketplaceWebServiceOrders_Interface
 {
 
@@ -35,8 +35,7 @@ interface  MarketplaceWebServiceOrders_Interface
 
     /**
      * Get Service Status
-     * Returns the service status of a particular MWS API section. The operation
-     *        takes no input.
+     * Returns the service status of a particular MWS API section. The operation takes no input.
      *
      * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_GetServiceStatus request or MarketplaceWebServiceOrders_Model_GetServiceStatus object itself
      * @see MarketplaceWebServiceOrders_Model_GetServiceStatusRequest

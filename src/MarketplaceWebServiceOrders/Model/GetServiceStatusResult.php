@@ -1,28 +1,35 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License");
+ * Copyright 2009-2018 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- * You may not use this file except in compliance with the License.
+ * You may not use this file except in compliance with the License. 
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
  * @category Amazon
  * @package  Marketplace Web Service Orders
  * @version  2013-09-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 15:31:59 GMT 2014
+ * Library Version: 2018-10-31
+ * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
 
 /**
+ *  @see MarketplaceWebServiceOrders_Model
+ */
+
+require_once (dirname(__FILE__) . '/../Model.php');
+
+
+/**
  * MarketplaceWebServiceOrders_Model_GetServiceStatusResult
- *
+ * 
  * Properties:
  * <ul>
- *
+ * 
  * <li>Status: string</li>
  * <li>Timestamp: string</li>
  * <li>MessageId: string</li>
@@ -30,22 +37,18 @@
  *
  * </ul>
  */
-class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends MarketplaceWebServiceOrders_Model
-{
+
+ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-        $this->_fields = array(
-            'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Messages' => array(
-                'FieldValue' => array(),
-                'FieldType' => array('MarketplaceWebServiceOrders_Model_Message'),
-                'ListMemberName' => 'Message'
-            ),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Messages' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Message'), 'ListMemberName' => 'Message'),
+    );
+    parent::__construct($data);
     }
 
     /**
@@ -61,8 +64,8 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
     /**
      * Set the value of the Status property.
      *
-     * @param string $value status
-     * @return $this This instance
+     * @param string status
+     * @return this instance
      */
     public function setStatus($value)
     {
@@ -77,8 +80,8 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      */
     public function isSetStatus()
     {
-        return !is_null($this->_fields['Status']['FieldValue']);
-    }
+                return !is_null($this->_fields['Status']['FieldValue']);
+            }
 
     /**
      * Set the value of Status, return this.
@@ -86,7 +89,7 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      * @param status
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withStatus($value)
     {
@@ -97,7 +100,7 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
     /**
      * Get the value of the Timestamp property.
      *
-     * @return string Timestamp.
+     * @return XMLGregorianCalendar Timestamp.
      */
     public function getTimestamp()
     {
@@ -107,8 +110,8 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
     /**
      * Set the value of the Timestamp property.
      *
-     * @param string $value timestamp
-     * @return $this This instance
+     * @param string timestamp
+     * @return this instance
      */
     public function setTimestamp($value)
     {
@@ -123,8 +126,8 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      */
     public function isSetTimestamp()
     {
-        return !is_null($this->_fields['Timestamp']['FieldValue']);
-    }
+                return !is_null($this->_fields['Timestamp']['FieldValue']);
+            }
 
     /**
      * Set the value of Timestamp, return this.
@@ -132,7 +135,7 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      * @param timestamp
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withTimestamp($value)
     {
@@ -153,8 +156,8 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
     /**
      * Set the value of the MessageId property.
      *
-     * @param string $value messageId
-     * @return $this This instance
+     * @param string messageId
+     * @return this instance
      */
     public function setMessageId($value)
     {
@@ -169,8 +172,8 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      */
     public function isSetMessageId()
     {
-        return !is_null($this->_fields['MessageId']['FieldValue']);
-    }
+                return !is_null($this->_fields['MessageId']['FieldValue']);
+            }
 
     /**
      * Set the value of MessageId, return this.
@@ -178,7 +181,7 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      * @param messageId
      *             The new value to set.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withMessageId($value)
     {
@@ -189,11 +192,12 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
     /**
      * Get the value of the Messages property.
      *
-     * @return MarketplaceWebServiceOrders_Model_Message[] Messages.
+     * @return List<Message> Messages.
      */
     public function getMessages()
     {
-        if ($this->_fields['Messages']['FieldValue'] == null) {
+        if ($this->_fields['Messages']['FieldValue'] == null)
+        {
             $this->_fields['Messages']['FieldValue'] = array();
         }
         return $this->_fields['Messages']['FieldValue'];
@@ -202,13 +206,13 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
     /**
      * Set the value of the Messages property.
      *
-     * @param array $value messages
-     * @return $this This instance
+     * @param array messages
+     * @return this instance
      */
     public function setMessages($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array($value);
+            $value = array ($value);
         }
         $this->_fields['Messages']['FieldValue'] = $value;
         return $this;
@@ -229,8 +233,8 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      */
     public function isSetMessages()
     {
-        return !empty($this->_fields['Messages']['FieldValue']);
-    }
+                return !empty($this->_fields['Messages']['FieldValue']);
+            }
 
     /**
      * Add values for Messages, return this.
@@ -238,11 +242,12 @@ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends Marketpla
      * @param messages
      *             New values to add.
      *
-     * @return $this This instance.
+     * @return This instance.
      */
     public function withMessages()
     {
-        foreach (func_get_args() as $Messages) {
+        foreach (func_get_args() as $Messages)
+        {
             $this->_fields['Messages']['FieldValue'][] = $Messages;
         }
         return $this;
