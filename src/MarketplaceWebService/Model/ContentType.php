@@ -53,6 +53,9 @@ class MarketplaceWebService_Model_ContentType extends MarketplaceWebService_Mode
 
     public function isSetParameters()
     {
+        if(empty($this->fields['Parameters']['FieldValue']) || !is_array($this->fields['Parameters']['FieldValue'])) {
+            return false;
+        }
         return count($this->fields['Parameters']['FieldValue']) > 0;
     }
 
