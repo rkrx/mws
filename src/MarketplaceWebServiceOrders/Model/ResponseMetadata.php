@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -48,7 +48,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the RequestId property.
      *
-     * @return String RequestId.
+     * @return string RequestId.
      */
     public function getRequestId()
     {
@@ -59,7 +59,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the RequestId property.
      *
      * @param string requestId
-     * @return this instance
+     * @return $this
      */
     public function setRequestId($value)
     {
@@ -70,12 +70,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if RequestId is set.
      *
-     * @return true if RequestId is set.
+     * @return bool `true` if RequestId is set.
      */
     public function isSetRequestId()
     {
-                return !is_null($this->_fields['RequestId']['FieldValue']);
-            }
+        return ($this->_fields['RequestId']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of RequestId, return this.
@@ -83,7 +83,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param requestId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withRequestId($value)
     {

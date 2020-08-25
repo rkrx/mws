@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -36,23 +36,31 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
  class MarketplaceWebServiceOrders_Model_GetServiceStatusResponse extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'GetServiceStatusResult' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_GetServiceStatusResult'),
-    'ResponseMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'),
-    'ResponseHeaderMetadata' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'GetServiceStatusResult' => [
+                'FieldValue' => null,
+                'FieldType' => 'MarketplaceWebServiceOrders_Model_GetServiceStatusResult'
+            ],
+            'ResponseMetadata' => [
+                'FieldValue' => null,
+                'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseMetadata'
+            ],
+            'ResponseHeaderMetadata' => [
+                'FieldValue' => null,
+                'FieldType' => 'MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata'
+            ],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the GetServiceStatusResult property.
      *
-     * @return GetServiceStatusResult GetServiceStatusResult.
+     * @return MarketplaceWebServiceOrders_Model_GetServiceStatusResult GetServiceStatusResult.
      */
     public function getGetServiceStatusResult()
     {
@@ -63,7 +71,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the GetServiceStatusResult property.
      *
      * @param MarketplaceWebServiceOrders_Model_GetServiceStatusResult getServiceStatusResult
-     * @return this instance
+     * @return $this
      */
     public function setGetServiceStatusResult($value)
     {
@@ -74,20 +82,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GetServiceStatusResult is set.
      *
-     * @return true if GetServiceStatusResult is set.
+     * @return bool `true` if GetServiceStatusResult is set.
      */
     public function isSetGetServiceStatusResult()
     {
-                return !is_null($this->_fields['GetServiceStatusResult']['FieldValue']);
-            }
+        return ($this->_fields['GetServiceStatusResult']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of GetServiceStatusResult, return this.
      *
-     * @param getServiceStatusResult
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param MarketplaceWebServiceOrders_Model_GetServiceStatusResult $value
+     * @return $this
      */
     public function withGetServiceStatusResult($value)
     {
@@ -98,7 +104,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the ResponseMetadata property.
      *
-     * @return ResponseMetadata ResponseMetadata.
+     * @return MarketplaceWebServiceOrders_Model_ResponseMetadata ResponseMetadata.
      */
     public function getResponseMetadata()
     {
@@ -109,7 +115,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ResponseMetadata property.
      *
      * @param MarketplaceWebServiceOrders_Model_ResponseMetadata responseMetadata
-     * @return this instance
+     * @return $this
      */
     public function setResponseMetadata($value)
     {
@@ -120,20 +126,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return bool `true` if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
-                return !is_null($this->_fields['ResponseMetadata']['FieldValue']);
-            }
+        return ($this->_fields['ResponseMetadata']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ResponseMetadata, return this.
      *
-     * @param responseMetadata
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param MarketplaceWebServiceOrders_Model_ResponseMetadata $value
+     * @return $this
      */
     public function withResponseMetadata($value)
     {
@@ -144,7 +148,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the ResponseHeaderMetadata property.
      *
-     * @return ResponseHeaderMetadata ResponseHeaderMetadata.
+     * @return MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata ResponseHeaderMetadata.
      */
     public function getResponseHeaderMetadata()
     {
@@ -155,7 +159,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ResponseHeaderMetadata property.
      *
      * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata responseHeaderMetadata
-     * @return this instance
+     * @return $this
      */
     public function setResponseHeaderMetadata($value)
     {
@@ -166,20 +170,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return bool `true` if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {
-                return !is_null($this->_fields['ResponseHeaderMetadata']['FieldValue']);
-            }
+        return ($this->_fields['ResponseHeaderMetadata']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ResponseHeaderMetadata, return this.
      *
-     * @param responseHeaderMetadata
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param mixed $value The new value to set.
+     * @return $this
      */
     public function withResponseHeaderMetadata($value)
     {
@@ -189,10 +191,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Construct MarketplaceWebServiceOrders_Model_GetServiceStatusResponse from XML string
      * 
-     * @param $xml
-     *        XML string to construct from
-     *
-     * @return MarketplaceWebServiceOrders_Model_GetServiceStatusResponse 
+     * @param string $xml XML string to construct from
+     * @return MarketplaceWebServiceOrders_Model_GetServiceStatusResponse
      */
     public static function fromXML($xml)
     {
@@ -200,12 +200,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
         $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='GetServiceStatusResponse']");
-        if ($response->length == 1) {
-            return new MarketplaceWebServiceOrders_Model_GetServiceStatusResponse(($response->item(0))); 
-        } else {
-            throw new Exception ("Unable to construct MarketplaceWebServiceOrders_Model_GetServiceStatusResponse from provided XML. 
-                                  Make sure that GetServiceStatusResponse is a root element");
+        if ($response->length === 1) {
+            return new MarketplaceWebServiceOrders_Model_GetServiceStatusResponse($response->item(0));
         }
+        throw new RuntimeException('Unable to construct MarketplaceWebServiceOrders_Model_GetServiceStatusResponse from provided XML. '.
+                                   'Make sure that GetServiceStatusResponse is a root element');
     }
     /**
      * XML Representation for this object
@@ -214,11 +213,9 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function toXML() 
     {
-        $xml = "";
-        $xml .= "<GetServiceStatusResponse xmlns=\"https://mws.amazonservices.com/Orders/2013-09-01\">";
+        $xml = '<GetServiceStatusResponse xmlns="https://mws.amazonservices.com/Orders/2013-09-01">';
         $xml .= $this->_toXMLFragment();
-        $xml .= "</GetServiceStatusResponse>";
+        $xml .= '</GetServiceStatusResponse>';
         return $xml;
     }
-
 }

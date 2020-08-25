@@ -21,15 +21,15 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
  * MarketplaceWebServiceOrders_Model_Address
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>Name: string</li>
  * <li>AddressLine1: string</li>
  * <li>AddressLine2: string</li>
@@ -47,32 +47,33 @@ require_once (dirname(__FILE__) . '/../Model.php');
  * </ul>
  */
 
- class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrders_Model {
-
+class MarketplaceWebServiceOrders_Model_Address extends MarketplaceWebServiceOrders_Model
+{
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine1' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine2' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressLine3' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'City' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'County' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'District' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'StateOrRegion' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Municipality' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PostalCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CountryCode' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Phone' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AddressType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'Name' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'AddressLine1' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'AddressLine2' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'AddressLine3' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'City' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'County' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'District' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'StateOrRegion' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'Municipality' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'PostalCode' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'CountryCode' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'Phone' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'AddressType' => ['FieldValue' => null, 'FieldType' => 'string'],
+        ];
+        
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the Name property.
      *
-     * @return String Name.
+     * @return string Name.
      */
     public function getName()
     {
@@ -82,8 +83,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Name property.
      *
-     * @param string name
-     * @return this instance
+     * @param string $value name
+     * @return $this This instance
      */
     public function setName($value)
     {
@@ -94,20 +95,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Name is set.
      *
-     * @return true if Name is set.
+     * @return bool `true` if Name is set.
      */
     public function isSetName()
     {
-                return !is_null($this->_fields['Name']['FieldValue']);
-            }
+        return $this->_fields['Name']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of Name, return this.
      *
-     * @param name
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withName($value)
     {
@@ -118,7 +117,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the AddressLine1 property.
      *
-     * @return String AddressLine1.
+     * @return string AddressLine1.
      */
     public function getAddressLine1()
     {
@@ -128,8 +127,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the AddressLine1 property.
      *
-     * @param string addressLine1
-     * @return this instance
+     * @param string $value addressLine1
+     * @return $this This instance
      */
     public function setAddressLine1($value)
     {
@@ -140,20 +139,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AddressLine1 is set.
      *
-     * @return true if AddressLine1 is set.
+     * @return bool `true` if AddressLine1 is set.
      */
     public function isSetAddressLine1()
     {
-                return !is_null($this->_fields['AddressLine1']['FieldValue']);
-            }
+        return $this->_fields['AddressLine1']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of AddressLine1, return this.
      *
-     * @param addressLine1
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param mixed $value addressLine1 The new value to set.
+     * @return $this
      */
     public function withAddressLine1($value)
     {
@@ -164,7 +161,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the AddressLine2 property.
      *
-     * @return String AddressLine2.
+     * @return string AddressLine2.
      */
     public function getAddressLine2()
     {
@@ -174,8 +171,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the AddressLine2 property.
      *
-     * @param string addressLine2
-     * @return this instance
+     * @param string $value addressLine2
+     * @return $this
      */
     public function setAddressLine2($value)
     {
@@ -186,20 +183,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AddressLine2 is set.
      *
-     * @return true if AddressLine2 is set.
+     * @return bool `true` if AddressLine2 is set.
      */
     public function isSetAddressLine2()
     {
-                return !is_null($this->_fields['AddressLine2']['FieldValue']);
-            }
+        return $this->_fields['AddressLine2']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of AddressLine2, return this.
      *
-     * @param addressLine2
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param mixed $value The new value to set.
+     * @return $this
      */
     public function withAddressLine2($value)
     {
@@ -210,7 +205,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the AddressLine3 property.
      *
-     * @return String AddressLine3.
+     * @return string AddressLine3.
      */
     public function getAddressLine3()
     {
@@ -221,7 +216,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the AddressLine3 property.
      *
      * @param string addressLine3
-     * @return this instance
+     * @return $this
      */
     public function setAddressLine3($value)
     {
@@ -232,20 +227,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AddressLine3 is set.
      *
-     * @return true if AddressLine3 is set.
+     * @return bool `true` if AddressLine3 is set.
      */
     public function isSetAddressLine3()
     {
-                return !is_null($this->_fields['AddressLine3']['FieldValue']);
-            }
+        return $this->_fields['AddressLine3']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of AddressLine3, return this.
      *
-     * @param addressLine3
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param mixed $value The new value to set.
+     * @return $this
      */
     public function withAddressLine3($value)
     {
@@ -256,7 +249,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the City property.
      *
-     * @return String City.
+     * @return string City.
      */
     public function getCity()
     {
@@ -267,7 +260,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the City property.
      *
      * @param string city
-     * @return this instance
+     * @return $this
      */
     public function setCity($value)
     {
@@ -278,20 +271,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if City is set.
      *
-     * @return true if City is set.
+     * @return bool `true` if City is set.
      */
     public function isSetCity()
     {
-                return !is_null($this->_fields['City']['FieldValue']);
-            }
+        return $this->_fields['City']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of City, return this.
      *
-     * @param city
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withCity($value)
     {
@@ -302,7 +293,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the County property.
      *
-     * @return String County.
+     * @return string County.
      */
     public function getCounty()
     {
@@ -313,7 +304,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the County property.
      *
      * @param string county
-     * @return this instance
+     * @return $this
      */
     public function setCounty($value)
     {
@@ -324,20 +315,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if County is set.
      *
-     * @return true if County is set.
+     * @return bool `true` if County is set.
      */
     public function isSetCounty()
     {
-                return !is_null($this->_fields['County']['FieldValue']);
-            }
+        return $this->_fields['County']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of County, return this.
      *
-     * @param county
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param mixed $value
+     * @return $this
      */
     public function withCounty($value)
     {
@@ -348,7 +337,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the District property.
      *
-     * @return String District.
+     * @return string District.
      */
     public function getDistrict()
     {
@@ -358,8 +347,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the District property.
      *
-     * @param string district
-     * @return this instance
+     * @param string $value district
+     * @return $this
      */
     public function setDistrict($value)
     {
@@ -370,20 +359,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if District is set.
      *
-     * @return true if District is set.
+     * @return bool `true` if District is set.
      */
     public function isSetDistrict()
     {
-                return !is_null($this->_fields['District']['FieldValue']);
-            }
+        return ($this->_fields['District']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of District, return this.
      *
-     * @param district
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param mixed $value
+     * @return $this
      */
     public function withDistrict($value)
     {
@@ -394,7 +381,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the StateOrRegion property.
      *
-     * @return String StateOrRegion.
+     * @return string StateOrRegion.
      */
     public function getStateOrRegion()
     {
@@ -404,8 +391,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the StateOrRegion property.
      *
-     * @param string stateOrRegion
-     * @return this instance
+     * @param string $value
+     * @return $this instance
      */
     public function setStateOrRegion($value)
     {
@@ -416,20 +403,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if StateOrRegion is set.
      *
-     * @return true if StateOrRegion is set.
+     * @return bool `true` if StateOrRegion is set.
      */
     public function isSetStateOrRegion()
     {
-                return !is_null($this->_fields['StateOrRegion']['FieldValue']);
-            }
+        return ($this->_fields['StateOrRegion']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of StateOrRegion, return this.
      *
-     * @param stateOrRegion
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param mixed $value
+     * @return $this
      */
     public function withStateOrRegion($value)
     {
@@ -440,7 +425,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Municipality property.
      *
-     * @return String Municipality.
+     * @return string Municipality.
      */
     public function getMunicipality()
     {
@@ -450,8 +435,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Municipality property.
      *
-     * @param string municipality
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setMunicipality($value)
     {
@@ -462,20 +447,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Municipality is set.
      *
-     * @return true if Municipality is set.
+     * @return bool `true` if Municipality is set.
      */
     public function isSetMunicipality()
     {
-                return !is_null($this->_fields['Municipality']['FieldValue']);
-            }
+        return ($this->_fields['Municipality']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Municipality, return this.
      *
-     * @param municipality
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withMunicipality($value)
     {
@@ -486,7 +469,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the PostalCode property.
      *
-     * @return String PostalCode.
+     * @return string PostalCode.
      */
     public function getPostalCode()
     {
@@ -497,7 +480,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PostalCode property.
      *
      * @param string postalCode
-     * @return this instance
+     * @return $this
      */
     public function setPostalCode($value)
     {
@@ -508,20 +491,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PostalCode is set.
      *
-     * @return true if PostalCode is set.
+     * @return bool `true` if PostalCode is set.
      */
     public function isSetPostalCode()
     {
-                return !is_null($this->_fields['PostalCode']['FieldValue']);
-            }
+        return ($this->_fields['PostalCode']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PostalCode, return this.
      *
-     * @param postalCode
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withPostalCode($value)
     {
@@ -532,7 +513,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the CountryCode property.
      *
-     * @return String CountryCode.
+     * @return string CountryCode.
      */
     public function getCountryCode()
     {
@@ -542,8 +523,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the CountryCode property.
      *
-     * @param string countryCode
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setCountryCode($value)
     {
@@ -554,20 +535,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CountryCode is set.
      *
-     * @return true if CountryCode is set.
+     * @return bool `true` if CountryCode is set.
      */
     public function isSetCountryCode()
     {
-                return !is_null($this->_fields['CountryCode']['FieldValue']);
-            }
+        return ($this->_fields['CountryCode']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of CountryCode, return this.
      *
-     * @param countryCode
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withCountryCode($value)
     {
@@ -578,7 +557,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Phone property.
      *
-     * @return String Phone.
+     * @return string Phone.
      */
     public function getPhone()
     {
@@ -589,7 +568,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Phone property.
      *
      * @param string phone
-     * @return this instance
+     * @return $this
      */
     public function setPhone($value)
     {
@@ -600,20 +579,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Phone is set.
      *
-     * @return true if Phone is set.
+     * @return bool `true` if Phone is set.
      */
     public function isSetPhone()
     {
-                return !is_null($this->_fields['Phone']['FieldValue']);
-            }
+        return ($this->_fields['Phone']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Phone, return this.
      *
-     * @param phone
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withPhone($value)
     {
@@ -624,7 +601,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the AddressType property.
      *
-     * @return String AddressType.
+     * @return string
      */
     public function getAddressType()
     {
@@ -634,8 +611,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the AddressType property.
      *
-     * @param string addressType
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setAddressType($value)
     {
@@ -646,25 +623,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AddressType is set.
      *
-     * @return true if AddressType is set.
+     * @return bool `true` if AddressType is set.
      */
     public function isSetAddressType()
     {
-                return !is_null($this->_fields['AddressType']['FieldValue']);
-            }
+        return ($this->_fields['AddressType']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of AddressType, return this.
      *
-     * @param addressType
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withAddressType($value)
     {
         $this->setAddressType($value);
         return $this;
     }
-
 }

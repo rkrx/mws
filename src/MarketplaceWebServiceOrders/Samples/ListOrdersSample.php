@@ -21,7 +21,7 @@
  * List Orders Sample
  */
 
-require_once('.config.inc.php');
+require_once '.config.inc.php';
 
 /************************************************************************
  * Instantiate Implementation of MarketplaceWebServiceOrders
@@ -101,16 +101,16 @@ require_once('.config.inc.php');
         $dom->preserveWhiteSpace = false;
         $dom->formatOutput = true;
         echo $dom->saveXML();
-        echo("ResponseHeaderMetadata: " . $response->getResponseHeaderMetadata() . "\n");
+        echo('ResponseHeaderMetadata: ' . $response->getResponseHeaderMetadata() . "\n");
 
      } catch (MarketplaceWebServiceOrders_Exception $ex) {
-        echo("Caught Exception: " . $ex->getMessage() . "\n");
-        echo("Response Status Code: " . $ex->getStatusCode() . "\n");
-        echo("Error Code: " . $ex->getErrorCode() . "\n");
-        echo("Error Type: " . $ex->getErrorType() . "\n");
-        echo("Request ID: " . $ex->getRequestId() . "\n");
-        echo("XML: " . $ex->getXML() . "\n");
-        echo("ResponseHeaderMetadata: " . $ex->getResponseHeaderMetadata() . "\n");
+        echo('Caught Exception: ' . $ex->getMessage() . "\n");
+        echo('Response Status Code: ' . $ex->getStatusCode() . "\n");
+        echo('Error Code: ' . $ex->getErrorCode() . "\n");
+        echo('Error Type: ' . $ex->getErrorType() . "\n");
+        echo('Request ID: ' . $ex->getRequestId() . "\n");
+        echo('XML: ' . $ex->getXML() . "\n");
+        echo('ResponseHeaderMetadata: ' . $ex->getResponseHeaderMetadata() . "\n");
      }
  }
 

@@ -196,7 +196,7 @@ class FBAInboundServiceMWS_Model_PutTransportContentRequest extends FBAInboundSe
      */
     public function isIsPartnered()
     {
-        return $this->_fields['IsPartnered']['FieldValue'];
+        return $this->_fields['IsPartnered']['FieldValue'] ?? false;
     }
 
     /**

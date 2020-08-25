@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -36,23 +36,26 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
  class MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResult extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderItems' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_OrderItem'), 'ListMemberName' => 'OrderItem'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'NextToken' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'AmazonOrderId' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'OrderItems' => [
+                'FieldValue' => [],
+                'FieldType' => ['MarketplaceWebServiceOrders_Model_OrderItem'],
+                'ListMemberName' => 'OrderItem'
+            ],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the NextToken property.
      *
-     * @return String NextToken.
+     * @return string NextToken.
      */
     public function getNextToken()
     {
@@ -63,7 +66,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the NextToken property.
      *
      * @param string nextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value)
     {
@@ -74,20 +77,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NextToken is set.
      *
-     * @return true if NextToken is set.
+     * @return bool `true` if NextToken is set.
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return $this->_fields['NextToken']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of NextToken, return this.
      *
-     * @param nextToken
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withNextToken($value)
     {
@@ -98,7 +99,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the AmazonOrderId property.
      *
-     * @return String AmazonOrderId.
+     * @return string AmazonOrderId.
      */
     public function getAmazonOrderId()
     {
@@ -109,7 +110,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the AmazonOrderId property.
      *
      * @param string amazonOrderId
-     * @return this instance
+     * @return $this
      */
     public function setAmazonOrderId($value)
     {
@@ -120,20 +121,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AmazonOrderId is set.
      *
-     * @return true if AmazonOrderId is set.
+     * @return bool `true` if AmazonOrderId is set.
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return $this->_fields['AmazonOrderId']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
      *
-     * @param amazonOrderId
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withAmazonOrderId($value)
     {
@@ -144,13 +143,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the OrderItems property.
      *
-     * @return List<OrderItem> OrderItems.
+     * @return MarketplaceWebServiceOrders_Model_OrderItem[] OrderItems.
      */
     public function getOrderItems()
     {
-        if ($this->_fields['OrderItems']['FieldValue'] == null)
-        {
-            $this->_fields['OrderItems']['FieldValue'] = array();
+        if ($this->_fields['OrderItems']['FieldValue'] === null) {
+            $this->_fields['OrderItems']['FieldValue'] = [];
         }
         return $this->_fields['OrderItems']['FieldValue'];
     }
@@ -159,12 +157,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the OrderItems property.
      *
      * @param array orderItems
-     * @return this instance
+     * @return $this
      */
     public function setOrderItems($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
+            $value = [$value];
         }
         $this->_fields['OrderItems']['FieldValue'] = $value;
         return $this;
@@ -175,33 +173,28 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function unsetOrderItems()
     {
-        $this->_fields['OrderItems']['FieldValue'] = array();
+        $this->_fields['OrderItems']['FieldValue'] = [];
     }
 
     /**
      * Check to see if OrderItems is set.
      *
-     * @return true if OrderItems is set.
+     * @return bool `true` if OrderItems is set.
      */
     public function isSetOrderItems()
     {
-                return !empty($this->_fields['OrderItems']['FieldValue']);
-            }
+        return !empty($this->_fields['OrderItems']['FieldValue']);
+    }
 
     /**
      * Add values for OrderItems, return this.
      *
-     * @param orderItems
-     *             New values to add.
-     *
-     * @return This instance.
+     * @param MarketplaceWebServiceOrders_Model_OrderItem ...$orderItems
+     * @return $this
      */
-    public function withOrderItems()
+    public function withOrderItems(...$orderItems)
     {
-        foreach (func_get_args() as $OrderItems)
-        {
-            $this->_fields['OrderItems']['FieldValue'][] = $OrderItems;
-        }
+        $this->_fields['OrderItems']['FieldValue'][] = $orderItems;
         return $this;
     }
 

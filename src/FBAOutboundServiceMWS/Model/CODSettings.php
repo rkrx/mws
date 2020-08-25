@@ -53,7 +53,7 @@ class FBAOutboundServiceMWS_Model_CODSettings extends FBAOutboundServiceMWS_Mode
      */
     public function isIsCODRequired()
     {
-        return $this->_fields['IsCODRequired']['FieldValue'];
+        return $this->_fields['IsCODRequired']['FieldValue'] ?? false;
     }
 
     /**

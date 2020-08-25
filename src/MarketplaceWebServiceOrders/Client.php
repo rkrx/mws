@@ -200,7 +200,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * List Order Items By Next Token
      * If ListOrderItems cannot return all the order items in one go, it will
      *         provide a nextToken. That nextToken can be used with this operation to
-     *         retrive the next batch of items for that order.
+     *         retrieve the next batch of items for that order.
      *
      * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken request or MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken object itself
      * @see MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest
@@ -852,7 +852,8 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
     }
 
     /**
-     * Convert paremeters to Url encoded query string
+     * Convert parameters to Url encoded query string
+     *
      * @param array $parameters
      * @return string
      */
@@ -927,8 +928,8 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         if (!isset ($uri)) {
             $uri = '/';
         }
-        $uriencoded = implode('/', array_map(array($this, '_urlencode'), explode('/', $uri)));
-        $data .= $uriencoded;
+        $uriEncoded = implode('/', array_map(array($this, '_urlencode'), explode('/', $uri)));
+        $data .= $uriEncoded;
         $data .= "\n";
         uksort($parameters, 'strcmp');
         $data .= $this->_getParametersAsString($parameters);

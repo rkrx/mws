@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -34,21 +34,20 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
  class MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CustomizedURL' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'CustomizedURL' => ['FieldValue' => null, 'FieldType' => 'string'],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the CustomizedURL property.
      *
-     * @return String CustomizedURL.
+     * @return string CustomizedURL.
      */
     public function getCustomizedURL()
     {
@@ -59,7 +58,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CustomizedURL property.
      *
      * @param string customizedURL
-     * @return this instance
+     * @return $this
      */
     public function setCustomizedURL($value)
     {
@@ -70,25 +69,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CustomizedURL is set.
      *
-     * @return true if CustomizedURL is set.
+     * @return bool `true` if CustomizedURL is set.
      */
     public function isSetCustomizedURL()
     {
-                return !is_null($this->_fields['CustomizedURL']['FieldValue']);
-            }
+        return ($this->_fields['CustomizedURL']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of CustomizedURL, return this.
      *
-     * @param customizedURL
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withCustomizedURL($value)
     {
         $this->setCustomizedURL($value);
         return $this;
     }
-
 }

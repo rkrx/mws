@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -37,24 +37,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServiceOrders_Model {
-
+ class MarketplaceWebServiceOrders_Model_InvoiceData extends MarketplaceWebServiceOrders_Model
+ {
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'InvoiceRequirement' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerSelectedInvoiceCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceTitle' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'InvoiceInformation' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'InvoiceRequirement' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'BuyerSelectedInvoiceCategory' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'InvoiceTitle' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'InvoiceInformation' => ['FieldValue' => null, 'FieldType' => 'string'],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the InvoiceRequirement property.
      *
-     * @return String InvoiceRequirement.
+     * @return string
      */
     public function getInvoiceRequirement()
     {
@@ -64,8 +63,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the InvoiceRequirement property.
      *
-     * @param string invoiceRequirement
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setInvoiceRequirement($value)
     {
@@ -76,20 +75,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if InvoiceRequirement is set.
      *
-     * @return true if InvoiceRequirement is set.
+     * @return bool `true` if InvoiceRequirement is set.
      */
     public function isSetInvoiceRequirement()
     {
-                return !is_null($this->_fields['InvoiceRequirement']['FieldValue']);
-            }
+        return ($this->_fields['InvoiceRequirement']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of InvoiceRequirement, return this.
      *
-     * @param invoiceRequirement
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withInvoiceRequirement($value)
     {
@@ -100,7 +97,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the BuyerSelectedInvoiceCategory property.
      *
-     * @return String BuyerSelectedInvoiceCategory.
+     * @return string
      */
     public function getBuyerSelectedInvoiceCategory()
     {
@@ -110,8 +107,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the BuyerSelectedInvoiceCategory property.
      *
-     * @param string buyerSelectedInvoiceCategory
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setBuyerSelectedInvoiceCategory($value)
     {
@@ -122,20 +119,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerSelectedInvoiceCategory is set.
      *
-     * @return true if BuyerSelectedInvoiceCategory is set.
+     * @return bool `true` if BuyerSelectedInvoiceCategory is set.
      */
     public function isSetBuyerSelectedInvoiceCategory()
     {
-                return !is_null($this->_fields['BuyerSelectedInvoiceCategory']['FieldValue']);
-            }
+        return ($this->_fields['BuyerSelectedInvoiceCategory']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of BuyerSelectedInvoiceCategory, return this.
      *
-     * @param buyerSelectedInvoiceCategory
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withBuyerSelectedInvoiceCategory($value)
     {
@@ -146,7 +141,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the InvoiceTitle property.
      *
-     * @return String InvoiceTitle.
+     * @return string InvoiceTitle.
      */
     public function getInvoiceTitle()
     {
@@ -157,7 +152,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the InvoiceTitle property.
      *
      * @param string invoiceTitle
-     * @return this instance
+     * @return $this
      */
     public function setInvoiceTitle($value)
     {
@@ -168,20 +163,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if InvoiceTitle is set.
      *
-     * @return true if InvoiceTitle is set.
+     * @return bool `true` if InvoiceTitle is set.
      */
     public function isSetInvoiceTitle()
     {
-                return !is_null($this->_fields['InvoiceTitle']['FieldValue']);
-            }
+        return ($this->_fields['InvoiceTitle']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of InvoiceTitle, return this.
      *
-     * @param invoiceTitle
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withInvoiceTitle($value)
     {
@@ -192,7 +185,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the InvoiceInformation property.
      *
-     * @return String InvoiceInformation.
+     * @return string InvoiceInformation.
      */
     public function getInvoiceInformation()
     {
@@ -202,8 +195,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the InvoiceInformation property.
      *
-     * @param string invoiceInformation
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setInvoiceInformation($value)
     {
@@ -214,25 +207,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if InvoiceInformation is set.
      *
-     * @return true if InvoiceInformation is set.
+     * @return bool `true` if InvoiceInformation is set.
      */
     public function isSetInvoiceInformation()
     {
-                return !is_null($this->_fields['InvoiceInformation']['FieldValue']);
-            }
+        return ($this->_fields['InvoiceInformation']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of InvoiceInformation, return this.
      *
-     * @param invoiceInformation
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withInvoiceInformation($value)
     {
         $this->setInvoiceInformation($value);
         return $this;
     }
-
 }

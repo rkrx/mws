@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -37,24 +37,27 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebServiceOrders_Model {
-
+ class MarketplaceWebServiceOrders_Model_ListOrdersResult extends MarketplaceWebServiceOrders_Model
+ {
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NextToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CreatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LastUpdatedBefore' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Orders' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Order'), 'ListMemberName' => 'Order'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'NextToken' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'CreatedBefore' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'LastUpdatedBefore' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'Orders' => [
+                'FieldValue' => [],
+                'FieldType' => ['MarketplaceWebServiceOrders_Model_Order'],
+                'ListMemberName' => 'Order'
+            ],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the NextToken property.
      *
-     * @return String NextToken.
+     * @return string NextToken.
      */
     public function getNextToken()
     {
@@ -65,7 +68,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the NextToken property.
      *
      * @param string nextToken
-     * @return this instance
+     * @return $this
      */
     public function setNextToken($value)
     {
@@ -76,20 +79,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NextToken is set.
      *
-     * @return true if NextToken is set.
+     * @return bool `true` if NextToken is set.
      */
     public function isSetNextToken()
     {
-                return !is_null($this->_fields['NextToken']['FieldValue']);
-            }
+        return $this->_fields['NextToken']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of NextToken, return this.
      *
-     * @param nextToken
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withNextToken($value)
     {
@@ -100,7 +101,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the CreatedBefore property.
      *
-     * @return XMLGregorianCalendar CreatedBefore.
+     * @return string
      */
     public function getCreatedBefore()
     {
@@ -111,7 +112,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CreatedBefore property.
      *
      * @param string createdBefore
-     * @return this instance
+     * @return $this
      */
     public function setCreatedBefore($value)
     {
@@ -122,20 +123,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CreatedBefore is set.
      *
-     * @return true if CreatedBefore is set.
+     * @return bool `true` if CreatedBefore is set.
      */
     public function isSetCreatedBefore()
     {
-                return !is_null($this->_fields['CreatedBefore']['FieldValue']);
-            }
+        return $this->_fields['CreatedBefore']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of CreatedBefore, return this.
      *
-     * @param createdBefore
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withCreatedBefore($value)
     {
@@ -146,7 +145,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the LastUpdatedBefore property.
      *
-     * @return XMLGregorianCalendar LastUpdatedBefore.
+     * @return string LastUpdatedBefore.
      */
     public function getLastUpdatedBefore()
     {
@@ -157,7 +156,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the LastUpdatedBefore property.
      *
      * @param string lastUpdatedBefore
-     * @return this instance
+     * @return $this
      */
     public function setLastUpdatedBefore($value)
     {
@@ -168,20 +167,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LastUpdatedBefore is set.
      *
-     * @return true if LastUpdatedBefore is set.
+     * @return bool `true` if LastUpdatedBefore is set.
      */
     public function isSetLastUpdatedBefore()
     {
-                return !is_null($this->_fields['LastUpdatedBefore']['FieldValue']);
-            }
+        return $this->_fields['LastUpdatedBefore']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of LastUpdatedBefore, return this.
      *
-     * @param lastUpdatedBefore
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withLastUpdatedBefore($value)
     {
@@ -192,13 +189,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Orders property.
      *
-     * @return List<Order> Orders.
+     * @return MarketplaceWebServiceOrders_Model_Order[] Orders.
      */
     public function getOrders()
     {
-        if ($this->_fields['Orders']['FieldValue'] == null)
-        {
-            $this->_fields['Orders']['FieldValue'] = array();
+        if ($this->_fields['Orders']['FieldValue'] === null) {
+            $this->_fields['Orders']['FieldValue'] = [];
         }
         return $this->_fields['Orders']['FieldValue'];
     }
@@ -206,13 +202,13 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Orders property.
      *
-     * @param array orders
-     * @return this instance
+     * @param MarketplaceWebServiceOrders_Model_Order[]|MarketplaceWebServiceOrders_Model_Order $value
+     * @return $this
      */
     public function setOrders($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
+            $value = [$value];
         }
         $this->_fields['Orders']['FieldValue'] = $value;
         return $this;
@@ -229,28 +225,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Orders is set.
      *
-     * @return true if Orders is set.
+     * @return bool `true` if Orders is set.
      */
     public function isSetOrders()
     {
-                return !empty($this->_fields['Orders']['FieldValue']);
-            }
+        return !empty($this->_fields['Orders']['FieldValue']);
+    }
 
     /**
      * Add values for Orders, return this.
      *
-     * @param orders
-     *             New values to add.
-     *
-     * @return This instance.
+     * @param MarketplaceWebServiceOrders_Model_Order ...$orders
+     * @return $this
      */
-    public function withOrders()
+    public function withOrders(...$orders)
     {
-        foreach (func_get_args() as $Orders)
-        {
-            $this->_fields['Orders']['FieldValue'][] = $Orders;
-        }
+        $this->_fields['Orders']['FieldValue'] = $orders;
         return $this;
     }
-
 }

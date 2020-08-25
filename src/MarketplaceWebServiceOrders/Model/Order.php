@@ -1,12 +1,12 @@
 <?php
 /*******************************************************************************
  * Copyright 2009-2018 Amazon Services. All Rights Reserved.
- * Licensed under the Apache License, Version 2.0 (the "License"); 
+ * Licensed under the Apache License, Version 2.0 (the "License");
  *
- * You may not use this file except in compliance with the License. 
+ * You may not use this file except in compliance with the License.
  * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
- * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
- * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the
  * specific language governing permissions and limitations under the License.
  *******************************************************************************
  * PHP Version 5
@@ -21,15 +21,15 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
  * MarketplaceWebServiceOrders_Model_Order
- * 
+ *
  * Properties:
  * <ul>
- * 
+ *
  * <li>AmazonOrderId: string</li>
  * <li>SellerOrderId: string</li>
  * <li>PurchaseDate: string</li>
@@ -77,54 +77,62 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'AmazonOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SellerOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PurchaseDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LastUpdateDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SalesChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShipServiceLevel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippingAddress' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Address'),
-    'OrderTotal' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    'NumberOfItemsShipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfItemsUnshipped' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PaymentExecutionDetail' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem'), 'ListMemberName' => 'PaymentExecutionDetailItem'),
-    'PaymentMethod' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'PaymentMethodDetails' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'PaymentMethodDetail'),
-    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerEmail' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerCounty' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BuyerTaxInfo' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_BuyerTaxInfo'),
-    'ShipmentServiceLevelCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ShippedByAmazonTFM' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'TFMShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EasyShipShipmentStatus' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'CbaDisplayableShippingLabel' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'OrderType' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LatestShipDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'EarliestDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'LatestDeliveryDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsBusinessOrder' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PurchaseOrderNumber' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsPrime' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'IsPremiumOrder' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'ReplacedOrderId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsReplacementOrder' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    'PromiseResponseDueDate' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'IsEstimatedShipDateSet' => array('FieldValue' => null, 'FieldType' => 'bool'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'AmazonOrderId' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'SellerOrderId' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'PurchaseDate' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'LastUpdateDate' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'OrderStatus' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'FulfillmentChannel' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'SalesChannel' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'OrderChannel' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'ShipServiceLevel' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'ShippingAddress' => ['FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Address'],
+            'OrderTotal' => ['FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'],
+            'NumberOfItemsShipped' => ['FieldValue' => null, 'FieldType' => 'int'],
+            'NumberOfItemsUnshipped' => ['FieldValue' => null, 'FieldType' => 'int'],
+            'PaymentExecutionDetail' => [
+                'FieldValue' => [],
+                'FieldType' => ['MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem'],
+                'ListMemberName' => 'PaymentExecutionDetailItem'
+            ],
+            'PaymentMethod' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'PaymentMethodDetails' => [
+                'FieldValue' => [],
+                'FieldType' => ['string'],
+                'ListMemberName' => 'PaymentMethodDetail'
+            ],
+            'MarketplaceId' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'BuyerEmail' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'BuyerName' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'BuyerCounty' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'BuyerTaxInfo' => ['FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_BuyerTaxInfo'],
+            'ShipmentServiceLevelCategory' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'ShippedByAmazonTFM' => ['FieldValue' => null, 'FieldType' => 'bool'],
+            'TFMShipmentStatus' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'EasyShipShipmentStatus' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'CbaDisplayableShippingLabel' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'OrderType' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'EarliestShipDate' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'LatestShipDate' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'EarliestDeliveryDate' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'LatestDeliveryDate' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'IsBusinessOrder' => ['FieldValue' => null, 'FieldType' => 'bool'],
+            'PurchaseOrderNumber' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'IsPrime' => ['FieldValue' => null, 'FieldType' => 'bool'],
+            'IsPremiumOrder' => ['FieldValue' => null, 'FieldType' => 'bool'],
+            'ReplacedOrderId' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'IsReplacementOrder' => ['FieldValue' => null, 'FieldType' => 'bool'],
+            'PromiseResponseDueDate' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'IsEstimatedShipDateSet' => ['FieldValue' => null, 'FieldType' => 'bool'],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the AmazonOrderId property.
      *
-     * @return String AmazonOrderId.
+     * @return string AmazonOrderId.
      */
     public function getAmazonOrderId()
     {
@@ -135,7 +143,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the AmazonOrderId property.
      *
      * @param string amazonOrderId
-     * @return this instance
+     * @return $this
      */
     public function setAmazonOrderId($value)
     {
@@ -146,12 +154,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AmazonOrderId is set.
      *
-     * @return true if AmazonOrderId is set.
+     * @return bool `true` if AmazonOrderId is set.
      */
     public function isSetAmazonOrderId()
     {
-                return !is_null($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return ($this->_fields['AmazonOrderId']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of AmazonOrderId, return this.
@@ -159,7 +167,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param amazonOrderId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withAmazonOrderId($value)
     {
@@ -170,7 +178,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the SellerOrderId property.
      *
-     * @return String SellerOrderId.
+     * @return string SellerOrderId.
      */
     public function getSellerOrderId()
     {
@@ -181,7 +189,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the SellerOrderId property.
      *
      * @param string sellerOrderId
-     * @return this instance
+     * @return $this
      */
     public function setSellerOrderId($value)
     {
@@ -192,12 +200,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerOrderId is set.
      *
-     * @return true if SellerOrderId is set.
+     * @return bool `true` if SellerOrderId is set.
      */
     public function isSetSellerOrderId()
     {
-                return !is_null($this->_fields['SellerOrderId']['FieldValue']);
-            }
+        return ($this->_fields['SellerOrderId']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of SellerOrderId, return this.
@@ -205,7 +213,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param sellerOrderId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withSellerOrderId($value)
     {
@@ -227,7 +235,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PurchaseDate property.
      *
      * @param string purchaseDate
-     * @return this instance
+     * @return $this
      */
     public function setPurchaseDate($value)
     {
@@ -238,12 +246,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PurchaseDate is set.
      *
-     * @return true if PurchaseDate is set.
+     * @return bool `true` if PurchaseDate is set.
      */
     public function isSetPurchaseDate()
     {
-                return !is_null($this->_fields['PurchaseDate']['FieldValue']);
-            }
+        return ($this->_fields['PurchaseDate']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PurchaseDate, return this.
@@ -251,7 +259,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param purchaseDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPurchaseDate($value)
     {
@@ -273,7 +281,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the LastUpdateDate property.
      *
      * @param string lastUpdateDate
-     * @return this instance
+     * @return $this
      */
     public function setLastUpdateDate($value)
     {
@@ -284,12 +292,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LastUpdateDate is set.
      *
-     * @return true if LastUpdateDate is set.
+     * @return bool `true` if LastUpdateDate is set.
      */
     public function isSetLastUpdateDate()
     {
-                return !is_null($this->_fields['LastUpdateDate']['FieldValue']);
-            }
+        return ($this->_fields['LastUpdateDate']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of LastUpdateDate, return this.
@@ -297,7 +305,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param lastUpdateDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withLastUpdateDate($value)
     {
@@ -308,7 +316,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the OrderStatus property.
      *
-     * @return String OrderStatus.
+     * @return string OrderStatus.
      */
     public function getOrderStatus()
     {
@@ -319,7 +327,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the OrderStatus property.
      *
      * @param string orderStatus
-     * @return this instance
+     * @return $this
      */
     public function setOrderStatus($value)
     {
@@ -330,12 +338,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderStatus is set.
      *
-     * @return true if OrderStatus is set.
+     * @return bool `true` if OrderStatus is set.
      */
     public function isSetOrderStatus()
     {
-                return !is_null($this->_fields['OrderStatus']['FieldValue']);
-            }
+        return ($this->_fields['OrderStatus']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of OrderStatus, return this.
@@ -343,7 +351,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orderStatus
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withOrderStatus($value)
     {
@@ -354,7 +362,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the FulfillmentChannel property.
      *
-     * @return String FulfillmentChannel.
+     * @return string FulfillmentChannel.
      */
     public function getFulfillmentChannel()
     {
@@ -365,7 +373,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the FulfillmentChannel property.
      *
      * @param string fulfillmentChannel
-     * @return this instance
+     * @return $this
      */
     public function setFulfillmentChannel($value)
     {
@@ -376,12 +384,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FulfillmentChannel is set.
      *
-     * @return true if FulfillmentChannel is set.
+     * @return bool `true` if FulfillmentChannel is set.
      */
     public function isSetFulfillmentChannel()
     {
-                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-            }
+        return ($this->_fields['FulfillmentChannel']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of FulfillmentChannel, return this.
@@ -389,7 +397,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param fulfillmentChannel
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withFulfillmentChannel($value)
     {
@@ -400,7 +408,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the SalesChannel property.
      *
-     * @return String SalesChannel.
+     * @return string SalesChannel.
      */
     public function getSalesChannel()
     {
@@ -411,7 +419,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the SalesChannel property.
      *
      * @param string salesChannel
-     * @return this instance
+     * @return $this
      */
     public function setSalesChannel($value)
     {
@@ -422,12 +430,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SalesChannel is set.
      *
-     * @return true if SalesChannel is set.
+     * @return bool `true` if SalesChannel is set.
      */
     public function isSetSalesChannel()
     {
-                return !is_null($this->_fields['SalesChannel']['FieldValue']);
-            }
+        return ($this->_fields['SalesChannel']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of SalesChannel, return this.
@@ -435,7 +443,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param salesChannel
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withSalesChannel($value)
     {
@@ -446,7 +454,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the OrderChannel property.
      *
-     * @return String OrderChannel.
+     * @return string OrderChannel.
      */
     public function getOrderChannel()
     {
@@ -457,7 +465,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the OrderChannel property.
      *
      * @param string orderChannel
-     * @return this instance
+     * @return $this
      */
     public function setOrderChannel($value)
     {
@@ -468,12 +476,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderChannel is set.
      *
-     * @return true if OrderChannel is set.
+     * @return bool `true` if OrderChannel is set.
      */
     public function isSetOrderChannel()
     {
-                return !is_null($this->_fields['OrderChannel']['FieldValue']);
-            }
+        return ($this->_fields['OrderChannel']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of OrderChannel, return this.
@@ -481,7 +489,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orderChannel
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withOrderChannel($value)
     {
@@ -492,7 +500,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the ShipServiceLevel property.
      *
-     * @return String ShipServiceLevel.
+     * @return string ShipServiceLevel.
      */
     public function getShipServiceLevel()
     {
@@ -503,7 +511,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ShipServiceLevel property.
      *
      * @param string shipServiceLevel
-     * @return this instance
+     * @return $this
      */
     public function setShipServiceLevel($value)
     {
@@ -514,12 +522,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShipServiceLevel is set.
      *
-     * @return true if ShipServiceLevel is set.
+     * @return bool `true` if ShipServiceLevel is set.
      */
     public function isSetShipServiceLevel()
     {
-                return !is_null($this->_fields['ShipServiceLevel']['FieldValue']);
-            }
+        return ($this->_fields['ShipServiceLevel']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ShipServiceLevel, return this.
@@ -527,7 +535,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param shipServiceLevel
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withShipServiceLevel($value)
     {
@@ -549,7 +557,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ShippingAddress property.
      *
      * @param MarketplaceWebServiceOrders_Model_Address shippingAddress
-     * @return this instance
+     * @return $this
      */
     public function setShippingAddress($value)
     {
@@ -560,12 +568,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShippingAddress is set.
      *
-     * @return true if ShippingAddress is set.
+     * @return bool `true` if ShippingAddress is set.
      */
     public function isSetShippingAddress()
     {
-                return !is_null($this->_fields['ShippingAddress']['FieldValue']);
-            }
+        return ($this->_fields['ShippingAddress']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ShippingAddress, return this.
@@ -573,7 +581,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param shippingAddress
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withShippingAddress($value)
     {
@@ -595,7 +603,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the OrderTotal property.
      *
      * @param MarketplaceWebServiceOrders_Model_Money orderTotal
-     * @return this instance
+     * @return $this
      */
     public function setOrderTotal($value)
     {
@@ -606,12 +614,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderTotal is set.
      *
-     * @return true if OrderTotal is set.
+     * @return bool `true` if OrderTotal is set.
      */
     public function isSetOrderTotal()
     {
-                return !is_null($this->_fields['OrderTotal']['FieldValue']);
-            }
+        return ($this->_fields['OrderTotal']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of OrderTotal, return this.
@@ -619,7 +627,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orderTotal
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withOrderTotal($value)
     {
@@ -630,7 +638,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the NumberOfItemsShipped property.
      *
-     * @return Integer NumberOfItemsShipped.
+     * @return int NumberOfItemsShipped.
      */
     public function getNumberOfItemsShipped()
     {
@@ -641,7 +649,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the NumberOfItemsShipped property.
      *
      * @param int numberOfItemsShipped
-     * @return this instance
+     * @return $this
      */
     public function setNumberOfItemsShipped($value)
     {
@@ -652,12 +660,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfItemsShipped is set.
      *
-     * @return true if NumberOfItemsShipped is set.
+     * @return bool `true` if NumberOfItemsShipped is set.
      */
     public function isSetNumberOfItemsShipped()
     {
-                return !is_null($this->_fields['NumberOfItemsShipped']['FieldValue']);
-            }
+        return ($this->_fields['NumberOfItemsShipped']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of NumberOfItemsShipped, return this.
@@ -665,7 +673,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param numberOfItemsShipped
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withNumberOfItemsShipped($value)
     {
@@ -676,7 +684,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the NumberOfItemsUnshipped property.
      *
-     * @return Integer NumberOfItemsUnshipped.
+     * @return int NumberOfItemsUnshipped.
      */
     public function getNumberOfItemsUnshipped()
     {
@@ -687,7 +695,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the NumberOfItemsUnshipped property.
      *
      * @param int numberOfItemsUnshipped
-     * @return this instance
+     * @return $this
      */
     public function setNumberOfItemsUnshipped($value)
     {
@@ -698,12 +706,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfItemsUnshipped is set.
      *
-     * @return true if NumberOfItemsUnshipped is set.
+     * @return bool `true` if NumberOfItemsUnshipped is set.
      */
     public function isSetNumberOfItemsUnshipped()
     {
-                return !is_null($this->_fields['NumberOfItemsUnshipped']['FieldValue']);
-            }
+        return ($this->_fields['NumberOfItemsUnshipped']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of NumberOfItemsUnshipped, return this.
@@ -711,7 +719,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param numberOfItemsUnshipped
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withNumberOfItemsUnshipped($value)
     {
@@ -722,27 +730,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the PaymentExecutionDetail property.
      *
-     * @return List<PaymentExecutionDetailItem> PaymentExecutionDetail.
+     * @return MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem[]
      */
     public function getPaymentExecutionDetail()
     {
-        if ($this->_fields['PaymentExecutionDetail']['FieldValue'] == null)
-        {
-            $this->_fields['PaymentExecutionDetail']['FieldValue'] = array();
-        }
+        $this->_fields['PaymentExecutionDetail']['FieldValue'] = $this->_fields['PaymentExecutionDetail']['FieldValue'] = [];
         return $this->_fields['PaymentExecutionDetail']['FieldValue'];
     }
 
     /**
      * Set the value of the PaymentExecutionDetail property.
      *
-     * @param array paymentExecutionDetail
-     * @return this instance
+     * @param MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem[] $value
+     * @return $this
      */
     public function setPaymentExecutionDetail($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
+            $value = [$value];
         }
         $this->_fields['PaymentExecutionDetail']['FieldValue'] = $value;
         return $this;
@@ -759,34 +764,29 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentExecutionDetail is set.
      *
-     * @return true if PaymentExecutionDetail is set.
+     * @return bool `true` if PaymentExecutionDetail is set.
      */
     public function isSetPaymentExecutionDetail()
     {
-                return !empty($this->_fields['PaymentExecutionDetail']['FieldValue']);
-            }
+        return !empty($this->_fields['PaymentExecutionDetail']['FieldValue']);
+    }
 
     /**
      * Add values for PaymentExecutionDetail, return this.
      *
-     * @param paymentExecutionDetail
-     *             New values to add.
-     *
-     * @return This instance.
+     * @param MarketplaceWebServiceOrders_Model_PaymentExecutionDetailItem ...$paymentExecutionDetails
+     * @return $this
      */
-    public function withPaymentExecutionDetail()
+    public function withPaymentExecutionDetail(...$paymentExecutionDetails)
     {
-        foreach (func_get_args() as $PaymentExecutionDetail)
-        {
-            $this->_fields['PaymentExecutionDetail']['FieldValue'][] = $PaymentExecutionDetail;
-        }
+        $this->_fields['PaymentExecutionDetail']['FieldValue'] = $paymentExecutionDetails;
         return $this;
     }
 
     /**
      * Get the value of the PaymentMethod property.
      *
-     * @return String PaymentMethod.
+     * @return string PaymentMethod.
      */
     public function getPaymentMethod()
     {
@@ -797,7 +797,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PaymentMethod property.
      *
      * @param string paymentMethod
-     * @return this instance
+     * @return $this
      */
     public function setPaymentMethod($value)
     {
@@ -808,12 +808,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentMethod is set.
      *
-     * @return true if PaymentMethod is set.
+     * @return bool `true` if PaymentMethod is set.
      */
     public function isSetPaymentMethod()
     {
-                return !is_null($this->_fields['PaymentMethod']['FieldValue']);
-            }
+        return ($this->_fields['PaymentMethod']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PaymentMethod, return this.
@@ -821,7 +821,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param paymentMethod
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPaymentMethod($value)
     {
@@ -832,13 +832,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the PaymentMethodDetails property.
      *
-     * @return List<String> PaymentMethodDetails.
+     * @return PaymentMethodDetails[]
      */
     public function getPaymentMethodDetails()
     {
-        if ($this->_fields['PaymentMethodDetails']['FieldValue'] == null)
-        {
-            $this->_fields['PaymentMethodDetails']['FieldValue'] = array();
+        if ($this->_fields['PaymentMethodDetails']['FieldValue'] === null) {
+            $this->_fields['PaymentMethodDetails']['FieldValue'] = [];
         }
         return $this->_fields['PaymentMethodDetails']['FieldValue'];
     }
@@ -846,8 +845,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the PaymentMethodDetails property.
      *
-     * @param array paymentMethodDetails
-     * @return this instance
+     * @param PaymentMethodDetails[] $value
+     * @return $this
      */
     public function setPaymentMethodDetails($value)
     {
@@ -869,12 +868,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentMethodDetails is set.
      *
-     * @return true if PaymentMethodDetails is set.
+     * @return bool `true` if PaymentMethodDetails is set.
      */
     public function isSetPaymentMethodDetails()
     {
-                return !empty($this->_fields['PaymentMethodDetails']['FieldValue']);
-            }
+        return !empty($this->_fields['PaymentMethodDetails']['FieldValue']);
+    }
 
     /**
      * Add values for PaymentMethodDetails, return this.
@@ -882,12 +881,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param paymentMethodDetails
      *             New values to add.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPaymentMethodDetails()
     {
-        foreach (func_get_args() as $PaymentMethodDetails)
-        {
+        foreach (func_get_args() as $PaymentMethodDetails) {
             $this->_fields['PaymentMethodDetails']['FieldValue'][] = $PaymentMethodDetails;
         }
         return $this;
@@ -896,7 +894,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the MarketplaceId property.
      *
-     * @return String MarketplaceId.
+     * @return string MarketplaceId.
      */
     public function getMarketplaceId()
     {
@@ -907,7 +905,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the MarketplaceId property.
      *
      * @param string marketplaceId
-     * @return this instance
+     * @return $this
      */
     public function setMarketplaceId($value)
     {
@@ -918,12 +916,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MarketplaceId is set.
      *
-     * @return true if MarketplaceId is set.
+     * @return bool `true` if MarketplaceId is set.
      */
     public function isSetMarketplaceId()
     {
-                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-            }
+        return ($this->_fields['MarketplaceId']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of MarketplaceId, return this.
@@ -931,7 +929,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param marketplaceId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withMarketplaceId($value)
     {
@@ -942,7 +940,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the BuyerEmail property.
      *
-     * @return String BuyerEmail.
+     * @return string BuyerEmail.
      */
     public function getBuyerEmail()
     {
@@ -953,7 +951,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the BuyerEmail property.
      *
      * @param string buyerEmail
-     * @return this instance
+     * @return $this
      */
     public function setBuyerEmail($value)
     {
@@ -964,12 +962,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerEmail is set.
      *
-     * @return true if BuyerEmail is set.
+     * @return bool `true` if BuyerEmail is set.
      */
     public function isSetBuyerEmail()
     {
-                return !is_null($this->_fields['BuyerEmail']['FieldValue']);
-            }
+        return ($this->_fields['BuyerEmail']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of BuyerEmail, return this.
@@ -977,7 +975,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param buyerEmail
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withBuyerEmail($value)
     {
@@ -988,7 +986,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the BuyerName property.
      *
-     * @return String BuyerName.
+     * @return string BuyerName.
      */
     public function getBuyerName()
     {
@@ -999,7 +997,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the BuyerName property.
      *
      * @param string buyerName
-     * @return this instance
+     * @return $this
      */
     public function setBuyerName($value)
     {
@@ -1010,12 +1008,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerName is set.
      *
-     * @return true if BuyerName is set.
+     * @return bool `true` if BuyerName is set.
      */
     public function isSetBuyerName()
     {
-                return !is_null($this->_fields['BuyerName']['FieldValue']);
-            }
+        return ($this->_fields['BuyerName']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of BuyerName, return this.
@@ -1023,7 +1021,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param buyerName
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withBuyerName($value)
     {
@@ -1034,7 +1032,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the BuyerCounty property.
      *
-     * @return String BuyerCounty.
+     * @return string BuyerCounty.
      */
     public function getBuyerCounty()
     {
@@ -1045,7 +1043,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the BuyerCounty property.
      *
      * @param string buyerCounty
-     * @return this instance
+     * @return $this
      */
     public function setBuyerCounty($value)
     {
@@ -1056,12 +1054,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerCounty is set.
      *
-     * @return true if BuyerCounty is set.
+     * @return bool `true` if BuyerCounty is set.
      */
     public function isSetBuyerCounty()
     {
-                return !is_null($this->_fields['BuyerCounty']['FieldValue']);
-            }
+        return ($this->_fields['BuyerCounty']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of BuyerCounty, return this.
@@ -1069,7 +1067,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param buyerCounty
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withBuyerCounty($value)
     {
@@ -1091,7 +1089,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the BuyerTaxInfo property.
      *
      * @param MarketplaceWebServiceOrders_Model_BuyerTaxInfo buyerTaxInfo
-     * @return this instance
+     * @return $this
      */
     public function setBuyerTaxInfo($value)
     {
@@ -1102,12 +1100,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyerTaxInfo is set.
      *
-     * @return true if BuyerTaxInfo is set.
+     * @return bool `true` if BuyerTaxInfo is set.
      */
     public function isSetBuyerTaxInfo()
     {
-                return !is_null($this->_fields['BuyerTaxInfo']['FieldValue']);
-            }
+        return ($this->_fields['BuyerTaxInfo']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of BuyerTaxInfo, return this.
@@ -1115,7 +1113,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param buyerTaxInfo
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withBuyerTaxInfo($value)
     {
@@ -1126,7 +1124,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the ShipmentServiceLevelCategory property.
      *
-     * @return String ShipmentServiceLevelCategory.
+     * @return string ShipmentServiceLevelCategory.
      */
     public function getShipmentServiceLevelCategory()
     {
@@ -1137,7 +1135,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ShipmentServiceLevelCategory property.
      *
      * @param string shipmentServiceLevelCategory
-     * @return this instance
+     * @return $this
      */
     public function setShipmentServiceLevelCategory($value)
     {
@@ -1148,12 +1146,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShipmentServiceLevelCategory is set.
      *
-     * @return true if ShipmentServiceLevelCategory is set.
+     * @return bool `true` if ShipmentServiceLevelCategory is set.
      */
     public function isSetShipmentServiceLevelCategory()
     {
-                return !is_null($this->_fields['ShipmentServiceLevelCategory']['FieldValue']);
-            }
+        return ($this->_fields['ShipmentServiceLevelCategory']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ShipmentServiceLevelCategory, return this.
@@ -1161,7 +1159,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param shipmentServiceLevelCategory
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withShipmentServiceLevelCategory($value)
     {
@@ -1172,11 +1170,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of ShippedByAmazonTFM.
      *
-     * @return true if ShippedByAmazonTFM is set to true.
+     * @return bool `true` if ShippedByAmazonTFM is set to true.
      */
     public function isShippedByAmazonTFM()
     {
-        return !is_null($this->_fields['ShippedByAmazonTFM']['FieldValue']) && $this->_fields['ShippedByAmazonTFM']['FieldValue'];
+        return ($this->_fields['ShippedByAmazonTFM']['FieldValue'] ?? null) !== null && $this->_fields['ShippedByAmazonTFM']['FieldValue'];
     }
 
     /**
@@ -1193,7 +1191,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ShippedByAmazonTFM property.
      *
      * @param bool shippedByAmazonTFM
-     * @return this instance
+     * @return $this
      */
     public function setShippedByAmazonTFM($value)
     {
@@ -1204,12 +1202,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ShippedByAmazonTFM is set.
      *
-     * @return true if ShippedByAmazonTFM is set.
+     * @return bool `true` if ShippedByAmazonTFM is set.
      */
     public function isSetShippedByAmazonTFM()
     {
-                return !is_null($this->_fields['ShippedByAmazonTFM']['FieldValue']);
-            }
+        return ($this->_fields['ShippedByAmazonTFM']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ShippedByAmazonTFM, return this.
@@ -1217,7 +1215,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param shippedByAmazonTFM
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withShippedByAmazonTFM($value)
     {
@@ -1228,7 +1226,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the TFMShipmentStatus property.
      *
-     * @return String TFMShipmentStatus.
+     * @return string TFMShipmentStatus.
      */
     public function getTFMShipmentStatus()
     {
@@ -1239,7 +1237,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the TFMShipmentStatus property.
      *
      * @param string tfmShipmentStatus
-     * @return this instance
+     * @return $this
      */
     public function setTFMShipmentStatus($value)
     {
@@ -1250,12 +1248,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if TFMShipmentStatus is set.
      *
-     * @return true if TFMShipmentStatus is set.
+     * @return bool `true` if TFMShipmentStatus is set.
      */
     public function isSetTFMShipmentStatus()
     {
-                return !is_null($this->_fields['TFMShipmentStatus']['FieldValue']);
-            }
+        return ($this->_fields['TFMShipmentStatus']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of TFMShipmentStatus, return this.
@@ -1263,7 +1261,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param tfmShipmentStatus
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withTFMShipmentStatus($value)
     {
@@ -1274,7 +1272,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the EasyShipShipmentStatus property.
      *
-     * @return String EasyShipShipmentStatus.
+     * @return string EasyShipShipmentStatus.
      */
     public function getEasyShipShipmentStatus()
     {
@@ -1285,7 +1283,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the EasyShipShipmentStatus property.
      *
      * @param string easyShipShipmentStatus
-     * @return this instance
+     * @return $this
      */
     public function setEasyShipShipmentStatus($value)
     {
@@ -1296,12 +1294,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if EasyShipShipmentStatus is set.
      *
-     * @return true if EasyShipShipmentStatus is set.
+     * @return bool `true` if EasyShipShipmentStatus is set.
      */
     public function isSetEasyShipShipmentStatus()
     {
-                return !is_null($this->_fields['EasyShipShipmentStatus']['FieldValue']);
-            }
+        return ($this->_fields['EasyShipShipmentStatus']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of EasyShipShipmentStatus, return this.
@@ -1309,7 +1307,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param easyShipShipmentStatus
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withEasyShipShipmentStatus($value)
     {
@@ -1320,7 +1318,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the CbaDisplayableShippingLabel property.
      *
-     * @return String CbaDisplayableShippingLabel.
+     * @return string CbaDisplayableShippingLabel.
      */
     public function getCbaDisplayableShippingLabel()
     {
@@ -1331,7 +1329,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CbaDisplayableShippingLabel property.
      *
      * @param string cbaDisplayableShippingLabel
-     * @return this instance
+     * @return $this
      */
     public function setCbaDisplayableShippingLabel($value)
     {
@@ -1342,12 +1340,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CbaDisplayableShippingLabel is set.
      *
-     * @return true if CbaDisplayableShippingLabel is set.
+     * @return bool `true` if CbaDisplayableShippingLabel is set.
      */
     public function isSetCbaDisplayableShippingLabel()
     {
-                return !is_null($this->_fields['CbaDisplayableShippingLabel']['FieldValue']);
-            }
+        return ($this->_fields['CbaDisplayableShippingLabel']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of CbaDisplayableShippingLabel, return this.
@@ -1355,7 +1353,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param cbaDisplayableShippingLabel
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withCbaDisplayableShippingLabel($value)
     {
@@ -1366,7 +1364,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the OrderType property.
      *
-     * @return String OrderType.
+     * @return string OrderType.
      */
     public function getOrderType()
     {
@@ -1377,7 +1375,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the OrderType property.
      *
      * @param string orderType
-     * @return this instance
+     * @return $this
      */
     public function setOrderType($value)
     {
@@ -1388,12 +1386,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OrderType is set.
      *
-     * @return true if OrderType is set.
+     * @return bool `true` if OrderType is set.
      */
     public function isSetOrderType()
     {
-                return !is_null($this->_fields['OrderType']['FieldValue']);
-            }
+        return ($this->_fields['OrderType']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of OrderType, return this.
@@ -1401,7 +1399,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param orderType
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withOrderType($value)
     {
@@ -1423,7 +1421,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the EarliestShipDate property.
      *
      * @param string earliestShipDate
-     * @return this instance
+     * @return $this
      */
     public function setEarliestShipDate($value)
     {
@@ -1434,12 +1432,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if EarliestShipDate is set.
      *
-     * @return true if EarliestShipDate is set.
+     * @return bool `true` if EarliestShipDate is set.
      */
     public function isSetEarliestShipDate()
     {
-                return !is_null($this->_fields['EarliestShipDate']['FieldValue']);
-            }
+        return ($this->_fields['EarliestShipDate']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of EarliestShipDate, return this.
@@ -1447,7 +1445,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param earliestShipDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withEarliestShipDate($value)
     {
@@ -1469,7 +1467,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the LatestShipDate property.
      *
      * @param string latestShipDate
-     * @return this instance
+     * @return $this
      */
     public function setLatestShipDate($value)
     {
@@ -1480,12 +1478,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LatestShipDate is set.
      *
-     * @return true if LatestShipDate is set.
+     * @return bool `true` if LatestShipDate is set.
      */
     public function isSetLatestShipDate()
     {
-                return !is_null($this->_fields['LatestShipDate']['FieldValue']);
-            }
+        return ($this->_fields['LatestShipDate']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of LatestShipDate, return this.
@@ -1493,7 +1491,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param latestShipDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withLatestShipDate($value)
     {
@@ -1515,7 +1513,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the EarliestDeliveryDate property.
      *
      * @param string earliestDeliveryDate
-     * @return this instance
+     * @return $this
      */
     public function setEarliestDeliveryDate($value)
     {
@@ -1526,12 +1524,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if EarliestDeliveryDate is set.
      *
-     * @return true if EarliestDeliveryDate is set.
+     * @return bool `true` if EarliestDeliveryDate is set.
      */
     public function isSetEarliestDeliveryDate()
     {
-                return !is_null($this->_fields['EarliestDeliveryDate']['FieldValue']);
-            }
+        return ($this->_fields['EarliestDeliveryDate']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of EarliestDeliveryDate, return this.
@@ -1539,7 +1537,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param earliestDeliveryDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withEarliestDeliveryDate($value)
     {
@@ -1561,7 +1559,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the LatestDeliveryDate property.
      *
      * @param string latestDeliveryDate
-     * @return this instance
+     * @return $this
      */
     public function setLatestDeliveryDate($value)
     {
@@ -1572,12 +1570,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LatestDeliveryDate is set.
      *
-     * @return true if LatestDeliveryDate is set.
+     * @return bool `true` if LatestDeliveryDate is set.
      */
     public function isSetLatestDeliveryDate()
     {
-                return !is_null($this->_fields['LatestDeliveryDate']['FieldValue']);
-            }
+        return ($this->_fields['LatestDeliveryDate']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of LatestDeliveryDate, return this.
@@ -1585,7 +1583,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param latestDeliveryDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withLatestDeliveryDate($value)
     {
@@ -1596,11 +1594,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsBusinessOrder.
      *
-     * @return true if IsBusinessOrder is set to true.
+     * @return bool `true` if IsBusinessOrder is set to true.
      */
     public function isIsBusinessOrder()
     {
-        return !is_null($this->_fields['IsBusinessOrder']['FieldValue']) && $this->_fields['IsBusinessOrder']['FieldValue'];
+        return ($this->_fields['IsBusinessOrder']['FieldValue'] ?? null) !== null && $this->_fields['IsBusinessOrder']['FieldValue'];
     }
 
     /**
@@ -1617,7 +1615,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the IsBusinessOrder property.
      *
      * @param bool isBusinessOrder
-     * @return this instance
+     * @return $this
      */
     public function setIsBusinessOrder($value)
     {
@@ -1628,12 +1626,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsBusinessOrder is set.
      *
-     * @return true if IsBusinessOrder is set.
+     * @return bool `true` if IsBusinessOrder is set.
      */
     public function isSetIsBusinessOrder()
     {
-                return !is_null($this->_fields['IsBusinessOrder']['FieldValue']);
-            }
+        return ($this->_fields['IsBusinessOrder']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of IsBusinessOrder, return this.
@@ -1641,7 +1639,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param isBusinessOrder
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withIsBusinessOrder($value)
     {
@@ -1652,7 +1650,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the PurchaseOrderNumber property.
      *
-     * @return String PurchaseOrderNumber.
+     * @return string PurchaseOrderNumber.
      */
     public function getPurchaseOrderNumber()
     {
@@ -1663,7 +1661,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PurchaseOrderNumber property.
      *
      * @param string purchaseOrderNumber
-     * @return this instance
+     * @return $this
      */
     public function setPurchaseOrderNumber($value)
     {
@@ -1674,12 +1672,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PurchaseOrderNumber is set.
      *
-     * @return true if PurchaseOrderNumber is set.
+     * @return bool `true` if PurchaseOrderNumber is set.
      */
     public function isSetPurchaseOrderNumber()
     {
-                return !is_null($this->_fields['PurchaseOrderNumber']['FieldValue']);
-            }
+        return ($this->_fields['PurchaseOrderNumber']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PurchaseOrderNumber, return this.
@@ -1687,7 +1685,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param purchaseOrderNumber
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPurchaseOrderNumber($value)
     {
@@ -1698,11 +1696,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsPrime.
      *
-     * @return true if IsPrime is set to true.
+     * @return bool `true` if IsPrime is set to true.
      */
     public function isIsPrime()
     {
-        return !is_null($this->_fields['IsPrime']['FieldValue']) && $this->_fields['IsPrime']['FieldValue'];
+        return ($this->_fields['IsPrime']['FieldValue'] ?? null) !== null && $this->_fields['IsPrime']['FieldValue'];
     }
 
     /**
@@ -1719,7 +1717,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the IsPrime property.
      *
      * @param bool isPrime
-     * @return this instance
+     * @return $this
      */
     public function setIsPrime($value)
     {
@@ -1730,12 +1728,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsPrime is set.
      *
-     * @return true if IsPrime is set.
+     * @return bool `true` if IsPrime is set.
      */
     public function isSetIsPrime()
     {
-                return !is_null($this->_fields['IsPrime']['FieldValue']);
-            }
+        return ($this->_fields['IsPrime']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of IsPrime, return this.
@@ -1743,7 +1741,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param isPrime
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withIsPrime($value)
     {
@@ -1754,11 +1752,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsPremiumOrder.
      *
-     * @return true if IsPremiumOrder is set to true.
+     * @return bool `true` if IsPremiumOrder is set to true.
      */
     public function isIsPremiumOrder()
     {
-        return !is_null($this->_fields['IsPremiumOrder']['FieldValue']) && $this->_fields['IsPremiumOrder']['FieldValue'];
+        return ($this->_fields['IsPremiumOrder']['FieldValue'] ?? null) !== null && $this->_fields['IsPremiumOrder']['FieldValue'];
     }
 
     /**
@@ -1775,7 +1773,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the IsPremiumOrder property.
      *
      * @param bool isPremiumOrder
-     * @return this instance
+     * @return $this
      */
     public function setIsPremiumOrder($value)
     {
@@ -1786,12 +1784,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsPremiumOrder is set.
      *
-     * @return true if IsPremiumOrder is set.
+     * @return bool `true` if IsPremiumOrder is set.
      */
     public function isSetIsPremiumOrder()
     {
-                return !is_null($this->_fields['IsPremiumOrder']['FieldValue']);
-            }
+        return ($this->_fields['IsPremiumOrder']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of IsPremiumOrder, return this.
@@ -1799,7 +1797,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param isPremiumOrder
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withIsPremiumOrder($value)
     {
@@ -1810,7 +1808,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the ReplacedOrderId property.
      *
-     * @return String ReplacedOrderId.
+     * @return string ReplacedOrderId.
      */
     public function getReplacedOrderId()
     {
@@ -1821,7 +1819,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ReplacedOrderId property.
      *
      * @param string replacedOrderId
-     * @return this instance
+     * @return $this
      */
     public function setReplacedOrderId($value)
     {
@@ -1832,12 +1830,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ReplacedOrderId is set.
      *
-     * @return true if ReplacedOrderId is set.
+     * @return bool `true` if ReplacedOrderId is set.
      */
     public function isSetReplacedOrderId()
     {
-                return !is_null($this->_fields['ReplacedOrderId']['FieldValue']);
-            }
+        return ($this->_fields['ReplacedOrderId']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ReplacedOrderId, return this.
@@ -1845,7 +1843,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param replacedOrderId
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withReplacedOrderId($value)
     {
@@ -1856,11 +1854,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsReplacementOrder.
      *
-     * @return true if IsReplacementOrder is set to true.
+     * @return bool `true` if IsReplacementOrder is set to true.
      */
     public function isIsReplacementOrder()
     {
-        return !is_null($this->_fields['IsReplacementOrder']['FieldValue']) && $this->_fields['IsReplacementOrder']['FieldValue'];
+        return ($this->_fields['IsReplacementOrder']['FieldValue'] ?? null) !== null && $this->_fields['IsReplacementOrder']['FieldValue'];
     }
 
     /**
@@ -1877,7 +1875,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the IsReplacementOrder property.
      *
      * @param bool isReplacementOrder
-     * @return this instance
+     * @return $this
      */
     public function setIsReplacementOrder($value)
     {
@@ -1888,12 +1886,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsReplacementOrder is set.
      *
-     * @return true if IsReplacementOrder is set.
+     * @return bool `true` if IsReplacementOrder is set.
      */
     public function isSetIsReplacementOrder()
     {
-                return !is_null($this->_fields['IsReplacementOrder']['FieldValue']);
-            }
+        return ($this->_fields['IsReplacementOrder']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of IsReplacementOrder, return this.
@@ -1901,7 +1899,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param isReplacementOrder
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withIsReplacementOrder($value)
     {
@@ -1923,7 +1921,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PromiseResponseDueDate property.
      *
      * @param string promiseResponseDueDate
-     * @return this instance
+     * @return $this
      */
     public function setPromiseResponseDueDate($value)
     {
@@ -1934,12 +1932,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PromiseResponseDueDate is set.
      *
-     * @return true if PromiseResponseDueDate is set.
+     * @return bool `true` if PromiseResponseDueDate is set.
      */
     public function isSetPromiseResponseDueDate()
     {
-                return !is_null($this->_fields['PromiseResponseDueDate']['FieldValue']);
-            }
+        return ($this->_fields['PromiseResponseDueDate']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PromiseResponseDueDate, return this.
@@ -1947,7 +1945,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param promiseResponseDueDate
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPromiseResponseDueDate($value)
     {
@@ -1958,11 +1956,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check the value of IsEstimatedShipDateSet.
      *
-     * @return true if IsEstimatedShipDateSet is set to true.
+     * @return bool `true` if IsEstimatedShipDateSet is set to true.
      */
     public function isIsEstimatedShipDateSet()
     {
-        return !is_null($this->_fields['IsEstimatedShipDateSet']['FieldValue']) && $this->_fields['IsEstimatedShipDateSet']['FieldValue'];
+        return ($this->_fields['IsEstimatedShipDateSet']['FieldValue'] ?? null) !== null && $this->_fields['IsEstimatedShipDateSet']['FieldValue'];
     }
 
     /**
@@ -1979,7 +1977,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the IsEstimatedShipDateSet property.
      *
      * @param bool isEstimatedShipDateSet
-     * @return this instance
+     * @return $this
      */
     public function setIsEstimatedShipDateSet($value)
     {
@@ -1990,12 +1988,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if IsEstimatedShipDateSet is set.
      *
-     * @return true if IsEstimatedShipDateSet is set.
+     * @return bool `true` if IsEstimatedShipDateSet is set.
      */
     public function isSetIsEstimatedShipDateSet()
     {
-                return !is_null($this->_fields['IsEstimatedShipDateSet']['FieldValue']);
-            }
+        return ($this->_fields['IsEstimatedShipDateSet']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of IsEstimatedShipDateSet, return this.
@@ -2003,12 +2001,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param isEstimatedShipDateSet
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withIsEstimatedShipDateSet($value)
     {
         $this->setIsEstimatedShipDateSet($value);
         return $this;
     }
-
 }

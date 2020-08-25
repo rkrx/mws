@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -50,7 +50,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the CurrencyCode property.
      *
-     * @return String CurrencyCode.
+     * @return string CurrencyCode.
      */
     public function getCurrencyCode()
     {
@@ -61,7 +61,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CurrencyCode property.
      *
      * @param string currencyCode
-     * @return this instance
+     * @return $this
      */
     public function setCurrencyCode($value)
     {
@@ -72,12 +72,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CurrencyCode is set.
      *
-     * @return true if CurrencyCode is set.
+     * @return bool `true` if CurrencyCode is set.
      */
     public function isSetCurrencyCode()
     {
-                return !is_null($this->_fields['CurrencyCode']['FieldValue']);
-            }
+        return ($this->_fields['CurrencyCode']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of CurrencyCode, return this.
@@ -85,7 +85,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param currencyCode
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withCurrencyCode($value)
     {
@@ -96,7 +96,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Amount property.
      *
-     * @return String Amount.
+     * @return string Amount.
      */
     public function getAmount()
     {
@@ -107,7 +107,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Amount property.
      *
      * @param string amount
-     * @return this instance
+     * @return $this
      */
     public function setAmount($value)
     {
@@ -118,12 +118,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Amount is set.
      *
-     * @return true if Amount is set.
+     * @return bool `true` if Amount is set.
      */
     public function isSetAmount()
     {
-                return !is_null($this->_fields['Amount']['FieldValue']);
-            }
+        return ($this->_fields['Amount']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Amount, return this.
@@ -131,7 +131,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param amount
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withAmount($value)
     {

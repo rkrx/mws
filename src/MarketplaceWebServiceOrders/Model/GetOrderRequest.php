@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -41,18 +41,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'AmazonOrderId' => array('FieldValue' => array(), 'FieldType' => array('string'), 'ListMemberName' => 'Id'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'SellerId' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'MWSAuthToken' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'AmazonOrderId' => ['FieldValue' => [], 'FieldType' => ['string'], 'ListMemberName' => 'Id'],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the SellerId property.
      *
-     * @return String SellerId.
+     * @return string SellerId.
      */
     public function getSellerId()
     {
@@ -62,8 +62,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the SellerId property.
      *
-     * @param string sellerId
-     * @return this instance
+     * @param string $value sellerId
+     * @return $this
      */
     public function setSellerId($value)
     {
@@ -74,20 +74,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerId is set.
      *
-     * @return true if SellerId is set.
+     * @return bool `true` if SellerId is set.
      */
     public function isSetSellerId()
     {
-                return !is_null($this->_fields['SellerId']['FieldValue']);
-            }
+        return ($this->_fields['SellerId']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of SellerId, return this.
      *
-     * @param sellerId
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withSellerId($value)
     {
@@ -98,7 +96,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the MWSAuthToken property.
      *
-     * @return String MWSAuthToken.
+     * @return string MWSAuthToken.
      */
     public function getMWSAuthToken()
     {
@@ -108,8 +106,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the MWSAuthToken property.
      *
-     * @param string mwsAuthToken
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setMWSAuthToken($value)
     {
@@ -120,20 +118,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MWSAuthToken is set.
      *
-     * @return true if MWSAuthToken is set.
+     * @return bool `true` if MWSAuthToken is set.
      */
     public function isSetMWSAuthToken()
     {
-                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
-            }
+        return ($this->_fields['MWSAuthToken']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of MWSAuthToken, return this.
      *
-     * @param mwsAuthToken
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withMWSAuthToken($value)
     {
@@ -144,27 +140,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the AmazonOrderId property.
      *
-     * @return List<String> AmazonOrderId.
+     * @return string[] AmazonOrderId.
      */
     public function getAmazonOrderId()
     {
-        if ($this->_fields['AmazonOrderId']['FieldValue'] == null)
-        {
-            $this->_fields['AmazonOrderId']['FieldValue'] = array();
-        }
+        $this->_fields['AmazonOrderId']['FieldValue'] = $this->_fields['AmazonOrderId']['FieldValue'] ?? [];
         return $this->_fields['AmazonOrderId']['FieldValue'];
     }
 
     /**
      * Set the value of the AmazonOrderId property.
      *
-     * @param array amazonOrderId
-     * @return this instance
+     * @param array $value
+     * @return $this
      */
     public function setAmazonOrderId($value)
     {
         if (!$this->_isNumericArray($value)) {
-            $value = array ($value);
+            $value = [$value];
         }
         $this->_fields['AmazonOrderId']['FieldValue'] = $value;
         return $this;
@@ -175,34 +168,28 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public function unsetAmazonOrderId()
     {
-        $this->_fields['AmazonOrderId']['FieldValue'] = array();
+        $this->_fields['AmazonOrderId']['FieldValue'] = [];
     }
 
     /**
      * Check to see if AmazonOrderId is set.
      *
-     * @return true if AmazonOrderId is set.
+     * @return bool `true` if AmazonOrderId is set.
      */
     public function isSetAmazonOrderId()
     {
-                return !empty($this->_fields['AmazonOrderId']['FieldValue']);
-            }
+        return !empty($this->_fields['AmazonOrderId']['FieldValue']);
+    }
 
     /**
      * Add values for AmazonOrderId, return this.
      *
-     * @param amazonOrderId
-     *             New values to add.
-     *
-     * @return This instance.
+     * @param string ...$amazonOrderId
+     * @return $this
      */
-    public function withAmazonOrderId()
+    public function withAmazonOrderId(...$amazonOrderId)
     {
-        foreach (func_get_args() as $AmazonOrderId)
-        {
-            $this->_fields['AmazonOrderId']['FieldValue'][] = $AmazonOrderId;
-        }
+        $this->_fields['AmazonOrderId']['FieldValue'] = $amazonOrderId;
         return $this;
     }
-
 }

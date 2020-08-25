@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -50,7 +50,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Locale property.
      *
-     * @return String Locale.
+     * @return string Locale.
      */
     public function getLocale()
     {
@@ -61,7 +61,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Locale property.
      *
      * @param string locale
-     * @return this instance
+     * @return $this
      */
     public function setLocale($value)
     {
@@ -72,20 +72,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Locale is set.
      *
-     * @return true if Locale is set.
+     * @return bool `true` if Locale is set.
      */
     public function isSetLocale()
     {
-                return !is_null($this->_fields['Locale']['FieldValue']);
-            }
+        return ($this->_fields['Locale']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Locale, return this.
      *
-     * @param locale
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withLocale($value)
     {
@@ -96,7 +94,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Text property.
      *
-     * @return String Text.
+     * @return string Text.
      */
     public function getText()
     {
@@ -107,7 +105,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Text property.
      *
      * @param string text
-     * @return this instance
+     * @return $this
      */
     public function setText($value)
     {
@@ -118,12 +116,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Text is set.
      *
-     * @return true if Text is set.
+     * @return bool `true` if Text is set.
      */
     public function isSetText()
     {
-                return !is_null($this->_fields['Text']['FieldValue']);
-            }
+        return ($this->_fields['Text']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Text, return this.
@@ -131,12 +129,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param text
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withText($value)
     {
         $this->setText($value);
         return $this;
     }
-
 }

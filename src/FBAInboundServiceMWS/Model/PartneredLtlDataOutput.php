@@ -628,7 +628,7 @@ class FBAInboundServiceMWS_Model_PartneredLtlDataOutput extends FBAInboundServic
      */
     public function isIsBillOfLadingAvailable()
     {
-        return $this->_fields['IsBillOfLadingAvailable']['FieldValue'];
+        return $this->_fields['IsBillOfLadingAvailable']['FieldValue'] ?? false;
     }
 
     /**

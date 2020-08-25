@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -39,16 +39,16 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'NumberOfItems' => array('FieldValue' => null, 'FieldType' => 'int'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'NumberOfItems' => ['FieldValue' => null, 'FieldType' => 'int'],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the NumberOfItems property.
      *
-     * @return Integer NumberOfItems.
+     * @return int NumberOfItems.
      */
     public function getNumberOfItems()
     {
@@ -59,7 +59,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the NumberOfItems property.
      *
      * @param int numberOfItems
-     * @return this instance
+     * @return $this
      */
     public function setNumberOfItems($value)
     {
@@ -70,12 +70,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfItems is set.
      *
-     * @return true if NumberOfItems is set.
+     * @return bool `true` if NumberOfItems is set.
      */
     public function isSetNumberOfItems()
     {
-                return !is_null($this->_fields['NumberOfItems']['FieldValue']);
-            }
+        return ($this->_fields['NumberOfItems']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of NumberOfItems, return this.
@@ -83,12 +83,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param numberOfItems
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withNumberOfItems($value)
     {
         $this->setNumberOfItems($value);
         return $this;
     }
-
 }

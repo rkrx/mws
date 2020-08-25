@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -41,18 +41,22 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'CompanyLegalName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TaxingRegion' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'TaxClassifications' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_TaxClassification'), 'ListMemberName' => 'TaxClassification'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'CompanyLegalName' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'TaxingRegion' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'TaxClassifications' => [
+                'FieldValue' => [],
+                'FieldType' => ['MarketplaceWebServiceOrders_Model_TaxClassification'],
+                'ListMemberName' => 'TaxClassification'
+            ],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the CompanyLegalName property.
      *
-     * @return String CompanyLegalName.
+     * @return string CompanyLegalName.
      */
     public function getCompanyLegalName()
     {
@@ -63,7 +67,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the CompanyLegalName property.
      *
      * @param string companyLegalName
-     * @return this instance
+     * @return $this
      */
     public function setCompanyLegalName($value)
     {
@@ -74,20 +78,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CompanyLegalName is set.
      *
-     * @return true if CompanyLegalName is set.
+     * @return bool `true` if CompanyLegalName is set.
      */
     public function isSetCompanyLegalName()
     {
-                return !is_null($this->_fields['CompanyLegalName']['FieldValue']);
-            }
+        return ($this->_fields['CompanyLegalName']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of CompanyLegalName, return this.
      *
-     * @param companyLegalName
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withCompanyLegalName($value)
     {
@@ -98,7 +100,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the TaxingRegion property.
      *
-     * @return String TaxingRegion.
+     * @return string TaxingRegion.
      */
     public function getTaxingRegion()
     {
@@ -109,7 +111,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the TaxingRegion property.
      *
      * @param string taxingRegion
-     * @return this instance
+     * @return $this
      */
     public function setTaxingRegion($value)
     {
@@ -120,20 +122,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if TaxingRegion is set.
      *
-     * @return true if TaxingRegion is set.
+     * @return bool `true` if TaxingRegion is set.
      */
     public function isSetTaxingRegion()
     {
-                return !is_null($this->_fields['TaxingRegion']['FieldValue']);
-            }
+        return ($this->_fields['TaxingRegion']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of TaxingRegion, return this.
      *
-     * @param taxingRegion
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value The new value to set.
+     * @return $this
      */
     public function withTaxingRegion($value)
     {
@@ -144,14 +144,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the TaxClassifications property.
      *
-     * @return List<TaxClassification> TaxClassifications.
+     * @return MarketplaceWebServiceOrders_Model_TaxClassification[] TaxClassifications.
      */
     public function getTaxClassifications()
     {
-        if ($this->_fields['TaxClassifications']['FieldValue'] == null)
-        {
-            $this->_fields['TaxClassifications']['FieldValue'] = array();
-        }
+        $this->_fields['TaxClassifications']['FieldValue'] = $this->_fields['TaxClassifications']['FieldValue'] ?? [];
         return $this->_fields['TaxClassifications']['FieldValue'];
     }
 
@@ -159,7 +156,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the TaxClassifications property.
      *
      * @param array taxClassifications
-     * @return this instance
+     * @return $this
      */
     public function setTaxClassifications($value)
     {
@@ -181,28 +178,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if TaxClassifications is set.
      *
-     * @return true if TaxClassifications is set.
+     * @return bool `true` if TaxClassifications is set.
      */
     public function isSetTaxClassifications()
     {
-                return !empty($this->_fields['TaxClassifications']['FieldValue']);
-            }
+        return !empty($this->_fields['TaxClassifications']['FieldValue']);
+    }
 
     /**
      * Add values for TaxClassifications, return this.
      *
-     * @param taxClassifications
-     *             New values to add.
+     * @param MarketplaceWebServiceOrders_Model_TaxClassification ...$taxClassifications New values to add.
      *
-     * @return This instance.
+     * @return $this
      */
-    public function withTaxClassifications()
+    public function withTaxClassifications(...$taxClassifications)
     {
-        foreach (func_get_args() as $TaxClassifications)
-        {
-            $this->_fields['TaxClassifications']['FieldValue'][] = $TaxClassifications;
-        }
+        $this->_fields['TaxClassifications']['FieldValue'] = $taxClassifications;
         return $this;
     }
-
 }

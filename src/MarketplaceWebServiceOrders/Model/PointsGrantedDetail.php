@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -35,22 +35,24 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
  class MarketplaceWebServiceOrders_Model_PointsGrantedDetail extends MarketplaceWebServiceOrders_Model {
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'PointsNumber' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'PointsMonetaryValue' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'PointsNumber' => ['FieldValue' => null, 'FieldType' => 'int'],
+            'PointsMonetaryValue' => [
+                'FieldValue' => null,
+                'FieldType' => 'MarketplaceWebServiceOrders_Model_Money'
+            ],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the PointsNumber property.
      *
-     * @return Integer PointsNumber.
+     * @return int PointsNumber.
      */
     public function getPointsNumber()
     {
@@ -61,7 +63,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PointsNumber property.
      *
      * @param int pointsNumber
-     * @return this instance
+     * @return $this
      */
     public function setPointsNumber($value)
     {
@@ -72,12 +74,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PointsNumber is set.
      *
-     * @return true if PointsNumber is set.
+     * @return bool `true` if PointsNumber is set.
      */
     public function isSetPointsNumber()
     {
-                return !is_null($this->_fields['PointsNumber']['FieldValue']);
-            }
+        return ($this->_fields['PointsNumber']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PointsNumber, return this.
@@ -85,7 +87,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param pointsNumber
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPointsNumber($value)
     {
@@ -107,7 +109,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PointsMonetaryValue property.
      *
      * @param MarketplaceWebServiceOrders_Model_Money pointsMonetaryValue
-     * @return this instance
+     * @return $this
      */
     public function setPointsMonetaryValue($value)
     {
@@ -118,12 +120,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PointsMonetaryValue is set.
      *
-     * @return true if PointsMonetaryValue is set.
+     * @return bool `true` if PointsMonetaryValue is set.
      */
     public function isSetPointsMonetaryValue()
     {
-                return !is_null($this->_fields['PointsMonetaryValue']['FieldValue']);
-            }
+        return ($this->_fields['PointsMonetaryValue']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PointsMonetaryValue, return this.
@@ -131,12 +133,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param pointsMonetaryValue
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPointsMonetaryValue($value)
     {
         $this->setPointsMonetaryValue($value);
         return $this;
     }
-
 }

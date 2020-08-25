@@ -141,7 +141,7 @@ class FBAInboundServiceMWS_Model_Pallet extends FBAInboundServiceMWS_Model
      */
     public function isIsStacked()
     {
-        return $this->_fields['IsStacked']['FieldValue'];
+        return $this->_fields['IsStacked']['FieldValue'] ?? false;
     }
 
     /**

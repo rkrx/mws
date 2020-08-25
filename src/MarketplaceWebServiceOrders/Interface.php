@@ -16,7 +16,6 @@
  * Library Version: 2018-10-31
  * Generated: Mon Oct 22 22:40:38 UTC 2018
  */
-
 interface  MarketplaceWebServiceOrders_Interface
 {
     /**
@@ -24,25 +23,19 @@ interface  MarketplaceWebServiceOrders_Interface
      * This operation takes up to 50 order ids and returns the corresponding orders.
      *
      * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_GetOrder request or MarketplaceWebServiceOrders_Model_GetOrder object itself
-     * @see MarketplaceWebServiceOrders_Model_GetOrderRequest
      * @return MarketplaceWebServiceOrders_Model_GetOrderResponse
-     *
-     * @throws MarketplaceWebServiceOrders_Exception
      */
-    public function getOrder($request);
+    public function getOrder(MarketplaceWebServiceOrders_Model_GetOrderRequest $request);
 
 
     /**
      * Get Service Status
      * Returns the service status of a particular MWS API section. The operation takes no input.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_GetServiceStatus request or MarketplaceWebServiceOrders_Model_GetServiceStatus object itself
-     * @see MarketplaceWebServiceOrders_Model_GetServiceStatusRequest
+     * @param MarketplaceWebServiceOrders_Model_GetServiceStatusRequest $request array of parameters for MarketplaceWebServiceOrders_Model_GetServiceStatus request or MarketplaceWebServiceOrders_Model_GetServiceStatus object itself
      * @return MarketplaceWebServiceOrders_Model_GetServiceStatusResponse
-     *
-     * @throws MarketplaceWebServiceOrders_Exception
      */
-    public function getServiceStatus($request);
+    public function getServiceStatus(MarketplaceWebServiceOrders_Model_GetServiceStatusRequest $request);
 
 
     /**
@@ -50,55 +43,41 @@ interface  MarketplaceWebServiceOrders_Interface
      * This operation can be used to list the items of the order indicated by the
      *         given order id (only a single Amazon order id is allowed).
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrderItems request or MarketplaceWebServiceOrders_Model_ListOrderItems object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrderItemsRequest
+     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsRequest $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrderItems request or MarketplaceWebServiceOrders_Model_ListOrderItems object itself
      * @return MarketplaceWebServiceOrders_Model_ListOrderItemsResponse
-     *
-     * @throws MarketplaceWebServiceOrders_Exception
      */
-    public function listOrderItems($request);
+    public function listOrderItems(MarketplaceWebServiceOrders_Model_ListOrderItemsRequest $request);
 
 
     /**
      * List Order Items By Next Token
-     * If ListOrderItems cannot return all the order items in one go, it will
-     *         provide a nextToken. That nextToken can be used with this operation to
-     *         retrive the next batch of items for that order.
+     * If ListOrderItems cannot return all the order items in one go, it will provide a nextToken. That nextToken can
+     * be used with this operation to retrieve the next batch of items for that order.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken request or MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest
+     * @param MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken request or MarketplaceWebServiceOrders_Model_ListOrderItemsByNextToken object itself
      * @return MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenResponse
-     *
-     * @throws MarketplaceWebServiceOrders_Exception
      */
-    public function listOrderItemsByNextToken($request);
+    public function listOrderItemsByNextToken(MarketplaceWebServiceOrders_Model_ListOrderItemsByNextTokenRequest $request);
 
 
     /**
      * List Orders
      * ListOrders can be used to find orders that meet the specified criteria.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrders request or MarketplaceWebServiceOrders_Model_ListOrders object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrdersRequest
+     * @param MarketplaceWebServiceOrders_Model_ListOrdersRequest $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrders request or MarketplaceWebServiceOrders_Model_ListOrders object itself
      * @return MarketplaceWebServiceOrders_Model_ListOrdersResponse
-     *
-     * @throws MarketplaceWebServiceOrders_Exception
      */
-    public function listOrders($request);
+    public function listOrders(MarketplaceWebServiceOrders_Model_ListOrdersRequest $request);
 
 
     /**
      * List Orders By Next Token
-     * If ListOrders returns a nextToken, thus indicating that there are more orders
-     *         than returned that matched the given filter criteria, ListOrdersByNextToken
-     *         can be used to retrieve those other orders using that nextToken.
+     * If ListOrders returns a nextToken, thus indicating that there are more orders than returned that matched the
+     * given filter criteria, ListOrdersByNextToken can be used to retrieve those other orders using that nextToken.
      *
-     * @param mixed $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrdersByNextToken request or MarketplaceWebServiceOrders_Model_ListOrdersByNextToken object itself
-     * @see MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest
+     * @param MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest $request array of parameters for MarketplaceWebServiceOrders_Model_ListOrdersByNextToken request or MarketplaceWebServiceOrders_Model_ListOrdersByNextToken object itself
      * @return MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenResponse
-     *
-     * @throws MarketplaceWebServiceOrders_Exception
      */
-    public function listOrdersByNextToken($request);
+    public function listOrdersByNextToken(MarketplaceWebServiceOrders_Model_ListOrdersByNextTokenRequest $request);
 
 }

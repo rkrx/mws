@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -40,17 +40,17 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Model' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ResponsibleParty' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'Model' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'ResponsibleParty' => ['FieldValue' => null, 'FieldType' => 'string'],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the Model property.
      *
-     * @return String Model.
+     * @return string Model.
      */
     public function getModel()
     {
@@ -61,7 +61,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Model property.
      *
      * @param string model
-     * @return this instance
+     * @return $this
      */
     public function setModel($value)
     {
@@ -72,12 +72,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Model is set.
      *
-     * @return true if Model is set.
+     * @return bool `true` if Model is set.
      */
     public function isSetModel()
     {
-                return !is_null($this->_fields['Model']['FieldValue']);
-            }
+        return ($this->_fields['Model']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Model, return this.
@@ -85,7 +85,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param model
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withModel($value)
     {
@@ -96,7 +96,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the ResponsibleParty property.
      *
-     * @return String ResponsibleParty.
+     * @return string ResponsibleParty.
      */
     public function getResponsibleParty()
     {
@@ -107,7 +107,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the ResponsibleParty property.
      *
      * @param string responsibleParty
-     * @return this instance
+     * @return $this
      */
     public function setResponsibleParty($value)
     {
@@ -118,12 +118,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ResponsibleParty is set.
      *
-     * @return true if ResponsibleParty is set.
+     * @return bool `true` if ResponsibleParty is set.
      */
     public function isSetResponsibleParty()
     {
-                return !is_null($this->_fields['ResponsibleParty']['FieldValue']);
-            }
+        return ($this->_fields['ResponsibleParty']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of ResponsibleParty, return this.
@@ -131,12 +131,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param responsibleParty
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withResponsibleParty($value)
     {
         $this->setResponsibleParty($value);
         return $this;
     }
-
 }

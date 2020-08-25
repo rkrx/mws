@@ -81,9 +81,7 @@ class MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata {
   }
 
   public function __toString() {
-    return "RequestId: " . $this->getRequestId() . ", ResponseContext: " . $this->getResponseContext() . 
-      ", Timestamp: " . $this->getTimestamp() . ", Quota Max: " . $this->getQuotaMax() .
-      ", Quota Remaining: " . $this->getQuotaRemaining() . ", Quota Resets At: " . $this->getQuotaResetsAt();
+    return 'RequestId: ' . $this->getRequestId() . ', ResponseContext: ' . $this->getResponseContext() . ', Timestamp: ' . $this->getTimestamp() . ', Quota Max: ' . $this->getQuotaMax() . ', Quota Remaining: ' . $this->getQuotaRemaining() . ', Quota Resets At: ' . $this->getQuotaResetsAt();
   }
 
 }

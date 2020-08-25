@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -61,7 +61,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Payment property.
      *
      * @param MarketplaceWebServiceOrders_Model_Money payment
-     * @return this instance
+     * @return $this
      */
     public function setPayment($value)
     {
@@ -72,12 +72,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Payment is set.
      *
-     * @return true if Payment is set.
+     * @return bool `true` if Payment is set.
      */
     public function isSetPayment()
     {
-                return !is_null($this->_fields['Payment']['FieldValue']);
-            }
+        return ($this->_fields['Payment']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Payment, return this.
@@ -85,7 +85,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param payment
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPayment($value)
     {
@@ -96,7 +96,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the PaymentMethod property.
      *
-     * @return String PaymentMethod.
+     * @return string PaymentMethod.
      */
     public function getPaymentMethod()
     {
@@ -107,7 +107,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the PaymentMethod property.
      *
      * @param string paymentMethod
-     * @return this instance
+     * @return $this
      */
     public function setPaymentMethod($value)
     {
@@ -118,25 +118,23 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PaymentMethod is set.
      *
-     * @return true if PaymentMethod is set.
+     * @return bool `true` if PaymentMethod is set.
      */
     public function isSetPaymentMethod()
     {
-                return !is_null($this->_fields['PaymentMethod']['FieldValue']);
-            }
+        return ($this->_fields['PaymentMethod']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of PaymentMethod, return this.
      *
-     * @param paymentMethod
-     *             The new value to set.
+     * @param paymentMethod The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withPaymentMethod($value)
     {
         $this->setPaymentMethod($value);
         return $this;
     }
-
 }

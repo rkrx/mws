@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -40,17 +40,17 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Name' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'Name' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'Value' => ['FieldValue' => null, 'FieldType' => 'string'],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the Name property.
      *
-     * @return String Name.
+     * @return string Name.
      */
     public function getName()
     {
@@ -61,7 +61,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Name property.
      *
      * @param string name
-     * @return this instance
+     * @return $this
      */
     public function setName($value)
     {
@@ -72,12 +72,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Name is set.
      *
-     * @return true if Name is set.
+     * @return bool `true` if Name is set.
      */
     public function isSetName()
     {
-                return !is_null($this->_fields['Name']['FieldValue']);
-            }
+        return $this->_fields['Name']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of Name, return this.
@@ -85,7 +85,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param name
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withName($value)
     {
@@ -96,7 +96,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Value property.
      *
-     * @return String Value.
+     * @return string Value.
      */
     public function getValue()
     {
@@ -107,7 +107,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Value property.
      *
      * @param string value
-     * @return this instance
+     * @return $this
      */
     public function setValue($value)
     {
@@ -118,12 +118,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Value is set.
      *
-     * @return true if Value is set.
+     * @return bool `true` if Value is set.
      */
     public function isSetValue()
     {
-                return !is_null($this->_fields['Value']['FieldValue']);
-            }
+        return $this->_fields['Value']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of Value, return this.
@@ -131,12 +131,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param value
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this
      */
     public function withValue($value)
     {
         $this->setValue($value);
         return $this;
     }
-
 }

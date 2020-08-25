@@ -168,7 +168,7 @@ class FBAOutboundServiceMWS_Model_FulfillmentPreview extends FBAOutboundServiceM
      */
     public function isIsFulfillable()
     {
-        return $this->_fields['IsFulfillable']['FieldValue'];
+        return $this->_fields['IsFulfillable']['FieldValue'] ?? false;
     }
 
     /**

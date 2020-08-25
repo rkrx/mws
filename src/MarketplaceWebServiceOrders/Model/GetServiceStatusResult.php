@@ -21,7 +21,7 @@
  *  @see MarketplaceWebServiceOrders_Model
  */
 
-require_once (dirname(__FILE__) . '/../Model.php');
+require_once __DIR__ . '/../Model.php';
 
 
 /**
@@ -37,24 +37,27 @@ require_once (dirname(__FILE__) . '/../Model.php');
  *
  * </ul>
  */
-
- class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends MarketplaceWebServiceOrders_Model {
-
+ class MarketplaceWebServiceOrders_Model_GetServiceStatusResult extends MarketplaceWebServiceOrders_Model
+ {
     public function __construct($data = null)
     {
-    $this->_fields = array (
-    'Status' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Timestamp' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'MessageId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'Messages' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceOrders_Model_Message'), 'ListMemberName' => 'Message'),
-    );
-    parent::__construct($data);
+        $this->_fields = [
+            'Status' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'Timestamp' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'MessageId' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'Messages' => [
+                'FieldValue' => [],
+                'FieldType' => ['MarketplaceWebServiceOrders_Model_Message'],
+                'ListMemberName' => 'Message'
+            ],
+        ];
+        parent::__construct($data);
     }
 
     /**
      * Get the value of the Status property.
      *
-     * @return String Status.
+     * @return string Status.
      */
     public function getStatus()
     {
@@ -65,7 +68,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Status property.
      *
      * @param string status
-     * @return this instance
+     * @return $this
      */
     public function setStatus($value)
     {
@@ -76,20 +79,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Status is set.
      *
-     * @return true if Status is set.
+     * @return bool `true` if Status is set.
      */
     public function isSetStatus()
     {
-                return !is_null($this->_fields['Status']['FieldValue']);
-            }
+        return ($this->_fields['Status']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Status, return this.
      *
-     * @param status
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param bool $value
+     * @return $this
      */
     public function withStatus($value)
     {
@@ -100,7 +101,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Timestamp property.
      *
-     * @return XMLGregorianCalendar Timestamp.
+     * @return string Timestamp.
      */
     public function getTimestamp()
     {
@@ -110,8 +111,8 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Set the value of the Timestamp property.
      *
-     * @param string timestamp
-     * @return this instance
+     * @param string $value
+     * @return $this
      */
     public function setTimestamp($value)
     {
@@ -122,20 +123,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Timestamp is set.
      *
-     * @return true if Timestamp is set.
+     * @return bool `true` if Timestamp is set.
      */
     public function isSetTimestamp()
     {
-                return !is_null($this->_fields['Timestamp']['FieldValue']);
-            }
+        return ($this->_fields['Timestamp']['FieldValue'] ?? null) !== null;
+    }
 
     /**
      * Set the value of Timestamp, return this.
      *
-     * @param timestamp
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withTimestamp($value)
     {
@@ -146,7 +145,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the MessageId property.
      *
-     * @return String MessageId.
+     * @return string MessageId.
      */
     public function getMessageId()
     {
@@ -157,7 +156,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the MessageId property.
      *
      * @param string messageId
-     * @return this instance
+     * @return $this
      */
     public function setMessageId($value)
     {
@@ -168,20 +167,18 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MessageId is set.
      *
-     * @return true if MessageId is set.
+     * @return bool `true` if MessageId is set.
      */
     public function isSetMessageId()
     {
-                return !is_null($this->_fields['MessageId']['FieldValue']);
-            }
+        return $this->_fields['MessageId']['FieldValue'] !== null;
+    }
 
     /**
      * Set the value of MessageId, return this.
      *
-     * @param messageId
-     *             The new value to set.
-     *
-     * @return This instance.
+     * @param string $value
+     * @return $this
      */
     public function withMessageId($value)
     {
@@ -192,13 +189,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Get the value of the Messages property.
      *
-     * @return List<Message> Messages.
+     * @return MarketplaceWebServiceOrders_Model_Message[] Messages.
      */
     public function getMessages()
     {
-        if ($this->_fields['Messages']['FieldValue'] == null)
-        {
-            $this->_fields['Messages']['FieldValue'] = array();
+        if ($this->_fields['Messages']['FieldValue'] === null) {
+            $this->_fields['Messages']['FieldValue'] = [];
         }
         return $this->_fields['Messages']['FieldValue'];
     }
@@ -207,7 +203,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the Messages property.
      *
      * @param array messages
-     * @return this instance
+     * @return $this
      */
     public function setMessages($value)
     {
@@ -229,7 +225,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Messages is set.
      *
-     * @return true if Messages is set.
+     * @return bool `true` if Messages is set.
      */
     public function isSetMessages()
     {
@@ -239,17 +235,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Add values for Messages, return this.
      *
-     * @param messages
-     *             New values to add.
-     *
-     * @return This instance.
+     * @param string ...$messages
+     * @return $this
      */
-    public function withMessages()
+    public function withMessages(...$messages)
     {
-        foreach (func_get_args() as $Messages)
-        {
-            $this->_fields['Messages']['FieldValue'][] = $Messages;
-        }
+        $this->_fields['Messages']['FieldValue'] = $messages;
         return $this;
     }
 
