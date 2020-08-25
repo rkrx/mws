@@ -56,26 +56,24 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
 
     public function __construct($data = null)
     {
-        self::$DEFAULT_CONTENT_TYPE = new MarketplaceWebService_Model_ContentType(array('ContentType' => 'application/octet-stream'));
+        self::$DEFAULT_CONTENT_TYPE = new MarketplaceWebService_Model_ContentType(['ContentType' => 'application/octet-stream']);
 
-        // Here we're setting the content-type field directly to the object, but beware the actual 
+        // Here we're setting the content-type field directly to the object, but beware the actual
         // method of construction from associative arrays from the client interface would do something like:
         // $parameters = array ('ContentType' => array('ContentType' => 'application/octet-stream'));
 
-        $this->fields = array(
-            'Marketplace' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'Merchant' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'MarketplaceIdList' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'),
-            'FeedContent' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'FeedType' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'PurgeAndReplace' => array('FieldValue' => null, 'FieldType' => 'bool'),
-            'ContentMd5' => array('FieldValue' => null, 'FieldType' => 'string'),
-            'ContentType' => array(
-                'FieldValue' => self::$DEFAULT_CONTENT_TYPE,
-                'FieldType' => 'MarketplaceWebService_Model_ContentType'
-            )
-        );
+        $this->fields = [
+            'Marketplace' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'Merchant' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'MWSAuthToken' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'MarketplaceIdList' => ['FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'],
+            'FeedContent' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'FeedType' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'FeedOptions' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'PurgeAndReplace' => ['FieldValue' => null, 'FieldType' => 'bool'],
+            'ContentMd5' => ['FieldValue' => null, 'FieldType' => 'string'],
+            'ContentType' => ['FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'MarketplaceWebService_Model_ContentType']
+        ];
 
         parent::__construct($data);
 
@@ -92,9 +90,9 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     private function verifySupportedContentType($supplied)
     {
         if (!($supplied == self::$DEFAULT_CONTENT_TYPE)) {
-            throw new MarketplaceWebService_Exception(array(
+            throw new MarketplaceWebService_Exception([
                 'Message' => "Unsupported ContentType " . $supplied->getContentType() . " ContentType must be " . self::$DEFAULT_CONTENT_TYPE->getContentType()
-            ));
+            ]);
         }
     }
 
@@ -338,7 +336,6 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
         return $this;
     }
 
-
     /**
      * Checks if FeedContent is set
      *
@@ -368,6 +365,38 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     public function setFeedType($value)
     {
         $this->fields['FeedType']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Checks if FeedContent is set
+     *
+     * @return bool true if FeedContent  is set
+     */
+    public function isSetFeedOptions()
+    {
+        return ($this->fields['FeedOptions']['FieldValue'] ?? null) !== null;
+    }
+
+    /**
+     * Gets the value of the FeedOptions property.
+     *
+     * @return string FeedOptions
+     */
+    public function getFeedOptions()
+    {
+        return $this->fields['FeedOptions']['FieldValue'];
+    }
+
+    /**
+     * Sets the value of the FeedOptions property.
+     *
+     * @param string $value FeedOptions
+     * @return $this This instance
+     */
+    public function setFeedOptions($value)
+    {
+        $this->fields['FeedOptions']['FieldValue'] = $value;
         return $this;
     }
 

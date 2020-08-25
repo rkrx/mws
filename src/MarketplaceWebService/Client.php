@@ -1056,7 +1056,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
 
             $curlOptions[CURLOPT_PROXY] = $proxy;
         }
-        
+
         if (array_key_exists('CURLOPT_VERBOSE', $this->config) && !is_null($this->config['CURLOPT_VERBOSE'])) {
         	$curlOptions[CURLOPT_VERBOSE] = $this->config['CURLOPT_VERBOSE'];
         }
@@ -1441,6 +1441,9 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         }
         if ($request->isSetFeedType()) {
             $parameters['FeedType'] = $request->getFeedType();
+        }
+        if ($request->isSetFeedOptions()) {
+            $parameters['FeedOptions'] = $request->getFeedOptions();
         }
         if ($request->isSetPurgeAndReplace()) {
             $parameters['PurgeAndReplace'] = $request->getPurgeAndReplace() ? "true" : "false";
