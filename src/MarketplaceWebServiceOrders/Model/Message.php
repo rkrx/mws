@@ -126,9 +126,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of Text, return this.
      *
-     * @param text
-     *             The new value to set.
-     *
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withText($value)

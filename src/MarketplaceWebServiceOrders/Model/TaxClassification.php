@@ -82,9 +82,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of Name, return this.
      *
-     * @param name
-     *             The new value to set.
-     *
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withName($value)
@@ -128,9 +126,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of Value, return this.
      *
-     * @param value
-     *             The new value to set.
-     *
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withValue($value)

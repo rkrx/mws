@@ -84,9 +84,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PointsNumber, return this.
      *
-     * @param pointsNumber
-     *             The new value to set.
-     *
+     * @param int $value pointsNumber The new value to set.
      * @return $this
      */
     public function withPointsNumber($value)
@@ -98,7 +96,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the PointsMonetaryValue property.
      *
-     * @return Money PointsMonetaryValue.
+     * @return MarketplaceWebServiceOrders_Model_Money PointsMonetaryValue.
      */
     public function getPointsMonetaryValue()
     {
@@ -130,8 +128,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PointsMonetaryValue, return this.
      *
-     * @param pointsMonetaryValue
-     *             The new value to set.
+     * @param MarketplaceWebServiceOrders_Model_Money $value pointsMonetaryValue The new value to set.
      *
      * @return $this
      */

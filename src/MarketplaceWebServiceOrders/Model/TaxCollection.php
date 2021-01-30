@@ -60,7 +60,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of the Model property.
      *
-     * @param string model
+     * @param string $value
      * @return $this
      */
     public function setModel($value)
@@ -82,9 +82,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of Model, return this.
      *
-     * @param model
-     *             The new value to set.
-     *
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withModel($value)
@@ -128,9 +126,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ResponsibleParty, return this.
      *
-     * @param responsibleParty
-     *             The new value to set.
-     *
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withResponsibleParty($value)

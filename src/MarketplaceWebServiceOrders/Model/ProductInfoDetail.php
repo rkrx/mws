@@ -58,7 +58,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of the NumberOfItems property.
      *
-     * @param int numberOfItems
+     * @param int $value
      * @return $this
      */
     public function setNumberOfItems($value)
@@ -80,9 +80,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of NumberOfItems, return this.
      *
-     * @param numberOfItems
-     *             The new value to set.
-     *
+     * @param int $value The new value to set.
      * @return $this
      */
     public function withNumberOfItems($value)

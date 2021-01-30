@@ -148,8 +148,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ASIN, return this.
      *
-     * @param asin
-     *             The new value to set.
+     * @param string $value asin The new value to set.
      *
      * @return $this
      */
@@ -194,9 +193,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of SellerSKU, return this.
      *
-     * @param sellerSKU
-     *             The new value to set.
-     *
+     * @param string $value sellerSKU The new value to set.
      * @return $this
      */
     public function withSellerSKU($value)
@@ -240,9 +237,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of OrderItemId, return this.
      *
-     * @param orderItemId
-     *             The new value to set.
-     *
+     * @param string $value orderItemId The new value to set.
      * @return $this
      */
     public function withOrderItemId($value)
@@ -286,9 +281,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of Title, return this.
      *
-     * @param title
-     *             The new value to set.
-     *
+     * @param string $value title The new value to set.
      * @return $this
      */
     public function withTitle($value)
@@ -332,9 +325,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of QuantityOrdered, return this.
      *
-     * @param quantityOrdered
-     *             The new value to set.
-     *
+     * @param int $value quantityOrdered The new value to set.
      * @return $this
      */
     public function withQuantityOrdered($value)
@@ -378,9 +369,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of QuantityShipped, return this.
      *
-     * @param quantityShipped
-     *             The new value to set.
-     *
+     * @param int $value quantityShipped The new value to set.
      * @return $this
      */
     public function withQuantityShipped($value)
@@ -392,7 +381,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ProductInfo property.
      *
-     * @return ProductInfoDetail ProductInfo.
+     * @return MarketplaceWebServiceOrders_Model_ProductInfoDetail ProductInfo.
      */
     public function getProductInfo()
     {
@@ -424,9 +413,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ProductInfo, return this.
      *
-     * @param productInfo
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_ProductInfoDetail $value productInfo The new value to set.
      * @return $this
      */
     public function withProductInfo($value)
@@ -438,7 +425,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the PointsGranted property.
      *
-     * @return PointsGrantedDetail PointsGranted.
+     * @return MarketplaceWebServiceOrders_Model_PointsGrantedDetail PointsGranted.
      */
     public function getPointsGranted()
     {
@@ -448,7 +435,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of the PointsGranted property.
      *
-     * @param MarketplaceWebServiceOrders_Model_PointsGrantedDetail pointsGranted
+     * @param MarketplaceWebServiceOrders_Model_PointsGrantedDetail $value pointsGranted
      * @return $this
      */
     public function setPointsGranted($value)
@@ -470,8 +457,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PointsGranted, return this.
      *
-     * @param pointsGranted
-     *             The new value to set.
+     * @param MarketplaceWebServiceOrders_Model_PointsGrantedDetail $value pointsGranted The new value to set.
      *
      * @return $this
      */
@@ -484,7 +470,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ItemPrice property.
      *
-     * @return Money ItemPrice.
+     * @return MarketplaceWebServiceOrders_Model_Money ItemPrice.
      */
     public function getItemPrice()
     {
@@ -516,8 +502,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ItemPrice, return this.
      *
-     * @param itemPrice
-     *             The new value to set.
+     * @param MarketplaceWebServiceOrders_Model_Money $value itemPrice The new value to set.
      *
      * @return $this
      */
@@ -530,7 +515,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ShippingPrice property.
      *
-     * @return Money ShippingPrice.
+     * @return MarketplaceWebServiceOrders_Model_Money ShippingPrice.
      */
     public function getShippingPrice()
     {
@@ -562,9 +547,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShippingPrice, return this.
      *
-     * @param shippingPrice
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value shippingPrice The new value to set.
      * @return $this
      */
     public function withShippingPrice($value)
@@ -576,7 +559,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the GiftWrapPrice property.
      *
-     * @return Money GiftWrapPrice.
+     * @return MarketplaceWebServiceOrders_Model_Money GiftWrapPrice.
      */
     public function getGiftWrapPrice()
     {
@@ -608,9 +591,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of GiftWrapPrice, return this.
      *
-     * @param giftWrapPrice
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value giftWrapPrice The new value to set.
      * @return $this
      */
     public function withGiftWrapPrice($value)
@@ -622,7 +603,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ItemTax property.
      *
-     * @return Money ItemTax.
+     * @return MarketplaceWebServiceOrders_Model_Money ItemTax.
      */
     public function getItemTax()
     {
@@ -654,9 +635,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ItemTax, return this.
      *
-     * @param itemTax
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value itemTax The new value to set.
      * @return $this
      */
     public function withItemTax($value)
@@ -668,7 +647,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ShippingTax property.
      *
-     * @return Money ShippingTax.
+     * @return MarketplaceWebServiceOrders_Model_Money ShippingTax.
      */
     public function getShippingTax()
     {
@@ -700,9 +679,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShippingTax, return this.
      *
-     * @param shippingTax
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value shippingTax The new value to set.
      * @return $this
      */
     public function withShippingTax($value)
@@ -714,7 +691,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the GiftWrapTax property.
      *
-     * @return Money GiftWrapTax.
+     * @return MarketplaceWebServiceOrders_Model_Money GiftWrapTax.
      */
     public function getGiftWrapTax()
     {
@@ -746,9 +723,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of GiftWrapTax, return this.
      *
-     * @param giftWrapTax
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value giftWrapTax The new value to set.
      * @return $this
      */
     public function withGiftWrapTax($value)
@@ -760,7 +735,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ShippingDiscount property.
      *
-     * @return Money ShippingDiscount.
+     * @return MarketplaceWebServiceOrders_Model_Money ShippingDiscount.
      */
     public function getShippingDiscount()
     {
@@ -792,9 +767,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShippingDiscount, return this.
      *
-     * @param shippingDiscount
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value shippingDiscount The new value to set.
      * @return $this
      */
     public function withShippingDiscount($value)
@@ -806,7 +779,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ShippingDiscountTax property.
      *
-     * @return Money ShippingDiscountTax.
+     * @return MarketplaceWebServiceOrders_Model_Money ShippingDiscountTax.
      */
     public function getShippingDiscountTax()
     {
@@ -838,8 +811,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShippingDiscountTax, return this.
      *
-     * @param shippingDiscountTax
-     *             The new value to set.
+     * @param MarketplaceWebServiceOrders_Model_Money $value shippingDiscountTax The new value to set.
      *
      * @return $this
      */
@@ -852,7 +824,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the PromotionDiscount property.
      *
-     * @return Money PromotionDiscount.
+     * @return MarketplaceWebServiceOrders_Model_Money PromotionDiscount.
      */
     public function getPromotionDiscount()
     {
@@ -884,9 +856,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PromotionDiscount, return this.
      *
-     * @param promotionDiscount
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value promotionDiscount The new value to set.
      * @return $this
      */
     public function withPromotionDiscount($value)
@@ -898,7 +868,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the PromotionDiscountTax property.
      *
-     * @return Money PromotionDiscountTax.
+     * @return MarketplaceWebServiceOrders_Model_Money PromotionDiscountTax.
      */
     public function getPromotionDiscountTax()
     {
@@ -930,9 +900,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PromotionDiscountTax, return this.
      *
-     * @param promotionDiscountTax
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value promotionDiscountTax The new value to set.
      * @return $this
      */
     public function withPromotionDiscountTax($value)
@@ -985,20 +953,18 @@ require_once __DIR__ . '/../Model.php';
      */
     public function isSetPromotionIds()
     {
-                return !empty($this->_fields['PromotionIds']['FieldValue']);
-            }
+        return !empty($this->_fields['PromotionIds']['FieldValue']);
+    }
 
     /**
      * Add values for PromotionIds, return this.
      *
-     * @param promotionIds
-     *             New values to add.
-     *
+     * @param string ...$values promotionIds New values to add.
      * @return $this
      */
-    public function withPromotionIds()
+    public function withPromotionIds(...$values)
     {
-        foreach (func_get_args() as $PromotionIds)
+        foreach ($values as $PromotionIds)
         {
             $this->_fields['PromotionIds']['FieldValue'][] = $PromotionIds;
         }
@@ -1008,7 +974,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the CODFee property.
      *
-     * @return Money CODFee.
+     * @return MarketplaceWebServiceOrders_Model_Money CODFee.
      */
     public function getCODFee()
     {
@@ -1040,9 +1006,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of CODFee, return this.
      *
-     * @param codFee
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value codFee The new value to set.
      * @return $this
      */
     public function withCODFee($value)
@@ -1054,7 +1018,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the CODFeeDiscount property.
      *
-     * @return Money CODFeeDiscount.
+     * @return MarketplaceWebServiceOrders_Model_Money CODFeeDiscount.
      */
     public function getCODFeeDiscount()
     {
@@ -1086,9 +1050,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of CODFeeDiscount, return this.
      *
-     * @param codFeeDiscount
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value codFeeDiscount The new value to set.
      * @return $this
      */
     public function withCODFeeDiscount($value)
@@ -1110,7 +1072,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the IsGift property.
      *
-     * @return Boolean IsGift.
+     * @return bool IsGift.
      */
     public function getIsGift()
     {
@@ -1142,8 +1104,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of IsGift, return this.
      *
-     * @param isGift
-     *             The new value to set.
+     * @param bool $value isGift The new value to set.
      *
      * @return $this
      */
@@ -1188,9 +1149,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of GiftMessageText, return this.
      *
-     * @param giftMessageText
-     *             The new value to set.
-     *
+     * @param string $value giftMessageText The new value to set.
      * @return $this
      */
     public function withGiftMessageText($value)
@@ -1234,9 +1193,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of GiftWrapLevel, return this.
      *
-     * @param giftWrapLevel
-     *             The new value to set.
-     *
+     * @param string $value giftWrapLevel The new value to set.
      * @return $this
      */
     public function withGiftWrapLevel($value)
@@ -1248,7 +1205,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the InvoiceData property.
      *
-     * @return InvoiceData InvoiceData.
+     * @return MarketplaceWebServiceOrders_Model_InvoiceData InvoiceData.
      */
     public function getInvoiceData()
     {
@@ -1280,9 +1237,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of InvoiceData, return this.
      *
-     * @param invoiceData
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_InvoiceData $value invoiceData The new value to set.
      * @return $this
      */
     public function withInvoiceData($value)
@@ -1326,9 +1281,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ConditionNote, return this.
      *
-     * @param conditionNote
-     *             The new value to set.
-     *
+     * @param string $value conditionNote The new value to set.
      * @return $this
      */
     public function withConditionNote($value)
@@ -1372,9 +1325,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ConditionId, return this.
      *
-     * @param conditionId
-     *             The new value to set.
-     *
+     * @param string $value conditionId The new value to set.
      * @return $this
      */
     public function withConditionId($value)
@@ -1418,9 +1369,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ConditionSubtypeId, return this.
      *
-     * @param conditionSubtypeId
-     *             The new value to set.
-     *
+     * @param string $value conditionSubtypeId The new value to set.
      * @return $this
      */
     public function withConditionSubtypeId($value)
@@ -1464,9 +1413,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ScheduledDeliveryStartDate, return this.
      *
-     * @param scheduledDeliveryStartDate
-     *             The new value to set.
-     *
+     * @param string $value scheduledDeliveryStartDate The new value to set.
      * @return $this
      */
     public function withScheduledDeliveryStartDate($value)
@@ -1510,9 +1457,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ScheduledDeliveryEndDate, return this.
      *
-     * @param scheduledDeliveryEndDate
-     *             The new value to set.
-     *
+     * @param string $value scheduledDeliveryEndDate The new value to set.
      * @return $this
      */
     public function withScheduledDeliveryEndDate($value)
@@ -1556,9 +1501,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PriceDesignation, return this.
      *
-     * @param priceDesignation
-     *             The new value to set.
-     *
+     * @param string $value priceDesignation The new value to set.
      * @return $this
      */
     public function withPriceDesignation($value)
@@ -1570,7 +1513,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the BuyerCustomizedInfo property.
      *
-     * @return BuyerCustomizedInfoDetail BuyerCustomizedInfo.
+     * @return MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail BuyerCustomizedInfo.
      */
     public function getBuyerCustomizedInfo()
     {
@@ -1602,9 +1545,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of BuyerCustomizedInfo, return this.
      *
-     * @param buyerCustomizedInfo
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_BuyerCustomizedInfoDetail $value buyerCustomizedInfo The new value to set.
      * @return $this
      */
     public function withBuyerCustomizedInfo($value)
@@ -1616,7 +1557,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the TaxCollection property.
      *
-     * @return TaxCollection TaxCollection.
+     * @return MarketplaceWebServiceOrders_Model_TaxCollection TaxCollection.
      */
     public function getTaxCollection()
     {
@@ -1648,9 +1589,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of TaxCollection, return this.
      *
-     * @param taxCollection
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_TaxCollection $value taxCollection The new value to set.
      * @return $this
      */
     public function withTaxCollection($value)
@@ -1672,7 +1611,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the SerialNumberRequired property.
      *
-     * @return Boolean SerialNumberRequired.
+     * @return bool SerialNumberRequired.
      */
     public function getSerialNumberRequired()
     {
@@ -1704,9 +1643,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of SerialNumberRequired, return this.
      *
-     * @param serialNumberRequired
-     *             The new value to set.
-     *
+     * @param bool $value serialNumberRequired The new value to set.
      * @return $this
      */
     public function withSerialNumberRequired($value)
@@ -1728,7 +1665,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the IsTransparency property.
      *
-     * @return Boolean IsTransparency.
+     * @return bool IsTransparency.
      */
     public function getIsTransparency()
     {
@@ -1760,9 +1697,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of IsTransparency, return this.
      *
-     * @param isTransparency
-     *             The new value to set.
-     *
+     * @param bool $value isTransparency The new value to set.
      * @return $this
      */
     public function withIsTransparency($value)

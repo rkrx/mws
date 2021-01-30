@@ -60,7 +60,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of the CurrencyCode property.
      *
-     * @param string currencyCode
+     * @param string $value
      * @return $this
      */
     public function setCurrencyCode($value)
@@ -82,9 +82,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of CurrencyCode, return this.
      *
-     * @param currencyCode
-     *             The new value to set.
-     *
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withCurrencyCode($value)
@@ -128,9 +126,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of Amount, return this.
      *
-     * @param amount
-     *             The new value to set.
-     *
+     * @param string $value The new value to set.
      * @return $this
      */
     public function withAmount($value)

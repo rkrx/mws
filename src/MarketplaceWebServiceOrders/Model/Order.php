@@ -164,9 +164,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of AmazonOrderId, return this.
      *
-     * @param amazonOrderId
-     *             The new value to set.
-     *
+     * @param string $value amazonOrderId The new value to set.
      * @return $this
      */
     public function withAmazonOrderId($value)
@@ -210,8 +208,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of SellerOrderId, return this.
      *
-     * @param sellerOrderId
-     *             The new value to set.
+     * @param string $value sellerOrderId The new value to set.
      *
      * @return $this
      */
@@ -224,7 +221,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the PurchaseDate property.
      *
-     * @return XMLGregorianCalendar PurchaseDate.
+     * @return string PurchaseDate.
      */
     public function getPurchaseDate()
     {
@@ -256,8 +253,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PurchaseDate, return this.
      *
-     * @param purchaseDate
-     *             The new value to set.
+     * @param string $value purchaseDate The new value to set.
      *
      * @return $this
      */
@@ -270,7 +266,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the LastUpdateDate property.
      *
-     * @return XMLGregorianCalendar LastUpdateDate.
+     * @return string LastUpdateDate.
      */
     public function getLastUpdateDate()
     {
@@ -302,9 +298,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of LastUpdateDate, return this.
      *
-     * @param lastUpdateDate
-     *             The new value to set.
-     *
+     * @param string $value lastUpdateDate The new value to set.
      * @return $this
      */
     public function withLastUpdateDate($value)
@@ -348,9 +342,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of OrderStatus, return this.
      *
-     * @param orderStatus
-     *             The new value to set.
-     *
+     * @param string $value orderStatus The new value to set.
      * @return $this
      */
     public function withOrderStatus($value)
@@ -394,9 +386,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of FulfillmentChannel, return this.
      *
-     * @param fulfillmentChannel
-     *             The new value to set.
-     *
+     * @param string $value fulfillmentChannel The new value to set.
      * @return $this
      */
     public function withFulfillmentChannel($value)
@@ -440,9 +430,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of SalesChannel, return this.
      *
-     * @param salesChannel
-     *             The new value to set.
-     *
+     * @param string $value salesChannel The new value to set.
      * @return $this
      */
     public function withSalesChannel($value)
@@ -486,9 +474,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of OrderChannel, return this.
      *
-     * @param orderChannel
-     *             The new value to set.
-     *
+     * @param string $value orderChannel The new value to set.
      * @return $this
      */
     public function withOrderChannel($value)
@@ -532,9 +518,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShipServiceLevel, return this.
      *
-     * @param shipServiceLevel
-     *             The new value to set.
-     *
+     * @param string $value shipServiceLevel The new value to set.
      * @return $this
      */
     public function withShipServiceLevel($value)
@@ -546,7 +530,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ShippingAddress property.
      *
-     * @return Address ShippingAddress.
+     * @return MarketplaceWebServiceOrders_Model_Address ShippingAddress.
      */
     public function getShippingAddress()
     {
@@ -578,9 +562,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShippingAddress, return this.
      *
-     * @param shippingAddress
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Address $value shippingAddress The new value to set.
      * @return $this
      */
     public function withShippingAddress($value)
@@ -592,7 +574,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the OrderTotal property.
      *
-     * @return Money OrderTotal.
+     * @return MarketplaceWebServiceOrders_Model_Money OrderTotal.
      */
     public function getOrderTotal()
     {
@@ -624,9 +606,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of OrderTotal, return this.
      *
-     * @param orderTotal
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value orderTotal The new value to set.
      * @return $this
      */
     public function withOrderTotal($value)
@@ -670,9 +650,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of NumberOfItemsShipped, return this.
      *
-     * @param numberOfItemsShipped
-     *             The new value to set.
-     *
+     * @param int $value numberOfItemsShipped The new value to set.
      * @return $this
      */
     public function withNumberOfItemsShipped($value)
@@ -716,9 +694,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of NumberOfItemsUnshipped, return this.
      *
-     * @param numberOfItemsUnshipped
-     *             The new value to set.
-     *
+     * @param int $value numberOfItemsUnshipped The new value to set.
      * @return $this
      */
     public function withNumberOfItemsUnshipped($value)
@@ -818,9 +794,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PaymentMethod, return this.
      *
-     * @param paymentMethod
-     *             The new value to set.
-     *
+     * @param string $value paymentMethod The new value to set.
      * @return $this
      */
     public function withPaymentMethod($value)
@@ -832,7 +806,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the PaymentMethodDetails property.
      *
-     * @return PaymentMethodDetails[]
+     * @return mixed[]
      */
     public function getPaymentMethodDetails()
     {
@@ -845,7 +819,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of the PaymentMethodDetails property.
      *
-     * @param PaymentMethodDetails[] $value
+     * @param mixed[] $value
      * @return $this
      */
     public function setPaymentMethodDetails($value)
@@ -878,14 +852,14 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Add values for PaymentMethodDetails, return this.
      *
-     * @param paymentMethodDetails
+     * @param mixed ...$values paymentMethodDetails
      *             New values to add.
      *
      * @return $this
      */
-    public function withPaymentMethodDetails()
+    public function withPaymentMethodDetails(...$values)
     {
-        foreach (func_get_args() as $PaymentMethodDetails) {
+        foreach ($values as $PaymentMethodDetails) {
             $this->_fields['PaymentMethodDetails']['FieldValue'][] = $PaymentMethodDetails;
         }
         return $this;
@@ -926,9 +900,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of MarketplaceId, return this.
      *
-     * @param marketplaceId
-     *             The new value to set.
-     *
+     * @param string $value marketplaceId The new value to set.
      * @return $this
      */
     public function withMarketplaceId($value)
@@ -972,9 +944,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of BuyerEmail, return this.
      *
-     * @param buyerEmail
-     *             The new value to set.
-     *
+     * @param string $value buyerEmail The new value to set.
      * @return $this
      */
     public function withBuyerEmail($value)
@@ -1018,9 +988,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of BuyerName, return this.
      *
-     * @param buyerName
-     *             The new value to set.
-     *
+     * @param string $value buyerName The new value to set.
      * @return $this
      */
     public function withBuyerName($value)
@@ -1064,9 +1032,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of BuyerCounty, return this.
      *
-     * @param buyerCounty
-     *             The new value to set.
-     *
+     * @param string $value buyerCounty The new value to set.
      * @return $this
      */
     public function withBuyerCounty($value)
@@ -1078,7 +1044,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the BuyerTaxInfo property.
      *
-     * @return BuyerTaxInfo BuyerTaxInfo.
+     * @return MarketplaceWebServiceOrders_Model_BuyerTaxInfo BuyerTaxInfo.
      */
     public function getBuyerTaxInfo()
     {
@@ -1110,9 +1076,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of BuyerTaxInfo, return this.
      *
-     * @param buyerTaxInfo
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_BuyerTaxInfo $value buyerTaxInfo The new value to set.
      * @return $this
      */
     public function withBuyerTaxInfo($value)
@@ -1156,9 +1120,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShipmentServiceLevelCategory, return this.
      *
-     * @param shipmentServiceLevelCategory
-     *             The new value to set.
-     *
+     * @param string $value shipmentServiceLevelCategory The new value to set.
      * @return $this
      */
     public function withShipmentServiceLevelCategory($value)
@@ -1180,7 +1142,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the ShippedByAmazonTFM property.
      *
-     * @return Boolean ShippedByAmazonTFM.
+     * @return bool ShippedByAmazonTFM.
      */
     public function getShippedByAmazonTFM()
     {
@@ -1190,7 +1152,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of the ShippedByAmazonTFM property.
      *
-     * @param bool shippedByAmazonTFM
+     * @param bool $value shippedByAmazonTFM
      * @return $this
      */
     public function setShippedByAmazonTFM($value)
@@ -1212,9 +1174,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ShippedByAmazonTFM, return this.
      *
-     * @param shippedByAmazonTFM
-     *             The new value to set.
-     *
+     * @param bool $value shippedByAmazonTFM The new value to set.
      * @return $this
      */
     public function withShippedByAmazonTFM($value)
@@ -1258,9 +1218,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of TFMShipmentStatus, return this.
      *
-     * @param tfmShipmentStatus
-     *             The new value to set.
-     *
+     * @param string $value tfmShipmentStatus The new value to set.
      * @return $this
      */
     public function withTFMShipmentStatus($value)
@@ -1304,9 +1262,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of EasyShipShipmentStatus, return this.
      *
-     * @param easyShipShipmentStatus
-     *             The new value to set.
-     *
+     * @param string $value easyShipShipmentStatus The new value to set.
      * @return $this
      */
     public function withEasyShipShipmentStatus($value)
@@ -1350,9 +1306,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of CbaDisplayableShippingLabel, return this.
      *
-     * @param cbaDisplayableShippingLabel
-     *             The new value to set.
-     *
+     * @param string $value cbaDisplayableShippingLabel The new value to set.
      * @return $this
      */
     public function withCbaDisplayableShippingLabel($value)
@@ -1396,9 +1350,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of OrderType, return this.
      *
-     * @param orderType
-     *             The new value to set.
-     *
+     * @param string $value orderType The new value to set.
      * @return $this
      */
     public function withOrderType($value)
@@ -1410,7 +1362,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the EarliestShipDate property.
      *
-     * @return XMLGregorianCalendar EarliestShipDate.
+     * @return string EarliestShipDate.
      */
     public function getEarliestShipDate()
     {
@@ -1442,9 +1394,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of EarliestShipDate, return this.
      *
-     * @param earliestShipDate
-     *             The new value to set.
-     *
+     * @param string $value earliestShipDate The new value to set.
      * @return $this
      */
     public function withEarliestShipDate($value)
@@ -1456,7 +1406,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the LatestShipDate property.
      *
-     * @return XMLGregorianCalendar LatestShipDate.
+     * @return string LatestShipDate.
      */
     public function getLatestShipDate()
     {
@@ -1488,9 +1438,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of LatestShipDate, return this.
      *
-     * @param latestShipDate
-     *             The new value to set.
-     *
+     * @param string $value latestShipDate The new value to set.
      * @return $this
      */
     public function withLatestShipDate($value)
@@ -1502,7 +1450,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the EarliestDeliveryDate property.
      *
-     * @return XMLGregorianCalendar EarliestDeliveryDate.
+     * @return string EarliestDeliveryDate.
      */
     public function getEarliestDeliveryDate()
     {
@@ -1534,9 +1482,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of EarliestDeliveryDate, return this.
      *
-     * @param earliestDeliveryDate
-     *             The new value to set.
-     *
+     * @param string $value earliestDeliveryDate The new value to set.
      * @return $this
      */
     public function withEarliestDeliveryDate($value)
@@ -1548,7 +1494,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the LatestDeliveryDate property.
      *
-     * @return XMLGregorianCalendar LatestDeliveryDate.
+     * @return string LatestDeliveryDate.
      */
     public function getLatestDeliveryDate()
     {
@@ -1580,9 +1526,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of LatestDeliveryDate, return this.
      *
-     * @param latestDeliveryDate
-     *             The new value to set.
-     *
+     * @param string $value latestDeliveryDate The new value to set.
      * @return $this
      */
     public function withLatestDeliveryDate($value)
@@ -1604,7 +1548,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the IsBusinessOrder property.
      *
-     * @return Boolean IsBusinessOrder.
+     * @return bool IsBusinessOrder.
      */
     public function getIsBusinessOrder()
     {
@@ -1636,9 +1580,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of IsBusinessOrder, return this.
      *
-     * @param isBusinessOrder
-     *             The new value to set.
-     *
+     * @param bool $value isBusinessOrder The new value to set.
      * @return $this
      */
     public function withIsBusinessOrder($value)
@@ -1682,9 +1624,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PurchaseOrderNumber, return this.
      *
-     * @param purchaseOrderNumber
-     *             The new value to set.
-     *
+     * @param string $value purchaseOrderNumber The new value to set.
      * @return $this
      */
     public function withPurchaseOrderNumber($value)
@@ -1706,7 +1646,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the IsPrime property.
      *
-     * @return Boolean IsPrime.
+     * @return bool IsPrime.
      */
     public function getIsPrime()
     {
@@ -1738,9 +1678,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of IsPrime, return this.
      *
-     * @param isPrime
-     *             The new value to set.
-     *
+     * @param bool $value isPrime The new value to set.
      * @return $this
      */
     public function withIsPrime($value)
@@ -1762,7 +1700,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the IsPremiumOrder property.
      *
-     * @return Boolean IsPremiumOrder.
+     * @return bool IsPremiumOrder.
      */
     public function getIsPremiumOrder()
     {
@@ -1794,9 +1732,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of IsPremiumOrder, return this.
      *
-     * @param isPremiumOrder
-     *             The new value to set.
-     *
+     * @param bool $value isPremiumOrder The new value to set.
      * @return $this
      */
     public function withIsPremiumOrder($value)
@@ -1840,9 +1776,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ReplacedOrderId, return this.
      *
-     * @param replacedOrderId
-     *             The new value to set.
-     *
+     * @param string $value replacedOrderId The new value to set.
      * @return $this
      */
     public function withReplacedOrderId($value)
@@ -1864,7 +1798,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the IsReplacementOrder property.
      *
-     * @return Boolean IsReplacementOrder.
+     * @return bool IsReplacementOrder.
      */
     public function getIsReplacementOrder()
     {
@@ -1896,9 +1830,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of IsReplacementOrder, return this.
      *
-     * @param isReplacementOrder
-     *             The new value to set.
-     *
+     * @param bool $value isReplacementOrder The new value to set.
      * @return $this
      */
     public function withIsReplacementOrder($value)
@@ -1910,7 +1842,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the PromiseResponseDueDate property.
      *
-     * @return XMLGregorianCalendar PromiseResponseDueDate.
+     * @return string PromiseResponseDueDate.
      */
     public function getPromiseResponseDueDate()
     {
@@ -1942,9 +1874,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PromiseResponseDueDate, return this.
      *
-     * @param promiseResponseDueDate
-     *             The new value to set.
-     *
+     * @param string $value promiseResponseDueDate The new value to set.
      * @return $this
      */
     public function withPromiseResponseDueDate($value)
@@ -1966,7 +1896,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the IsEstimatedShipDateSet property.
      *
-     * @return Boolean IsEstimatedShipDateSet.
+     * @return bool IsEstimatedShipDateSet.
      */
     public function getIsEstimatedShipDateSet()
     {
@@ -1998,9 +1928,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of IsEstimatedShipDateSet, return this.
      *
-     * @param isEstimatedShipDateSet
-     *             The new value to set.
-     *
+     * @param bool $value isEstimatedShipDateSet The new value to set.
      * @return $this
      */
     public function withIsEstimatedShipDateSet($value)

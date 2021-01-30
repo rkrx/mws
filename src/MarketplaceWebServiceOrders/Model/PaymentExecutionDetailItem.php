@@ -50,7 +50,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Get the value of the Payment property.
      *
-     * @return Money Payment.
+     * @return MarketplaceWebServiceOrders_Model_Money Payment.
      */
     public function getPayment()
     {
@@ -82,9 +82,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of Payment, return this.
      *
-     * @param payment
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_Money $value payment The new value to set.
      * @return $this
      */
     public function withPayment($value)
@@ -128,8 +126,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of PaymentMethod, return this.
      *
-     * @param paymentMethod The new value to set.
-     *
+     * @param string $value paymentMethod The new value to set.
      * @return $this
      */
     public function withPaymentMethod($value)

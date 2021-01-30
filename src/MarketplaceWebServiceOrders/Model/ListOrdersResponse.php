@@ -180,9 +180,7 @@ require_once __DIR__ . '/../Model.php';
     /**
      * Set the value of ResponseHeaderMetadata, return this.
      *
-     * @param responseHeaderMetadata
-     *             The new value to set.
-     *
+     * @param MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata $value responseHeaderMetadata The new value to set.
      * @return $this
      */
     public function withResponseHeaderMetadata($value)
