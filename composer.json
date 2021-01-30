@@ -7,12 +7,13 @@
         "name": "Amazon.com, Inc.",
         "homepage": "https://developer.amazonservices.de/"
     }, {
+        "name": "Nikolas Hermann",
+        "email": "nikolas.hermann@brickfox.de"
+    }, {
         "name": "Ron Kirschler",
         "email": "ron.kirschler@gmail.com"
     }],
-    "include-path": [
-        "src/"
-    ],
+    "include-path": ["src/"],
     "autoload": {
         "psr-0": {
             "FBAInboundServiceMWS": "src/",
@@ -21,7 +22,11 @@
             "MarketplaceWebService": "src/",
             "MarketplaceWebServiceOrders": "src/",
             "MarketplaceWebServiceProducts": "src/",
-            "MarketplaceWebServiceSellers": "src/"
+            "MarketplaceWebServiceSellers": "src/",
+            "MWSFinancesService": "src/",
+            "MWSMerchantFulfillmentService": "src/",
+            "MWSRecommendationsSectionService": "src/",
+            "MWSSubscriptionsService": "src/"
         }
     },
     "require": {

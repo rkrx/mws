@@ -58,7 +58,7 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     {
         self::$DEFAULT_CONTENT_TYPE = new MarketplaceWebService_Model_ContentType(['ContentType' => 'application/octet-stream']);
 
-        // Here we're setting the content-type field directly to the object, but beware the actual
+        // Here we're setting the content-type field directly to the object, but beware the actual 
         // method of construction from associative arrays from the client interface would do something like:
         // $parameters = array ('ContentType' => array('ContentType' => 'application/octet-stream'));
 
@@ -69,10 +69,13 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
             'MarketplaceIdList' => ['FieldValue' => null, 'FieldType' => 'MarketplaceWebService_Model_IdList'],
             'FeedContent' => ['FieldValue' => null, 'FieldType' => 'string'],
             'FeedType' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'FeedOptions' => ['FieldValue' => null, 'FieldType' => 'string'],
             'PurgeAndReplace' => ['FieldValue' => null, 'FieldType' => 'bool'],
             'ContentMd5' => ['FieldValue' => null, 'FieldType' => 'string'],
-            'ContentType' => ['FieldValue' => self::$DEFAULT_CONTENT_TYPE, 'FieldType' => 'MarketplaceWebService_Model_ContentType']
+            'ContentType' => [
+                'FieldValue' => self::$DEFAULT_CONTENT_TYPE,
+                'FieldType' => 'MarketplaceWebService_Model_ContentType'
+            ],
+            'FeedOptions' => array ('FieldValue' => null, 'FieldType' => 'string')
         ];
 
         parent::__construct($data);
@@ -397,6 +400,18 @@ class MarketplaceWebService_Model_SubmitFeedRequest extends MarketplaceWebServic
     public function setFeedOptions($value)
     {
         $this->fields['FeedOptions']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Sets the value of the FeedOptions and returns this instance
+     *
+     * @param bool $value FeedOptions
+     * @return MarketplaceWebService_Model_SubmitFeedRequest instance
+     */
+    public function withFeedOptions($value)
+    {
+        $this->setFeedOptions($value);
         return $this;
     }
 
