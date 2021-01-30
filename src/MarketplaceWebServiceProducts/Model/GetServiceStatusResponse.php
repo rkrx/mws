@@ -76,7 +76,7 @@ class MarketplaceWebServiceProducts_Model_GetServiceStatusResponse extends Marke
     /**
      * Check to see if GetServiceStatusResult is set.
      *
-     * @return true if GetServiceStatusResult is set.
+     * @return bool if GetServiceStatusResult is set.
      */
     public function isSetGetServiceStatusResult()
     {
@@ -122,7 +122,7 @@ class MarketplaceWebServiceProducts_Model_GetServiceStatusResponse extends Marke
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return bool if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
@@ -168,7 +168,7 @@ class MarketplaceWebServiceProducts_Model_GetServiceStatusResponse extends Marke
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return bool if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {

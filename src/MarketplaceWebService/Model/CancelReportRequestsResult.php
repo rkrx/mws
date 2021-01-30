@@ -118,7 +118,7 @@ class MarketplaceWebService_Model_CancelReportRequestsResult extends Marketplace
      */
     public function setReportRequestInfoList($reportRequestInfo)
     {
-        if (!$this->_isNumericArray($reportRequestInfo)) {
+        if (!$this->isNumericArray($reportRequestInfo)) {
             $reportRequestInfo = array($reportRequestInfo);
         }
         $this->fields['ReportRequestInfo']['FieldValue'] = $reportRequestInfo;

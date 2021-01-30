@@ -555,8 +555,8 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
      *
      * @param string $awsAccessKeyId AWS Access Key ID
      * @param string $awsSecretAccessKey AWS Secret Access Key
-     * @param $applicationName
-     * @param $applicationVersion
+     * @param string $applicationName
+     * @param string $applicationVersion
      * @param array $config configuration options.
      * Valid configuration options are:
      * <ul>
@@ -638,7 +638,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
 
     /**
      * Collapse multiple whitespace characters into a single ' ' character.
-     * @param $s
+     * @param string $s
      * @return string
      */
     private function collapseWhitespace($s)
@@ -649,7 +649,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
     /**
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
      * and '/' characters from a string.
-     * @param $s
+     * @param string $s
      * @return string
      */
     private function quoteApplicationName($s)
@@ -665,7 +665,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
      * Collapse multiple whitespace characters into a single ' ' and backslash escape '\',
      * and '(' characters from a string.
      *
-     * @param $s
+     * @param string $s
      * @return string
      */
     private function quoteApplicationVersion($s)
@@ -754,9 +754,9 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
 
     /**
      * Look for additional error strings in the response and return formatted exception
-     * @param $responseBody
-     * @param $status
-     * @param $responseHeaderMetadata
+     * @param string $responseBody
+     * @param string $status
+     * @param mixed $responseHeaderMetadata
      * @param Exception $e
      * @return FBAInboundServiceMWS_Exception
      */
@@ -866,7 +866,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
      * This method will throw away extra response status lines and attempt to find the first full response headers and body
      *
      * return [status, body, ResponseHeaderMetadata]
-     * @param $response
+     * @param mixed $response
      * @return array
      * @throws FBAInboundServiceMWS_Exception
      */
@@ -910,7 +910,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
      * Example: HTTP/1.1 200 OK
      * ...
      * returns String statusCode or null if the status line can't be parsed
-     * @param $headers
+     * @param mixed $headers
      * @return null
      */
     private function _extractHttpStatusCode($headers)
@@ -927,7 +927,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
      * Tries to determine some valid headers indicating this response
      * has content.  In this case
      * return true if there is a valid "Content-Length" or "Transfer-Encoding" header
-     * @param $headers
+     * @param mixed $headers
      * @return bool
      */
     private function _httpHeadersHaveContent($headers)
@@ -939,7 +939,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
 
     /**
      *  extract a ResponseHeaderMetadata object from the raw headers
-     * @param $rawHeaders
+     * @param mixed $rawHeaders
      * @return FBAInboundServiceMWS_Model_ResponseHeaderMetadata
      */
     private function _extractResponseHeaderMetadata($rawHeaders)
@@ -972,7 +972,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
 
     /**
      * Set curl options relating to SSL. Protected to allow overriding.
-     * @param $ch resource curl handle
+     * @param resource $ch resource curl handle
      */
     protected function setSSLCurlOptions($ch)
     {
@@ -1060,7 +1060,7 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
      *       (ASCII character 61), even if the value is empty.
      *       Pairs of parameter and values are separated by the '&' character (ASCII code 38).
      * @param array $parameters
-     * @param $key
+     * @param string $key
      * @return string
      * @throws Exception
      */
@@ -1110,9 +1110,9 @@ class FBAInboundServiceMWS_Client implements FBAInboundServiceMWS_Interface
 
     /**
      * Computes RFC 2104-compliant HMAC signature.
-     * @param $data
-     * @param $key
-     * @param $algorithm
+     * @param string $data
+     * @param string $key
+     * @param string $algorithm
      * @return string
      * @throws Exception
      */

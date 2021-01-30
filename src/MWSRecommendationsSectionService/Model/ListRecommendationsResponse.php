@@ -74,7 +74,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ListRecommendationsResult is set.
      *
-     * @return true if ListRecommendationsResult is set.
+     * @return bool if ListRecommendationsResult is set.
      */
     public function isSetListRecommendationsResult()
     {
@@ -120,7 +120,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return bool if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
@@ -166,7 +166,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return bool if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {

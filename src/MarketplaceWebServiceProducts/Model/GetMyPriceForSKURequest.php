@@ -72,7 +72,7 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest extends Market
     /**
      * Check to see if SellerId is set.
      *
-     * @return true if SellerId is set.
+     * @return bool if SellerId is set.
      */
     public function isSetSellerId()
     {
@@ -118,7 +118,7 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest extends Market
     /**
      * Check to see if MWSAuthToken is set.
      *
-     * @return true if MWSAuthToken is set.
+     * @return bool if MWSAuthToken is set.
      */
     public function isSetMWSAuthToken()
     {
@@ -164,7 +164,7 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest extends Market
     /**
      * Check to see if MarketplaceId is set.
      *
-     * @return true if MarketplaceId is set.
+     * @return bool if MarketplaceId is set.
      */
     public function isSetMarketplaceId()
     {
@@ -210,7 +210,7 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest extends Market
     /**
      * Check to see if SellerSKUList is set.
      *
-     * @return true if SellerSKUList is set.
+     * @return bool if SellerSKUList is set.
      */
     public function isSetSellerSKUList()
     {

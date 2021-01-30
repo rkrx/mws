@@ -77,7 +77,7 @@ class FBAInboundServiceMWS_Model_AsinList extends FBAInboundServiceMWS_Model
     /**
      * Check to see if Id is set.
      *
-     * @return true if Id is set.
+     * @return bool if Id is set.
      */
     public function isSetId()
     {
@@ -87,12 +87,10 @@ class FBAInboundServiceMWS_Model_AsinList extends FBAInboundServiceMWS_Model
     /**
      * Add values for Id, return this.
      *
-     * @param id
-     *             New values to add.
-     *
+     * @param string ...$id New values to add.
      * @return $this This instance.
      */
-    public function withId()
+    public function withId(string ...$id)
     {
         foreach (func_get_args() as $Id) {
             $this->_fields['Id']['FieldValue'][] = $Id;

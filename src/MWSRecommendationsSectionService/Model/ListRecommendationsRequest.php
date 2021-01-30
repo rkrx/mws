@@ -78,7 +78,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MarketplaceId is set.
      *
-     * @return true if MarketplaceId is set.
+     * @return bool if MarketplaceId is set.
      */
     public function isSetMarketplaceId()
     {
@@ -124,7 +124,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MWSAuthToken is set.
      *
-     * @return true if MWSAuthToken is set.
+     * @return bool if MWSAuthToken is set.
      */
     public function isSetMWSAuthToken()
     {
@@ -170,7 +170,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerId is set.
      *
-     * @return true if SellerId is set.
+     * @return bool if SellerId is set.
      */
     public function isSetSellerId()
     {
@@ -216,7 +216,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if RecommendationCategory is set.
      *
-     * @return true if RecommendationCategory is set.
+     * @return bool if RecommendationCategory is set.
      */
     public function isSetRecommendationCategory()
     {
@@ -277,7 +277,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if CategoryQueryList is set.
      *
-     * @return true if CategoryQueryList is set.
+     * @return bool if CategoryQueryList is set.
      */
     public function isSetCategoryQueryList()
     {

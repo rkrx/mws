@@ -90,7 +90,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductResponse extends Mar
     /**
      * Check to see if GetMatchingProductResult is set.
      *
-     * @return true if GetMatchingProductResult is set.
+     * @return bool if GetMatchingProductResult is set.
      */
     public function isSetGetMatchingProductResult()
     {
@@ -138,7 +138,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductResponse extends Mar
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return bool if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
@@ -184,7 +184,7 @@ class MarketplaceWebServiceProducts_Model_GetMatchingProductResponse extends Mar
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return bool if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {

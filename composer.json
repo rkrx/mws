@@ -31,10 +31,17 @@
     },
     "require": {
         "php": ">= 7.2",
+
         "ext-dom": "*",
         "ext-curl": "*",
         "ext-libxml": "*",
         "ext-simplexml": "*",
         "ext-iconv": "*"
-    }
+    },
+    "require-dev": {
+        "phpstan/phpstan": ">= 0.1"
+    },
+    "scripts": {
+		"phpstan": "phpstan analyse -c phpstan.neon --level 4 src"
+	}
 }

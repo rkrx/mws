@@ -72,7 +72,7 @@ class FBAOutboundServiceMWS_Model_UnfulfillablePreviewItem extends FBAOutboundSe
     /**
      * Check to see if SellerSKU is set.
      *
-     * @return true if SellerSKU is set.
+     * @return bool if SellerSKU is set.
      */
     public function isSetSellerSKU()
     {
@@ -118,7 +118,7 @@ class FBAOutboundServiceMWS_Model_UnfulfillablePreviewItem extends FBAOutboundSe
     /**
      * Check to see if Quantity is set.
      *
-     * @return true if Quantity is set.
+     * @return bool if Quantity is set.
      */
     public function isSetQuantity()
     {
@@ -164,7 +164,7 @@ class FBAOutboundServiceMWS_Model_UnfulfillablePreviewItem extends FBAOutboundSe
     /**
      * Check to see if SellerFulfillmentOrderItemId is set.
      *
-     * @return true if SellerFulfillmentOrderItemId is set.
+     * @return bool if SellerFulfillmentOrderItemId is set.
      */
     public function isSetSellerFulfillmentOrderItemId()
     {
@@ -210,7 +210,7 @@ class FBAOutboundServiceMWS_Model_UnfulfillablePreviewItem extends FBAOutboundSe
     /**
      * Check to see if ItemUnfulfillableReasons is set.
      *
-     * @return true if ItemUnfulfillableReasons is set.
+     * @return bool if ItemUnfulfillableReasons is set.
      */
     public function isSetItemUnfulfillableReasons()
     {

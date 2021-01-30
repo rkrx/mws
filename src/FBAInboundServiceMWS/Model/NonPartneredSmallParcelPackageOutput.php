@@ -67,7 +67,7 @@ class FBAInboundServiceMWS_Model_NonPartneredSmallParcelPackageOutput extends FB
     /**
      * Check to see if CarrierName is set.
      *
-     * @return true if CarrierName is set.
+     * @return bool if CarrierName is set.
      */
     public function isSetCarrierName()
     {
@@ -113,7 +113,7 @@ class FBAInboundServiceMWS_Model_NonPartneredSmallParcelPackageOutput extends FB
     /**
      * Check to see if TrackingId is set.
      *
-     * @return true if TrackingId is set.
+     * @return bool if TrackingId is set.
      */
     public function isSetTrackingId()
     {
@@ -159,7 +159,7 @@ class FBAInboundServiceMWS_Model_NonPartneredSmallParcelPackageOutput extends FB
     /**
      * Check to see if PackageStatus is set.
      *
-     * @return true if PackageStatus is set.
+     * @return bool if PackageStatus is set.
      */
     public function isSetPackageStatus()
     {

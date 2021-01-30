@@ -63,7 +63,7 @@ class MarketplaceWebServiceProducts_Model_ResponseMetadata extends MarketplaceWe
     /**
      * Check to see if RequestId is set.
      *
-     * @return true if RequestId is set.
+     * @return bool if RequestId is set.
      */
     public function isSetRequestId()
     {

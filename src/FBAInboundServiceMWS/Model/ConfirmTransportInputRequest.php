@@ -67,7 +67,7 @@ class FBAInboundServiceMWS_Model_ConfirmTransportInputRequest extends FBAInbound
     /**
      * Check to see if SellerId is set.
      *
-     * @return true if SellerId is set.
+     * @return bool if SellerId is set.
      */
     public function isSetSellerId()
     {
@@ -77,9 +77,7 @@ class FBAInboundServiceMWS_Model_ConfirmTransportInputRequest extends FBAInbound
     /**
      * Set the value of SellerId, return this.
      *
-     * @param sellerId
-     *             The new value to set.
-     *
+     * @param string $value sellerId The new value to set.
      * @return $this This instance.
      */
     public function withSellerId($value)
@@ -113,7 +111,7 @@ class FBAInboundServiceMWS_Model_ConfirmTransportInputRequest extends FBAInbound
     /**
      * Check to see if MWSAuthToken is set.
      *
-     * @return true if MWSAuthToken is set.
+     * @return bool if MWSAuthToken is set.
      */
     public function isSetMWSAuthToken()
     {
@@ -123,9 +121,7 @@ class FBAInboundServiceMWS_Model_ConfirmTransportInputRequest extends FBAInbound
     /**
      * Set the value of MWSAuthToken, return this.
      *
-     * @param mwsAuthToken
-     *             The new value to set.
-     *
+     * @param string $value mwsAuthToken The new value to set.
      * @return $this This instance.
      */
     public function withMWSAuthToken($value)
@@ -159,7 +155,7 @@ class FBAInboundServiceMWS_Model_ConfirmTransportInputRequest extends FBAInbound
     /**
      * Check to see if ShipmentId is set.
      *
-     * @return true if ShipmentId is set.
+     * @return bool if ShipmentId is set.
      */
     public function isSetShipmentId()
     {
@@ -169,9 +165,7 @@ class FBAInboundServiceMWS_Model_ConfirmTransportInputRequest extends FBAInbound
     /**
      * Set the value of ShipmentId, return this.
      *
-     * @param shipmentId
-     *             The new value to set.
-     *
+     * @param string $value shipmentId The new value to set.
      * @return $this This instance.
      */
     public function withShipmentId($value)

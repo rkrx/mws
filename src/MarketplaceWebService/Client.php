@@ -797,8 +797,7 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
                             $errorResponse = MarketplaceWebService_Model_ErrorResponse::fromXML($response['ResponseBody']);
 
                             // We will not retry throttling errors since this would just add to the throttling problem.
-                            $shouldRetry = ($errorResponse->getError()
-                                    ->getCode() === 'RequestThrottled') ? false : true;
+                            $shouldRetry = ($errorResponse->getError()->getCode() === 'RequestThrottled') ? false : true;
 
                             if ($shouldRetry && $retries <= $this->config['MaxErrorRetry']) {
                                 $this->pauseOnRetry(++$retries);
@@ -892,13 +891,12 @@ class MarketplaceWebService_Client implements MarketplaceWebService_Interface
         rewind($this->headerContents);
         $header = stream_get_contents($this->headerContents);
 
-        $parsedHeader = array_merge(
-            array(
+        $parsedHeader = array_merge([
                'x-mws-request-id'       => null,
                'x-mws-response-context' => null,
                'x-mws-timestamp'        => null
-           ),
-           $this->parseHttpHeader($header)
+            ],
+            $this->parseHttpHeader($header)
         );
         $responseHeaderMetadata = new MarketplaceWebService_Model_ResponseHeaderMetadata($parsedHeader['x-mws-request-id'],
             $parsedHeader['x-mws-response-context'], $parsedHeader['x-mws-timestamp']);

@@ -77,7 +77,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if Name is set.
      *
-     * @return true if Name is set.
+     * @return bool if Name is set.
      */
     public function isSetName()
     {
@@ -87,9 +87,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of Name, return this.
      *
-     * @param name
-     *             The new value to set.
-     *
+     * @param string $value name The new value to set.
      * @return $this This instance.
      */
     public function withName($value)
@@ -101,7 +99,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Get the value of the AddressLine1 property.
      *
-     * @return String AddressLine1.
+     * @return string AddressLine1.
      */
     public function getAddressLine1()
     {
@@ -123,7 +121,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if AddressLine1 is set.
      *
-     * @return true if AddressLine1 is set.
+     * @return bool if AddressLine1 is set.
      */
     public function isSetAddressLine1()
     {
@@ -133,8 +131,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of AddressLine1, return this.
      *
-     * @param addressLine1
-     *             The new value to set.
+     * @param string $value addressLine1 The new value to set.
      *
      * @return $this This instance.
      */
@@ -169,7 +166,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if AddressLine2 is set.
      *
-     * @return true if AddressLine2 is set.
+     * @return bool if AddressLine2 is set.
      */
     public function isSetAddressLine2()
     {
@@ -179,8 +176,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of AddressLine2, return this.
      *
-     * @param addressLine2
-     *             The new value to set.
+     * @param string $value addressLine2 The new value to set.
      *
      * @return $this This instance.
      */
@@ -215,7 +211,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if DistrictOrCounty is set.
      *
-     * @return true if DistrictOrCounty is set.
+     * @return bool if DistrictOrCounty is set.
      */
     public function isSetDistrictOrCounty()
     {
@@ -225,8 +221,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of DistrictOrCounty, return this.
      *
-     * @param districtOrCounty
-     *             The new value to set.
+     * @param string $value districtOrCounty The new value to set.
      *
      * @return $this This instance.
      */
@@ -261,7 +256,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if City is set.
      *
-     * @return true if City is set.
+     * @return bool if City is set.
      */
     public function isSetCity()
     {
@@ -271,8 +266,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of City, return this.
      *
-     * @param city
-     *             The new value to set.
+     * @param string $value city The new value to set.
      *
      * @return $this This instance.
      */
@@ -307,7 +301,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if StateOrProvinceCode is set.
      *
-     * @return true if StateOrProvinceCode is set.
+     * @return bool if StateOrProvinceCode is set.
      */
     public function isSetStateOrProvinceCode()
     {
@@ -317,8 +311,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of StateOrProvinceCode, return this.
      *
-     * @param stateOrProvinceCode
-     *             The new value to set.
+     * @param string $value stateOrProvinceCode The new value to set.
      *
      * @return $this This instance.
      */
@@ -353,7 +346,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if CountryCode is set.
      *
-     * @return true if CountryCode is set.
+     * @return bool if CountryCode is set.
      */
     public function isSetCountryCode()
     {
@@ -363,9 +356,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of CountryCode, return this.
      *
-     * @param countryCode
-     *             The new value to set.
-     *
+     * @param string $value countryCode The new value to set.
      * @return $this This instance.
      */
     public function withCountryCode($value)
@@ -399,7 +390,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Check to see if PostalCode is set.
      *
-     * @return true if PostalCode is set.
+     * @return bool if PostalCode is set.
      */
     public function isSetPostalCode()
     {
@@ -409,9 +400,7 @@ class FBAInboundServiceMWS_Model_Address extends FBAInboundServiceMWS_Model
     /**
      * Set the value of PostalCode, return this.
      *
-     * @param postalCode
-     *             The new value to set.
-     *
+     * @param string $value postalCode The new value to set.
      * @return $this This instance.
      */
     public function withPostalCode($value)

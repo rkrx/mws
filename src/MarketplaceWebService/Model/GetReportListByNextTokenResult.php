@@ -166,7 +166,7 @@ class MarketplaceWebService_Model_GetReportListByNextTokenResult extends Marketp
      */
     public function setReportInfoList($reportInfo)
     {
-        if (!$this->_isNumericArray($reportInfo)) {
+        if (!$this->isNumericArray($reportInfo)) {
             $reportInfo = array($reportInfo);
         }
         $this->fields['ReportInfo']['FieldValue'] = $reportInfo;

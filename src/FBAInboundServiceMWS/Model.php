@@ -76,7 +76,7 @@ abstract class FBAInboundServiceMWS_Model
      *   $action->setProperty('ABC')
      *
      * @param string $propertyName name of the property
-     * @param $propertyValue
+     * @param mixed $propertyValue
      * @return $this
      */
     public function __set($propertyName, $propertyValue)
@@ -379,7 +379,7 @@ abstract class FBAInboundServiceMWS_Model
 
     /**
      * Escape special XML characters
-     * @param $str
+     * @param string $str
      * @return string with escaped XML characters
      */
     private function _escapeXML($str)
@@ -404,7 +404,7 @@ abstract class FBAInboundServiceMWS_Model
      * Checks  whether passed variable is an associative array
      *
      * @param mixed $var
-     * @return TRUE if passed variable is an associative array
+     * @return bool if passed variable is an associative array
      */
     private function _isAssociativeArray($var)
     {
@@ -415,7 +415,7 @@ abstract class FBAInboundServiceMWS_Model
      * Checks  whether passed variable is DOMElement
      *
      * @param mixed $var
-     * @return TRUE if passed variable is DOMElement
+     * @return bool if passed variable is DOMElement
      */
     private function _isDOMElement($var)
     {
@@ -426,7 +426,7 @@ abstract class FBAInboundServiceMWS_Model
      * Checks  whether passed variable is numeric array
      *
      * @param mixed $var
-     * @return TRUE if passed variable is an numeric array
+     * @return bool if passed variable is an numeric array
      */
     protected function _isNumericArray($var)
     {

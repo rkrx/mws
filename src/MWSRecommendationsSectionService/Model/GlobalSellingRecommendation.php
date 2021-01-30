@@ -49,27 +49,35 @@ require_once (dirname(__FILE__) . '/../Model.php');
  */
 
  class MWSRecommendationsSectionService_Model_GlobalSellingRecommendation extends MWSRecommendationsSectionService_Model {
-
-    public function __construct($data = null)
-    {
-    $this->_fields = array (
-    'LastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ItemIdentifier' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_ProductIdentifier'),
-    'ItemName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'BrandName' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'ProductCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'SalesRank' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'BuyboxPrice' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'),
-    'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'NumberOfOffersFulfilledByAmazon' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'AverageCustomerReview' => array('FieldValue' => null, 'FieldType' => 'float'),
-    'NumberOfCustomerReviews' => array('FieldValue' => null, 'FieldType' => 'int'),
-    'ItemDimensions' => array('FieldValue' => null, 'FieldType' => 'MWSRecommendationsSectionService_Model_ItemDimensions'),
-    'RecommendationId' => array('FieldValue' => null, 'FieldType' => 'string'),
-    'RecommendationReason' => array('FieldValue' => null, 'FieldType' => 'string'),
-    );
-    parent::__construct($data);
-    }
+    
+     public function __construct($data = null) {
+         $this->_fields = array(
+             'LastUpdated' => array('FieldValue' => null, 'FieldType' => 'string'),
+             'ItemIdentifier' => array(
+                 'FieldValue' => null,
+                 'FieldType' => 'MWSRecommendationsSectionService_Model_ProductIdentifier'
+             ),
+             'ItemName' => array('FieldValue' => null, 'FieldType' => 'string'),
+             'BrandName' => array('FieldValue' => null, 'FieldType' => 'string'),
+             'ProductCategory' => array('FieldValue' => null, 'FieldType' => 'string'),
+             'SalesRank' => array('FieldValue' => null, 'FieldType' => 'int'),
+             'BuyboxPrice' => array(
+                 'FieldValue' => null,
+                 'FieldType' => 'MWSRecommendationsSectionService_Model_Price'
+             ),
+             'NumberOfOffers' => array('FieldValue' => null, 'FieldType' => 'int'),
+             'NumberOfOffersFulfilledByAmazon' => array('FieldValue' => null, 'FieldType' => 'int'),
+             'AverageCustomerReview' => array('FieldValue' => null, 'FieldType' => 'float'),
+             'NumberOfCustomerReviews' => array('FieldValue' => null, 'FieldType' => 'int'),
+             'ItemDimensions' => array(
+                 'FieldValue' => null,
+                 'FieldType' => 'MWSRecommendationsSectionService_Model_ItemDimensions'
+             ),
+             'RecommendationId' => array('FieldValue' => null, 'FieldType' => 'string'),
+             'RecommendationReason' => array('FieldValue' => null, 'FieldType' => 'string')
+         );
+         parent::__construct($data);
+     }
 
     /**
      * Get the value of the LastUpdated property.
@@ -85,7 +93,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * Set the value of the LastUpdated property.
      *
      * @param string lastUpdated
-     * @return this instance
+     * @return $this instance
      */
     public function setLastUpdated($value)
     {
@@ -96,12 +104,12 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if LastUpdated is set.
      *
-     * @return true if LastUpdated is set.
+     * @return bool if LastUpdated is set.
      */
     public function isSetLastUpdated()
     {
-                return !is_null($this->_fields['LastUpdated']['FieldValue']);
-            }
+        return !is_null($this->_fields['LastUpdated']['FieldValue']);
+    }
 
     /**
      * Set the value of LastUpdated, return this.
@@ -142,7 +150,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ItemIdentifier is set.
      *
-     * @return true if ItemIdentifier is set.
+     * @return bool if ItemIdentifier is set.
      */
     public function isSetItemIdentifier()
     {
@@ -188,7 +196,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ItemName is set.
      *
-     * @return true if ItemName is set.
+     * @return bool if ItemName is set.
      */
     public function isSetItemName()
     {
@@ -234,7 +242,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BrandName is set.
      *
-     * @return true if BrandName is set.
+     * @return bool if BrandName is set.
      */
     public function isSetBrandName()
     {
@@ -280,7 +288,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ProductCategory is set.
      *
-     * @return true if ProductCategory is set.
+     * @return bool if ProductCategory is set.
      */
     public function isSetProductCategory()
     {
@@ -326,7 +334,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SalesRank is set.
      *
-     * @return true if SalesRank is set.
+     * @return bool if SalesRank is set.
      */
     public function isSetSalesRank()
     {
@@ -372,7 +380,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if BuyboxPrice is set.
      *
-     * @return true if BuyboxPrice is set.
+     * @return bool if BuyboxPrice is set.
      */
     public function isSetBuyboxPrice()
     {
@@ -418,7 +426,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfOffers is set.
      *
-     * @return true if NumberOfOffers is set.
+     * @return bool if NumberOfOffers is set.
      */
     public function isSetNumberOfOffers()
     {
@@ -464,7 +472,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfOffersFulfilledByAmazon is set.
      *
-     * @return true if NumberOfOffersFulfilledByAmazon is set.
+     * @return bool if NumberOfOffersFulfilledByAmazon is set.
      */
     public function isSetNumberOfOffersFulfilledByAmazon()
     {
@@ -510,7 +518,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AverageCustomerReview is set.
      *
-     * @return true if AverageCustomerReview is set.
+     * @return bool if AverageCustomerReview is set.
      */
     public function isSetAverageCustomerReview()
     {
@@ -556,7 +564,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if NumberOfCustomerReviews is set.
      *
-     * @return true if NumberOfCustomerReviews is set.
+     * @return bool if NumberOfCustomerReviews is set.
      */
     public function isSetNumberOfCustomerReviews()
     {
@@ -602,7 +610,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ItemDimensions is set.
      *
-     * @return true if ItemDimensions is set.
+     * @return bool if ItemDimensions is set.
      */
     public function isSetItemDimensions()
     {
@@ -648,7 +656,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if RecommendationId is set.
      *
-     * @return true if RecommendationId is set.
+     * @return bool if RecommendationId is set.
      */
     public function isSetRecommendationId()
     {
@@ -694,7 +702,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if RecommendationReason is set.
      *
-     * @return true if RecommendationReason is set.
+     * @return bool if RecommendationReason is set.
      */
     public function isSetRecommendationReason()
     {
@@ -707,12 +715,11 @@ require_once (dirname(__FILE__) . '/../Model.php');
      * @param recommendationReason
      *             The new value to set.
      *
-     * @return This instance.
+     * @return $this This instance.
      */
     public function withRecommendationReason($value)
     {
         $this->setRecommendationReason($value);
         return $this;
     }
-
 }

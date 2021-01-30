@@ -72,7 +72,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if DeliveryChannel is set.
      *
-     * @return true if DeliveryChannel is set.
+     * @return bool if DeliveryChannel is set.
      */
     public function isSetDeliveryChannel()
     {
@@ -118,7 +118,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AttributeList is set.
      *
-     * @return true if AttributeList is set.
+     * @return bool if AttributeList is set.
      */
     public function isSetAttributeList()
     {

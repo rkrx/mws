@@ -5,4 +5,5 @@
 !/composer.json
 !/LICENSE
 !/NOTICE
+!/phpstan.neon
 !/README.md

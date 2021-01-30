@@ -76,7 +76,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if RecoveryAmount is set.
      *
-     * @return true if RecoveryAmount is set.
+     * @return bool if RecoveryAmount is set.
      */
     public function isSetRecoveryAmount()
     {
@@ -122,7 +122,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if OriginalAmount is set.
      *
-     * @return true if OriginalAmount is set.
+     * @return bool if OriginalAmount is set.
      */
     public function isSetOriginalAmount()
     {
@@ -168,7 +168,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GroupBeginDate is set.
      *
-     * @return true if GroupBeginDate is set.
+     * @return bool if GroupBeginDate is set.
      */
     public function isSetGroupBeginDate()
     {
@@ -214,7 +214,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if GroupEndDate is set.
      *
-     * @return true if GroupEndDate is set.
+     * @return bool if GroupEndDate is set.
      */
     public function isSetGroupEndDate()
     {

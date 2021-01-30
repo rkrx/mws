@@ -50,7 +50,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Get the value of the ASIN property.
      *
-     * @return String ASIN.
+     * @return string ASIN.
      */
     public function getASIN()
     {
@@ -72,7 +72,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Check to see if ASIN is set.
      *
-     * @return true if ASIN is set.
+     * @return bool if ASIN is set.
      */
     public function isSetASIN()
     {
@@ -82,9 +82,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Set the value of ASIN, return this.
      *
-     * @param asin
-     *             The new value to set.
-     *
+     * @param string $value asin The new value to set.
      * @return $this This instance.
      */
     public function withASIN($value)
@@ -118,7 +116,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Check to see if BarcodeInstruction is set.
      *
-     * @return true if BarcodeInstruction is set.
+     * @return bool if BarcodeInstruction is set.
      */
     public function isSetBarcodeInstruction()
     {
@@ -128,8 +126,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Set the value of BarcodeInstruction, return this.
      *
-     * @param barcodeInstruction
-     *             The new value to set.
+     * @param string $value barcodeInstruction The new value to set.
      *
      * @return $this This instance.
      */
@@ -164,7 +161,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Check to see if PrepGuidance is set.
      *
-     * @return true if PrepGuidance is set.
+     * @return bool if PrepGuidance is set.
      */
     public function isSetPrepGuidance()
     {
@@ -174,9 +171,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Set the value of PrepGuidance, return this.
      *
-     * @param prepGuidance
-     *             The new value to set.
-     *
+     * @param string $value prepGuidance The new value to set.
      * @return $this This instance.
      */
     public function withPrepGuidance($value)
@@ -210,7 +205,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Check to see if PrepInstructionList is set.
      *
-     * @return true if PrepInstructionList is set.
+     * @return bool if PrepInstructionList is set.
      */
     public function isSetPrepInstructionList()
     {
@@ -220,9 +215,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructions extends FBAInboundServiceM
     /**
      * Set the value of PrepInstructionList, return this.
      *
-     * @param prepInstructionList
-     *             The new value to set.
-     *
+     * @param FBAInboundServiceMWS_Model_PrepInstructionList $value prepInstructionList The new value to set.
      * @return $this This instance.
      */
     public function withPrepInstructionList($value)

@@ -76,7 +76,7 @@ class FBAOutboundServiceMWS_Model_GetFulfillmentOrderResponse extends FBAOutboun
     /**
      * Check to see if GetFulfillmentOrderResult is set.
      *
-     * @return true if GetFulfillmentOrderResult is set.
+     * @return bool if GetFulfillmentOrderResult is set.
      */
     public function isSetGetFulfillmentOrderResult()
     {
@@ -122,7 +122,7 @@ class FBAOutboundServiceMWS_Model_GetFulfillmentOrderResponse extends FBAOutboun
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return bool if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
@@ -168,7 +168,7 @@ class FBAOutboundServiceMWS_Model_GetFulfillmentOrderResponse extends FBAOutboun
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return bool if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {

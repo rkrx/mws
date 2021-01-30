@@ -118,7 +118,7 @@ class MarketplaceWebService_Model_ManageReportScheduleResult extends Marketplace
      */
     public function setReportScheduleList($reportSchedule)
     {
-        if (!$this->_isNumericArray($reportSchedule)) {
+        if (!$this->isNumericArray($reportSchedule)) {
             $reportSchedule = array($reportSchedule);
         }
         $this->fields['ReportSchedule']['FieldValue'] = $reportSchedule;

@@ -81,7 +81,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if Name is set.
      *
-     * @return true if Name is set.
+     * @return bool if Name is set.
      */
     public function isSetName()
     {
@@ -127,7 +127,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if Line1 is set.
      *
-     * @return true if Line1 is set.
+     * @return bool if Line1 is set.
      */
     public function isSetLine1()
     {
@@ -173,7 +173,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if Line2 is set.
      *
-     * @return true if Line2 is set.
+     * @return bool if Line2 is set.
      */
     public function isSetLine2()
     {
@@ -219,7 +219,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if Line3 is set.
      *
-     * @return true if Line3 is set.
+     * @return bool if Line3 is set.
      */
     public function isSetLine3()
     {
@@ -265,7 +265,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if DistrictOrCounty is set.
      *
-     * @return true if DistrictOrCounty is set.
+     * @return bool if DistrictOrCounty is set.
      */
     public function isSetDistrictOrCounty()
     {
@@ -311,7 +311,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if City is set.
      *
-     * @return true if City is set.
+     * @return bool if City is set.
      */
     public function isSetCity()
     {
@@ -357,7 +357,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if StateOrProvinceCode is set.
      *
-     * @return true if StateOrProvinceCode is set.
+     * @return bool if StateOrProvinceCode is set.
      */
     public function isSetStateOrProvinceCode()
     {
@@ -403,7 +403,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if CountryCode is set.
      *
-     * @return true if CountryCode is set.
+     * @return bool if CountryCode is set.
      */
     public function isSetCountryCode()
     {
@@ -449,7 +449,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if PostalCode is set.
      *
-     * @return true if PostalCode is set.
+     * @return bool if PostalCode is set.
      */
     public function isSetPostalCode()
     {
@@ -495,7 +495,7 @@ class FBAOutboundServiceMWS_Model_Address extends FBAOutboundServiceMWS_Model
     /**
      * Check to see if PhoneNumber is set.
      *
-     * @return true if PhoneNumber is set.
+     * @return bool if PhoneNumber is set.
      */
     public function isSetPhoneNumber()
     {

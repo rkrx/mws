@@ -73,7 +73,7 @@ class FBAInboundServiceMWS_Model_InboundShipmentHeader extends FBAInboundService
     /**
      * Check to see if ShipmentName is set.
      *
-     * @return true if ShipmentName is set.
+     * @return bool if ShipmentName is set.
      */
     public function isSetShipmentName()
     {
@@ -119,7 +119,7 @@ class FBAInboundServiceMWS_Model_InboundShipmentHeader extends FBAInboundService
     /**
      * Check to see if ShipFromAddress is set.
      *
-     * @return true if ShipFromAddress is set.
+     * @return bool if ShipFromAddress is set.
      */
     public function isSetShipFromAddress()
     {
@@ -165,7 +165,7 @@ class FBAInboundServiceMWS_Model_InboundShipmentHeader extends FBAInboundService
     /**
      * Check to see if DestinationFulfillmentCenterId is set.
      *
-     * @return true if DestinationFulfillmentCenterId is set.
+     * @return bool if DestinationFulfillmentCenterId is set.
      */
     public function isSetDestinationFulfillmentCenterId()
     {
@@ -189,7 +189,7 @@ class FBAInboundServiceMWS_Model_InboundShipmentHeader extends FBAInboundService
     /**
      * Check the value of AreCasesRequired.
      *
-     * @return true if AreCasesRequired is set to true.
+     * @return bool if AreCasesRequired is set to true.
      */
     public function isAreCasesRequired()
     {
@@ -221,7 +221,7 @@ class FBAInboundServiceMWS_Model_InboundShipmentHeader extends FBAInboundService
     /**
      * Check to see if AreCasesRequired is set.
      *
-     * @return true if AreCasesRequired is set.
+     * @return bool if AreCasesRequired is set.
      */
     public function isSetAreCasesRequired()
     {
@@ -267,7 +267,7 @@ class FBAInboundServiceMWS_Model_InboundShipmentHeader extends FBAInboundService
     /**
      * Check to see if ShipmentStatus is set.
      *
-     * @return true if ShipmentStatus is set.
+     * @return bool if ShipmentStatus is set.
      */
     public function isSetShipmentStatus()
     {
@@ -313,7 +313,7 @@ class FBAInboundServiceMWS_Model_InboundShipmentHeader extends FBAInboundService
     /**
      * Check to see if LabelPrepPreference is set.
      *
-     * @return true if LabelPrepPreference is set.
+     * @return bool if LabelPrepPreference is set.
      */
     public function isSetLabelPrepPreference()
     {

@@ -118,7 +118,7 @@ class MarketplaceWebService_Model_CancelFeedSubmissionsResult extends Marketplac
      */
     public function setFeedSubmissionInfoList($feedSubmissionInfo)
     {
-        if (!$this->_isNumericArray($feedSubmissionInfo)) {
+        if (!$this->isNumericArray($feedSubmissionInfo)) {
             $feedSubmissionInfo = array($feedSubmissionInfo);
         }
         $this->fields['FeedSubmissionInfo']['FieldValue'] = $feedSubmissionInfo;

@@ -65,7 +65,7 @@ class FBAInboundServiceMWS_Model_Amount extends FBAInboundServiceMWS_Model
     /**
      * Check to see if CurrencyCode is set.
      *
-     * @return true if CurrencyCode is set.
+     * @return bool if CurrencyCode is set.
      */
     public function isSetCurrencyCode()
     {
@@ -75,9 +75,7 @@ class FBAInboundServiceMWS_Model_Amount extends FBAInboundServiceMWS_Model
     /**
      * Set the value of CurrencyCode, return this.
      *
-     * @param currencyCode
-     *             The new value to set.
-     *
+     * @param string $value currencyCode The new value to set.
      * @return $this This instance.
      */
     public function withCurrencyCode($value)
@@ -111,7 +109,7 @@ class FBAInboundServiceMWS_Model_Amount extends FBAInboundServiceMWS_Model
     /**
      * Check to see if Value is set.
      *
-     * @return true if Value is set.
+     * @return bool if Value is set.
      */
     public function isSetValue()
     {
@@ -121,9 +119,7 @@ class FBAInboundServiceMWS_Model_Amount extends FBAInboundServiceMWS_Model
     /**
      * Set the value of Value, return this.
      *
-     * @param value
-     *             The new value to set.
-     *
+     * @param float $value The new value to set.
      * @return $this This instance.
      */
     public function withValue($value)

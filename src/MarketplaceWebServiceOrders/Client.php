@@ -63,7 +63,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      *
      * @throws MarketplaceWebServiceOrders_Exception
      */
-    public function getOrder($request)
+    public function getOrder(MarketplaceWebServiceOrders_Model_GetOrderRequest $request)
     {
         if (!($request instanceof MarketplaceWebServiceOrders_Model_GetOrderRequest)) {
             require_once __DIR__ . '/Model/GetOrderRequest.php';

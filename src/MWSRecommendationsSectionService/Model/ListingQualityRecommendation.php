@@ -82,7 +82,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if QualitySet is set.
      *
-     * @return true if QualitySet is set.
+     * @return bool if QualitySet is set.
      */
     public function isSetQualitySet()
     {
@@ -128,7 +128,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if DefectGroup is set.
      *
-     * @return true if DefectGroup is set.
+     * @return bool if DefectGroup is set.
      */
     public function isSetDefectGroup()
     {
@@ -174,7 +174,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if DefectAttribute is set.
      *
-     * @return true if DefectAttribute is set.
+     * @return bool if DefectAttribute is set.
      */
     public function isSetDefectAttribute()
     {
@@ -220,7 +220,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ItemIdentifier is set.
      *
-     * @return true if ItemIdentifier is set.
+     * @return bool if ItemIdentifier is set.
      */
     public function isSetItemIdentifier()
     {
@@ -266,7 +266,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ItemName is set.
      *
-     * @return true if ItemName is set.
+     * @return bool if ItemName is set.
      */
     public function isSetItemName()
     {
@@ -312,7 +312,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if RecommendationId is set.
      *
-     * @return true if RecommendationId is set.
+     * @return bool if RecommendationId is set.
      */
     public function isSetRecommendationId()
     {
@@ -358,7 +358,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if RecommendationReason is set.
      *
-     * @return true if RecommendationReason is set.
+     * @return bool if RecommendationReason is set.
      */
     public function isSetRecommendationReason()
     {

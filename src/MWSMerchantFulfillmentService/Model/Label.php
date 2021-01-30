@@ -72,7 +72,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if Dimensions is set.
      *
-     * @return true if Dimensions is set.
+     * @return bool if Dimensions is set.
      */
     public function isSetDimensions()
     {
@@ -118,7 +118,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FileContents is set.
      *
-     * @return true if FileContents is set.
+     * @return bool if FileContents is set.
      */
     public function isSetFileContents()
     {

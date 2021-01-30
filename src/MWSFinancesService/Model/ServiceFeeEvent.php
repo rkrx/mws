@@ -82,7 +82,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AmazonOrderId is set.
      *
-     * @return true if AmazonOrderId is set.
+     * @return bool if AmazonOrderId is set.
      */
     public function isSetAmazonOrderId()
     {
@@ -128,7 +128,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FeeReason is set.
      *
-     * @return true if FeeReason is set.
+     * @return bool if FeeReason is set.
      */
     public function isSetFeeReason()
     {
@@ -189,7 +189,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FeeList is set.
      *
-     * @return true if FeeList is set.
+     * @return bool if FeeList is set.
      */
     public function isSetFeeList()
     {
@@ -238,7 +238,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerSKU is set.
      *
-     * @return true if SellerSKU is set.
+     * @return bool if SellerSKU is set.
      */
     public function isSetSellerSKU()
     {
@@ -284,7 +284,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FnSKU is set.
      *
-     * @return true if FnSKU is set.
+     * @return bool if FnSKU is set.
      */
     public function isSetFnSKU()
     {
@@ -330,7 +330,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FeeDescription is set.
      *
-     * @return true if FeeDescription is set.
+     * @return bool if FeeDescription is set.
      */
     public function isSetFeeDescription()
     {
@@ -376,7 +376,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if ASIN is set.
      *
-     * @return true if ASIN is set.
+     * @return bool if ASIN is set.
      */
     public function isSetASIN()
     {

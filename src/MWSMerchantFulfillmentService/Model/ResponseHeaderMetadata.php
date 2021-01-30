@@ -29,12 +29,12 @@ class MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata {
   private $metadata = array();
 
   public function __construct($requestId = null, $responseContext = null, $timestamp = null,
-                              $quotaMax = null, $quotaMax = null, $quotaResetsAt = null) {
+                              $quotaMax = null, $quotaRemaining = null, $quotaResetsAt = null) {
     $this->metadata[self::REQUEST_ID] = $requestId;
     $this->metadata[self::RESPONSE_CONTEXT] = $responseContext;
     $this->metadata[self::TIMESTAMP] = $timestamp;
     $this->metadata[self::QUOTA_MAX] = $quotaMax;
-    $this->metadata[self::QUOTA_REMAINING] = $quotaMax;
+    $this->metadata[self::QUOTA_REMAINING] = $quotaRemaining;
     $this->metadata[self::QUOTA_RESETS_AT] = $quotaResetsAt;
   }
 
@@ -54,7 +54,7 @@ class MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata {
    * Gets the max quota allowed for a quota period
    * (from the x-mws-quota-max header)
    *
-   * @return the max quota allowed for a quota period
+   * @return mixed the max quota allowed for a quota period
    */
   public function getQuotaMax() {
     return $this->metadata[self::QUOTA_MAX];
@@ -64,7 +64,7 @@ class MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata {
    * Gets the quota remaining within this quota period
    * (from the x-mws-quota-remaining header)
    *
-   * @return the quota remaining within this quota period
+   * @return mixed the quota remaining within this quota period
    */
   public function getQuotaRemaining() {
     return $this->metadata[self::QUOTA_REMAINING];
@@ -74,7 +74,7 @@ class MWSMerchantFulfillmentService_Model_ResponseHeaderMetadata {
    * Gets the time that this quota period ends
    * (from the x-mws-quota-resetsOn header)
    *
-   * @return the time that this quota period ends
+   * @return mixed the time that this quota period ends
    */
   public function getQuotaResetsAt() {
     return $this->metadata[self::QUOTA_RESETS_AT];

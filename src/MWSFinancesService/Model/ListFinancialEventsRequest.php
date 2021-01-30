@@ -82,7 +82,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if SellerId is set.
      *
-     * @return true if SellerId is set.
+     * @return bool if SellerId is set.
      */
     public function isSetSellerId()
     {
@@ -128,7 +128,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MWSAuthToken is set.
      *
-     * @return true if MWSAuthToken is set.
+     * @return bool if MWSAuthToken is set.
      */
     public function isSetMWSAuthToken()
     {
@@ -174,7 +174,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if MaxResultsPerPage is set.
      *
-     * @return true if MaxResultsPerPage is set.
+     * @return bool if MaxResultsPerPage is set.
      */
     public function isSetMaxResultsPerPage()
     {
@@ -220,7 +220,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if AmazonOrderId is set.
      *
-     * @return true if AmazonOrderId is set.
+     * @return bool if AmazonOrderId is set.
      */
     public function isSetAmazonOrderId()
     {
@@ -266,7 +266,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if FinancialEventGroupId is set.
      *
-     * @return true if FinancialEventGroupId is set.
+     * @return bool if FinancialEventGroupId is set.
      */
     public function isSetFinancialEventGroupId()
     {
@@ -312,7 +312,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PostedAfter is set.
      *
-     * @return true if PostedAfter is set.
+     * @return bool if PostedAfter is set.
      */
     public function isSetPostedAfter()
     {
@@ -358,7 +358,7 @@ require_once (dirname(__FILE__) . '/../Model.php');
     /**
      * Check to see if PostedBefore is set.
      *
-     * @return true if PostedBefore is set.
+     * @return bool if PostedBefore is set.
      */
     public function isSetPostedBefore()
     {

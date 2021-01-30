@@ -76,7 +76,7 @@ class FBAInboundServiceMWS_Model_GetPackageLabelsResponse extends FBAInboundServ
     /**
      * Check to see if GetPackageLabelsResult is set.
      *
-     * @return true if GetPackageLabelsResult is set.
+     * @return bool if GetPackageLabelsResult is set.
      */
     public function isSetGetPackageLabelsResult()
     {
@@ -122,7 +122,7 @@ class FBAInboundServiceMWS_Model_GetPackageLabelsResponse extends FBAInboundServ
     /**
      * Check to see if ResponseMetadata is set.
      *
-     * @return true if ResponseMetadata is set.
+     * @return bool if ResponseMetadata is set.
      */
     public function isSetResponseMetadata()
     {
@@ -168,7 +168,7 @@ class FBAInboundServiceMWS_Model_GetPackageLabelsResponse extends FBAInboundServ
     /**
      * Check to see if ResponseHeaderMetadata is set.
      *
-     * @return true if ResponseHeaderMetadata is set.
+     * @return bool if ResponseHeaderMetadata is set.
      */
     public function isSetResponseHeaderMetadata()
     {

@@ -80,7 +80,7 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructionsList extends FBAInboundServ
     /**
      * Check to see if ASINPrepInstructions is set.
      *
-     * @return true if ASINPrepInstructions is set.
+     * @return bool if ASINPrepInstructions is set.
      */
     public function isSetASINPrepInstructions()
     {
@@ -90,14 +90,12 @@ class FBAInboundServiceMWS_Model_ASINPrepInstructionsList extends FBAInboundServ
     /**
      * Add values for ASINPrepInstructions, return this.
      *
-     * @param asinPrepInstructions
-     *             New values to add.
-     *
+     * @param mixed ...$value asinPrepInstructions New values to add.
      * @return $this This instance.
      */
-    public function withASINPrepInstructions()
+    public function withASINPrepInstructions(...$value)
     {
-        foreach (func_get_args() as $ASINPrepInstructions) {
+        foreach ($value as $ASINPrepInstructions) {
             $this->_fields['ASINPrepInstructions']['FieldValue'][] = $ASINPrepInstructions;
         }
         return $this;
