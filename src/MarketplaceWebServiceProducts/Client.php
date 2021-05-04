@@ -23,7 +23,6 @@
  */
 class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProducts_Interface
 {
-
     const SERVICE_VERSION = '2011-10-01';
     const MWS_CLIENT_VERSION = '2014-10-20';
 
@@ -34,7 +33,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     private $_awsSecretAccessKey = null;
 
     /** @var array */
-    private $_config = array(
+    private $_config = [
         'ServiceURL' => null,
         'UserAgent' => 'MarketplaceWebServiceProducts PHP5 Library',
         'SignatureVersion' => 2,
@@ -44,10 +43,10 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
         'ProxyUsername' => null,
         'ProxyPassword' => null,
         'MaxErrorRetry' => 3,
-        'Headers' => array(),
+        'Headers' => [],
         'SSL_VerifyPeer' => true,
         'SSL_VerifyHost' => 2,
-    );
+    ];
 
 
     /**
@@ -419,11 +418,11 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
 
     private function constructUserAgentHeader($applicationName, $applicationVersion, $attributes = null)
     {
-        if (is_null($applicationName) || $applicationName === "") {
+        if (is_null($applicationName) || $applicationName === '') {
             throw new InvalidArgumentException('$applicationName cannot be null');
         }
 
-        if (is_null($applicationVersion) || $applicationVersion === "") {
+        if (is_null($applicationVersion) || $applicationVersion === '') {
             throw new InvalidArgumentException('$applicationVersion cannot be null');
         }
 
@@ -682,8 +681,8 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
      * This method will throw away extra response status lines and attempt to find the first full response headers and body
      *
      * return [status, body, ResponseHeaderMetadata]
-     * @param $response
-     * @return array
+     * @param string $response
+     * @return array{Status: int, ResponseBody: string, ResponseHeaderMetadata: MarketplaceWebServiceProducts_Model_ResponseHeaderMetadata}
      * @throws MarketplaceWebServiceProducts_Exception
      */
     private function _extractHeadersAndBody($response)
@@ -691,13 +690,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
+        $responseStatus = null;
+        $responseHeaderMetadata = null;
+        for($count = 0; $count < count($responseComponents) && $body === null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)) {
-
+            if ($responseStatus !== null && $this->_httpHeadersHaveContent($headers)) {
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
@@ -705,17 +705,17 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if ($body == null) {
+        if ($body === null) {
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new MarketplaceWebServiceProducts_Exception($exProps);
         }
 
-        return array(
+        return [
             'Status' => $responseStatus,
             'ResponseBody' => $body,
             'ResponseHeaderMetadata' => $responseHeaderMetadata
-        );
+        ];
     }
 
     /**
@@ -725,8 +725,8 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
      * Example: HTTP/1.1 200 OK
      * ...
      * returns String statusCode or null if the status line can't be parsed
-     * @param $headers
-     * @return null
+     * @param string $headers
+     * @return int|null
      */
     private function _extractHttpStatusCode($headers)
     {

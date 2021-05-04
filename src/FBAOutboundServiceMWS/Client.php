@@ -730,13 +730,14 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundServiceMWS_Interface
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; $count < count($responseComponents) && $body == null; $count++) {
+        $responseStatus = null;
+        $responseHeaderMetadata = null;
+        for ($count = 0; $count < count($responseComponents) && $body === null; $count++) {
 
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
 
-            if ($responseStatus != null && $this->_httpHeadersHaveContent($headers)) {
-
+            if($responseStatus !== null && $this->_httpHeadersHaveContent($headers)) {
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
@@ -744,17 +745,17 @@ class FBAOutboundServiceMWS_Client implements FBAOutboundServiceMWS_Interface
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if ($body == null) {
-            $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
-            $exProps["ErrorType"] = "HTTP";
+        if($body === null) {
+            $exProps['Message'] = 'Failed to parse valid HTTP response (' . $response . ')';
+            $exProps['ErrorType'] = 'HTTP';
             throw new FBAOutboundServiceMWS_Exception($exProps);
         }
 
-        return array(
+        return [
             'Status' => $responseStatus,
             'ResponseBody' => $body,
             'ResponseHeaderMetadata' => $responseHeaderMetadata
-        );
+        ];
     }
 
     /**

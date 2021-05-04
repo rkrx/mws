@@ -42,6 +42,6 @@
         "phpstan/phpstan": ">= 0.1"
     },
     "scripts": {
-		"phpstan": "phpstan analyse -c phpstan.neon --level 4 src"
+		"phpstan": "phpstan analyse -c phpstan.neon --memory-limit=2G"
 	}
 }

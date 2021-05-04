@@ -89,13 +89,13 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
 
         $parameters = [];
         $parameters['Action'] = 'GetOrder';
-        if ($request->isSetSellerId()) {
+        if($request->isSetSellerId()) {
             $parameters['SellerId'] =  $request->getSellerId();
         }
-        if ($request->isSetMWSAuthToken()) {
+        if($request->isSetMWSAuthToken()) {
             $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
         }
-        if ($request->isSetAmazonOrderId()) {
+        if($request->isSetAmazonOrderId()) {
             $parameters['AmazonOrderId'] =  $request->getAmazonOrderId();
         }
 
@@ -499,7 +499,6 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\(/', '\\(', $quotedString);
-
         return $quotedString;
     }
 
@@ -515,7 +514,6 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $quotedString = $this->collapseWhitespace($s);
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\=/', '\\=', $quotedString);
-
         return $quotedString;
     }
 
@@ -532,7 +530,6 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         $quotedString = preg_replace('/\\\\/', '\\\\\\\\', $quotedString);
         $quotedString = preg_replace('/\\;/', '\\;', $quotedString);
         $quotedString = preg_replace('/\\)/', '\\)', $quotedString);
-
         return $quotedString;
     }
 
@@ -561,10 +558,10 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
                 $response = $this->_httpPost($parameters);
                 $status = (int) $response['Status'];
                 if ($status === 200) {
-                    return array(
+                    return [
                         'ResponseBody' => $response['ResponseBody'],
                         'ResponseHeaderMetadata' => $response['ResponseHeaderMetadata']
-                    );
+                    ];
                 }
                 if ($status === 500 && $this->_pauseOnRetry(++$retries)) {
                     continue;
@@ -575,7 +572,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
             throw $se;
         } catch(Exception $t) {
             require_once __DIR__ . '/Exception.php';
-            throw new MarketplaceWebServiceOrders_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
+            throw new MarketplaceWebServiceOrders_Exception(['Exception' => $t, 'Message' => $t->getMessage()]);
         }
     }
 
@@ -589,7 +586,7 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      */
     private function _reportAnyErrors($responseBody, $status, $responseHeaderMetadata, Exception $e =  null)
     {
-        $exProps = array();
+        $exProps = [];
         $exProps['StatusCode'] = $status;
         $exProps['ResponseHeaderMetadata'] = $responseHeaderMetadata;
 
@@ -698,12 +695,14 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
      * This method will throw away extra response status lines and attempt to find the first full response headers and body
      *
      * @param string $response
-     * @return array [status, body, ResponseHeaderMetadata]
+     * @return array{Status: int, ResponseBody: string, ResponseHeaderMetadata: MarketplaceWebServiceOrders_Model_ResponseHeaderMetadata} [status, body, ResponseHeaderMetadata]
      */
-    private function _extractHeadersAndBody($response){
+    private function _extractHeadersAndBody($response) {
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
+        $responseStatus = null;
+        $responseHeaderMetadata = null;
         for ($count = 0; $count < count($responseComponents) && $body === null; $count++) {
 
             $headers = $responseComponents[$count];
@@ -717,18 +716,18 @@ class MarketplaceWebServiceOrders_Client implements MarketplaceWebServiceOrders_
         }
 
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if($body === null){
+        if($body === null) {
             require_once __DIR__ . '/Exception.php';
             $exProps['Message'] = 'Failed to parse valid HTTP response (' . $response . ')';
             $exProps['ErrorType'] = 'HTTP';
             throw new MarketplaceWebServiceOrders_Exception($exProps);
         }
 
-        return array(
+        return [
             'Status' => $responseStatus,
             'ResponseBody' => $body,
             'ResponseHeaderMetadata' => $responseHeaderMetadata
-        );
+        ];
     }
 
     /**

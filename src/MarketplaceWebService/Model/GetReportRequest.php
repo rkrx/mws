@@ -252,7 +252,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
     /**
      * Sets the value of the Report property.
      *
-     * @param string $value Report
+     * @param resource $value Report
      * @return $this This instance
      */
     public function setReport($value)
@@ -264,7 +264,7 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
     /**
      * Sets the value of the Report and returns this instance
      *
-     * @param string $value Report
+     * @param resource $value Report
      * @return MarketplaceWebService_Model_GetReportRequest instance
      */
     public function withReport($value)
@@ -283,6 +283,4 @@ class MarketplaceWebService_Model_GetReportRequest extends MarketplaceWebService
     {
         return !is_null($this->fields['Report']['FieldValue']);
     }
-
-
 }

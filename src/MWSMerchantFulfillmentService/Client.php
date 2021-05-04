@@ -20,7 +20,7 @@
 /**
  *  @see MWSMerchantFulfillmentService_Interface
  */
-require_once (dirname(__FILE__) . '/Interface.php');
+require_once (__DIR__ . '/Interface.php');
 
 /**
  * MWSMerchantFulfillmentService_Client is an implementation of MWSMerchantFulfillmentService
@@ -39,17 +39,18 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
     private  $_awsSecretAccessKey = null;
 
     /** @var array */
-    private  $_config = array ('ServiceURL' => null,
-                               'UserAgent' => 'MWSMerchantFulfillmentService PHP5 Library',
-                               'SignatureVersion' => 2,
-                               'SignatureMethod' => 'HmacSHA256',
-                               'ProxyHost' => null,
-                               'ProxyPort' => -1,
-                               'ProxyUsername' => null,
-                               'ProxyPassword' => null,
-                               'MaxErrorRetry' => 3,
-                               'Headers' => array()
-                               );
+    private  $_config = [
+        'ServiceURL' => null,
+        'UserAgent' => 'MWSMerchantFulfillmentService PHP5 Library',
+        'SignatureVersion' => 2,
+        'SignatureMethod' => 'HmacSHA256',
+        'ProxyHost' => null,
+        'ProxyPort' => -1,
+        'ProxyUsername' => null,
+        'ProxyPassword' => null,
+        'MaxErrorRetry' => 3,
+        'Headers' => []
+    ];
 
 
     /**
@@ -615,34 +616,32 @@ class MWSMerchantFulfillmentService_Client implements MWSMerchantFulfillmentServ
         //First split by 2 'CRLF'
         $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
-        for ($count = 0; 
-                $count < count($responseComponents) && $body == null; 
-                $count++) {
-            
+        $responseStatus = null;
+        $responseHeaderMetadata = null;
+        for ($count = 0; $count < count($responseComponents) && $body === null; $count++) {
+
             $headers = $responseComponents[$count];
             $responseStatus = $this->_extractHttpStatusCode($headers);
-            
-            if($responseStatus != null && 
-                    $this->_httpHeadersHaveContent($headers)){
-                
+
+            if($responseStatus !== null && $this->_httpHeadersHaveContent($headers)) {
                 $responseHeaderMetadata = $this->_extractResponseHeaderMetadata($headers);
                 //The body will be the next item in the responseComponents array
                 $body = $responseComponents[++$count];
             }
         }
-        
+
         //If the body is null here then we were unable to parse the response and will throw an exception
-        if($body == null){
-            require_once (dirname(__FILE__) . '/Exception.php');
-            $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
-            $exProps["ErrorType"] = "HTTP";
+        if($body === null) {
+            $exProps['Message'] = 'Failed to parse valid HTTP response (' . $response . ')';
+            $exProps['ErrorType'] = 'HTTP';
             throw new MWSMerchantFulfillmentService_Exception($exProps);
         }
 
-        return array(
-                'Status' => $responseStatus, 
-                'ResponseBody' => $body, 
-                'ResponseHeaderMetadata' => $responseHeaderMetadata);
+        return [
+            'Status' => $responseStatus,
+            'ResponseBody' => $body,
+            'ResponseHeaderMetadata' => $responseHeaderMetadata
+        ];
     }
     
     /**
